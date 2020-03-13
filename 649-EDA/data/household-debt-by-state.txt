@@ -1,0 +1,7 @@
+Label		Description
+year		Yearly observation date.
+qtr 		Quarterly observation date, end of period.
+state_fips 	2-digit U.S. state Federal Information Processing Standard(FIPS) code.
+totdebt_totwage	State Debt-to-Income(DTI) ratio, taken from total household debt balance over annualized total household wages.
+low		Lower bound of Debt-to-Income ratio category.
+high		Upper bound of Debt-to-Income ratio category.
