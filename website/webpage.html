@@ -1,0 +1,174 @@
+<!DOCTYPE HTML>
+<!--
+	Transitive by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega@5"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-lite@3.4.0"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-embed@4"></script>
+
+		<title>Transitived by Templated</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="subpage">
+
+		<!-- Header -->
+			<header id="header">
+				<div class="logo"><a href="index.html">Transitive <span>by TEMPLATED</span></a></div>
+				<a href="#menu" class="toggle"><span>Menu</span></a>
+			</header>
+
+		<!-- Nav -->
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="generic.html">Generic</a></li>
+					<li><a href="elements.html">Elements</a></li>
+				</ul>
+			</nav>
+
+		<!-- One -->
+			<section id="one" class="wrapper style2">
+				<div class="inner">
+					<div class="box">
+						<div class="image fit">
+							<img src="images/pic01.jpg" alt="" />
+						</div>
+						<div class="content">
+							<header class="align-center">
+								<h2>Characterizing the Digital Divides Across the U.S.</h2>
+								<p>Yijing Chen, Irena Chen, Megan Zhou</p>
+							</header>
+							<hr />
+							<p> Some stuff about why this is important. Like what is a "digital divide"? </p>
+							<p> 
+						</div>
+					</div>
+				</div>
+			</section>
+
+		<!-- Four -->
+			<section id="four" class="wrapper style3">
+				<div class="inner">
+
+					<header class="align-center">
+						<h2>1. How do socio-economic factors affect digital divides?  </h2>
+										<p>
+
+				</p>
+					</header>
+
+					<div>
+    <div id="vis"></div>
+    <br/>
+    (Caption)
+</div>
+
+<p>
+    Some general descriptions of the data  </p>
+
+
+
+				</div>
+
+
+			</section>
+
+			<section id="four" class="wrapper style3">
+				<div class="inner">
+
+					<header class="align-center">
+						<h2>2. What are the regional trends in U.S. households with computer access?</h2>
+										<p>
+				  
+			<div>
+			    <div><div id="vis2" style="float:center; width: 100%;"></div>
+			    </div> <br/>
+			  (Caption)
+			   
+			</div>
+
+				</div>
+
+
+			</section>
+
+			<section id="four" class="wrapper style3">
+				<div class="inner">
+
+					<header class="align-center">
+						<h2>3. Where does Trump do extremely well in terms of voter preferences?</h2>
+						We know that Donald Trump won several key swing states in the Midwest, like Ohio and Michigan. He also won many Southern
+states, but didn't perform very well in states on the West Coast, or in the Northeast/Mid-Atlantic regions of the US. It
+would be useful to know if he can repeat his success in the Midwest and South in 2020. The chart below shows his average
+favorability ratings over time, by pollster and state. In the chart, we can also compare different regions to national
+trends.
+<div>
+    <div id="vis3"></div>    <br/>
+ (It is possible to examine trends for one region compared to the national level trends by using the radio buttons to select whether or not national results should also be displayed.)
+
+</div>
+
+<p>There are clear regional differences in Trump's favorability. Trump's favorability in the Midwest, for example, is mostly in line with national level trends (with some polls in North Dakota and Missouri putting him at higher favorability). On the other hand, Trump's favorability in West Coast states is noticeably lower. We don't see many clear differences over time, indicating that support for/against Trump has mainly remained stable from mid-2018 and 2020. </p>
+		</section>
+
+
+<section id="one" class="wrapper style2">
+				<div class="inner">
+					<div class="box">
+						<div class="image fit">
+							<img src="images/pic01.jpg" alt="" />
+						</div>
+						<div class="content">
+							<hr />
+							<p>There are several future directions that we could examine as more polling data is collected, and more primary results flow in. For example, we could add in indicators for national and world events such as the novel Coronavirus outbreak, or the recent impeachment trial. Going into the 2020 presidential general election, will be interesting to see if these trends hold, or if they change. </p>
+
+							<p> 
+						</div>
+					</div>
+				</div>
+			</section>
+
+	
+
+
+	
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+			
+# Yijing's vis! 
+<script type="text/javascript">
+    let jsonSpec = "json_files/nh_nv_national_chart.json";
+    vegaEmbed("#vis", jsonSpec, {theme: 'fivethirtyeight'}).then(function (result) {
+    }).catch(
+        console.error)
+</script>
+
+# Irena's vis! 
+<script type="text/javascript">
+    jsonSpec = "json_files/candidate_by_poll_method.json";
+    vegaEmbed("#vis2", jsonSpec, {theme: 'fivethirtyeight'}).then(function (result) {
+    }).catch(
+        console.error)
+</script>
+
+# Megan's vis! 
+<script type="text/javascript">
+    jsonSpec = "json_files/trump_regional_favorability.json";
+    vegaEmbed("#vis3", jsonSpec, {theme: 'fivethirtyeight'}).then(function (result) {
+    }).catch(
+        console.error)
+</script>
+	</body>
+</html>
