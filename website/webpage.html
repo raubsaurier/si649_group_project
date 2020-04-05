@@ -1,0 +1,170 @@
+<!DOCTYPE HTML>
+<!--
+	Transitive by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega@5"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-lite@3.4.0"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-embed@4"></script>
+
+		<title>Transitived by Templated</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="subpage">
+
+		<!-- Header -->
+			<header id="header">
+				<div class="logo"><a href="index.html">Transitive <span>by TEMPLATED</span></a></div>
+				<a href="#menu" class="toggle"><span>Menu</span></a>
+			</header>
+
+		<!-- Nav -->
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="generic.html">Generic</a></li>
+					<li><a href="elements.html">Elements</a></li>
+				</ul>
+			</nav>
+
+		<!-- One -->
+			<section id="one" class="wrapper style2">
+				<div class="inner">
+					<div class="box">
+						<div class="image fit">
+							<img src="images/pic01.jpg" alt="" />
+						</div>
+						<div class="content">
+							<header class="align-center">
+								<h2>Characterizing the Digital Divides Across the U.S.</h2>
+								<p>Yijing Chen, Irena Chen, Megan Zhou</p>
+							</header>
+							<hr />
+							<p> Some stuff about why this is important. Like what is a "digital divide"? </p>
+							<p> 
+						</div>
+					</div>
+				</div>
+			</section>
+
+		<!-- Four -->
+			<section id="four" class="wrapper style3">
+				<div class="inner">
+
+					<header class="align-center">
+						<h2>1. How do socio-economic factors affect digital divides?  </h2>
+										<p>
+
+				</p>
+					</header>
+
+					<div>
+    <div id="vis"></div>
+    <br/>
+    (Caption)
+</div>
+
+<p>
+    Some general descriptions of the data  </p>
+
+
+
+				</div>
+
+
+			</section>
+
+			<section id="four" class="wrapper style3">
+				<div class="inner">
+
+					<header class="align-center">
+						<h2>2. What are the regional trends in U.S. households with computer access?</h2>
+										<p>
+				  
+			<div>
+			    <div><div id="vis2" style="float:center; width: 100%;"></div>
+			    </div> <br/>
+			  (Caption)
+			   
+			</div>
+
+				</div>
+
+
+			</section>
+
+			<section id="four" class="wrapper style3">
+				<div class="inner">
+
+					<header class="align-center">
+						<h2>3. Municipal Broadband </h2>
+					
+<div>
+    <div id="vis3"></div>    <br/>
+ Caption
+
+</div>
+
+<p>Some takeaways</p>
+		</section>
+
+
+<section id="one" class="wrapper style2">
+				<div class="inner">
+					<div class="box">
+						<div class="image fit">
+							<img src="images/pic01.jpg" alt="" />
+						</div>
+						<div class="content">
+							<hr />
+							<p>Conclusions</p>	
+
+							<p> 
+						</div>
+					</div>
+				</div>
+			</section>
+
+	
+
+
+	
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+			
+# Yijing's vis! 
+<script type="text/javascript">
+    let jsonSpec = "json_files/IMG.json";
+    vegaEmbed("#vis", jsonSpec, {theme: 'fivethirtyeight'}).then(function (result) {
+    }).catch(
+        console.error)
+</script>
+
+# Irena's vis! 
+<script type="text/javascript">
+    jsonSpec = "json_files/regional_diffs.json";
+    vegaEmbed("#vis2", jsonSpec, {theme: 'fivethirtyeight'}).then(function (result) {
+    }).catch(
+        console.error)
+</script>
+
+# Megan's vis! 
+<script type="text/javascript">
+    jsonSpec = "json_files/IMG.json";
+    vegaEmbed("#vis3", jsonSpec, {theme: 'fivethirtyeight'}).then(function (result) {
+    }).catch(
+        console.error)
+</script>
+	</body>
+</html>
