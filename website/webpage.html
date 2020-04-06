@@ -90,12 +90,18 @@
 			    <div><div id="vis2" style="float:center; width: 100%;"></div>
 			    </div> <br/>
 			  (Caption)
+			  <div><div id="vis_multiples" style="float:center; width: 100%;"></div>
+			  <img src="/img/sm_multiples.png">
+					</div> <br/>
+				  State by state estimates of the % of households with computer access for selected years, plotted along with the national average for that year.
+				   
 			   
 			</div>
 
 				</div>
 
 
+	
 			</section>
 
 			<section id="four" class="wrapper style3">
@@ -154,7 +160,14 @@
 # Irena's vis! 
 <script type="text/javascript">
     jsonSpec = "json_files/regional_diffs.json";
-    vegaEmbed("#vis2", jsonSpec, {theme: 'fivethirtyeight'}).then(function (result) {
+    vegaEmbed("#vis2", jsonSpec, {theme: 'latimes'}).then(function (result) {
+    }).catch(
+        console.error)
+</script>
+
+<script type="text/javascript">
+    jsonSpec = "json_files/sm_multiples_state_plots.json";
+    vegaEmbed("#vis_multiples", jsonSpec, {theme: 'latimes'}).then(function (result) {
     }).catch(
         console.error)
 </script>
