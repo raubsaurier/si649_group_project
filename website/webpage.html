@@ -8,7 +8,7 @@
 	<head>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega@5"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-lite@3.4.0"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-embed@4"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-embed@4"></script>
 
 		<title>Transitived by Templated</title>
 		<meta charset="utf-8" />
@@ -89,9 +89,12 @@
 			<div>
 			    <div><div id="vis2" style="float:center; width: 100%;"></div>
 			    </div> <br/>
-			  (Caption)
-			  <div><div id="vis_multiples" style="float:center; width: 100%;"></div>
-			  <img src="/img/sm_multiples.png">
+			  We can see that there are clear regional differences in US household computer access. In general, southern states tend to have lower than average computer access and western states have higher than average computer access.
+
+			  <div><div id="smvis" style="float:center; width: 200%, height: 100%;"></div>
+			</div> <br/>
+			Visualizing the state data in this form allows us to see the trends over time more clearly. 
+			   <!-- <img src="/img/sm_multiples.png"> -->
 					</div> <br/>
 				  State by state estimates of the % of households with computer access for selected years, plotted along with the national average for that year.
 				   
@@ -149,7 +152,7 @@
 			<script src="assets/js/main.js"></script>
 
 			
-# Yijing's vis! 
+<!-- # Yijing's vis!  -->
 <script type="text/javascript">
     let jsonSpec = "json_files/IMG.json";
     vegaEmbed("#vis", jsonSpec, {theme: 'fivethirtyeight'}).then(function (result) {
@@ -157,7 +160,7 @@
         console.error)
 </script>
 
-# Irena's vis! 
+<!-- # Irena's vis!  -->
 <script type="text/javascript">
     jsonSpec = "json_files/regional_diffs.json";
     vegaEmbed("#vis2", jsonSpec, {theme: 'latimes'}).then(function (result) {
@@ -166,13 +169,13 @@
 </script>
 
 <script type="text/javascript">
-    jsonSpec = "json_files/sm_multiples_state_plots.json";
-    vegaEmbed("#vis_multiples", jsonSpec, {theme: 'latimes'}).then(function (result) {
+    jsonSpec = "json_files/sm2.json";
+    vegaEmbed("#smvis", jsonSpec, {theme: 'fivethirtyeight'}).then(function (result) {
     }).catch(
         console.error)
 </script>
 
-# Megan's vis! 
+<!-- # Megan's vis!  -->
 <script type="text/javascript">
     jsonSpec = "json_files/IMG.json";
     vegaEmbed("#vis3", jsonSpec, {theme: 'fivethirtyeight'}).then(function (result) {
