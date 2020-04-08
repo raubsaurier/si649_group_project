@@ -6,9 +6,9 @@
 -->
 <html>
 	<head>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega@5"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-lite@3.4.0"></script>
-	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-embed@4"></script>
+		<script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+		<script src="https://cdn.jsdelivr.net/npm/vega-lite@4"></script>
+		<script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
 
 		<title>SI 649 Group Project</title>
 		<meta charset="utf-8" />
@@ -47,18 +47,18 @@
 							<hr />
 							<p> <b>A digital divide</b> is an uneven distribution in the access to or usage of
 								Information and Communication Technologies (ICT), such as computers, smartphones, and internet.
-								Often, these digital divides reflect broader divides between socioeconomic, age, and racial/ethnic groups, 
-								and deepen existing inequities. 
+								Often, these digital divides reflect broader divides between socioeconomic, age, and racial/ethnic groups,
+								and deepen existing inequities.
 								<a href="https://time.com/4718032/the-digital-divide/">In the US</a>,
 								inequalities in computer and internet access are driven by the high cost of broadband and by geography.
 								<br /></p>
-							<p><b>As the world increasingly moves online,</b> digital divides become economic divides. 
+							<p><b>As the world increasingly moves online,</b> digital divides become economic divides.
 								<a href="https://www.nytimes.com/2020/03/27/business/economy/coronavirus-inequality.html">COVID19 lockdowns
-								across the US</a>  have highlighted how inequalities in broadband access translate into inequalities in educational advancement, 
+								across the US</a>  have highlighted how inequalities in broadband access translate into inequalities in educational advancement,
 								employment opportunities, and even healthcare access.</p>
 							<p><b>So we wanted to investigate: <i>what do these digital divides along socioeconomic and geographic lines actually
 								look like in the US? How have they changed in recent years? And how might we close these divides? </i></b></p>
-							<p> 
+							<p>
 						</div>
 					</div>
 				</div>
@@ -69,10 +69,13 @@
 				<div class="inner">
 
 					<header class="align-center">
-						<h2>1. Socio-economic factors & digital divides </h2>
+						<h4> SI 649 Data Visualization</h4>
+
+						<h2>1. Digital Divides across Demographic Groups </h2>
+						<div id="barchart_vis1"></div>
 										<p>
 
-				</p>
+										</p>
 					</header>
 
 					<div>
@@ -96,8 +99,9 @@
 
 					<header class="align-center">
 						<h2>2. Recent geographic and regional trends</h2>
+						<div id="vis2"></div>
 										<p>
-				  
+
 			<div>
 			    <div><div id="vis2" style="float:center; width: 100%;"></div>
 			    </div> <br/>
@@ -105,18 +109,18 @@
 
 			  <div><div id="smvis" style="float:center; width: 200%, height: 100%;"></div>
 			</div> <br/>
-			Visualizing the state data in this form allows us to see the trends over time more clearly. 
+			Visualizing the state data in this form allows us to see the trends over time more clearly.
 			   <!-- <img src="/img/sm_multiples.png"> -->
 					</div> <br/>
 				  State by state estimates of the % of households with computer access for selected years, plotted along with the national average for that year.
-				   
-			   
+
+
 			</div>
 
 				</div>
 
 
-	
+
 			</section>
 
 			<section id="four" class="wrapper style3">
@@ -124,7 +128,7 @@
 
 					<header class="align-center">
 						<h2>3. Municipal broadband: a growing solution? </h2>
-					
+
 <div>
 	<p><img src="img/munic_broadband.png"></p>
 </div>
@@ -149,18 +153,18 @@
 						</div>
 						<div class="content">
 							<hr />
-							<p>Conclusions</p>	
+							<p>Conclusions</p>
 
-							<p> 
+							<p>
 						</div>
 					</div>
 				</div>
 			</section>
 
-	
 
 
-	
+
+
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>
@@ -169,11 +173,11 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 
-			
+
 <!-- # Yijing's vis!  -->
 <script type="text/javascript">
-    let jsonSpec = "json_files/IMG.json";
-    vegaEmbed("#vis", jsonSpec, {theme: 'fivethirtyeight'}).then(function (result) {
+    let jsonSpec = "json_files/demographic_divide_bars.json";
+    vegaEmbed("#barchart_vis1", jsonSpec, {theme: 'fivethirtyeight'}).then(function (result) {
     }).catch(
         console.error)
 </script>
