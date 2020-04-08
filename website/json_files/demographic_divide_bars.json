@@ -27,7 +27,7 @@
             "opacity": {
               "condition": {
                 "value": 1,
-                "selection": "selector028"
+                "selection": "selector010"
               },
               "value": 0.8
             },
@@ -77,7 +77,7 @@
                 "year": "2010"
               }
             },
-            "selector028": {
+            "selector010": {
               "type": "single",
               "on": "mouseover",
               "nearest": true,
@@ -175,16 +175,21 @@
                   "order": "ascending"
                 },
                 "title": "reasons",
-                "selection": "selector030"
+                "selection": "selector012"
               },
               "value": "lightgrey"
             },
             "opacity": {
               "condition": {
                 "value": 1,
-                "selection": "selector029"
+                "selection": "selector011"
               },
               "value": 0.8
+            },
+            "order": {
+              "type": "quantitative",
+              "field": "value",
+              "sort": "descending"
             },
             "tooltip": [
               {
@@ -237,12 +242,12 @@
                 "year": "2010"
               }
             },
-            "selector029": {
+            "selector011": {
               "type": "single",
               "on": "mouseover",
               "clear": "click"
             },
-            "selector030": {
+            "selector012": {
               "type": "single",
               "fields": [
                 "label"
@@ -281,7 +286,7 @@
             "opacity": {
               "condition": {
                 "value": 1,
-                "selection": "selector031"
+                "selection": "selector004"
               },
               "value": 0.8
             },
@@ -331,7 +336,7 @@
                 "year": "2010"
               }
             },
-            "selector031": {
+            "selector004": {
               "type": "single",
               "on": "mouseover",
               "nearest": true,
@@ -429,14 +434,14 @@
                   "order": "ascending"
                 },
                 "title": "reasons",
-                "selection": "selector033"
+                "selection": "selector006"
               },
               "value": "lightgrey"
             },
             "opacity": {
               "condition": {
                 "value": 1,
-                "selection": "selector032"
+                "selection": "selector005"
               },
               "value": 0.8
             },
@@ -496,12 +501,12 @@
                 "year": "2010"
               }
             },
-            "selector032": {
+            "selector005": {
               "type": "single",
               "on": "mouseover",
               "clear": "click"
             },
-            "selector033": {
+            "selector006": {
               "type": "single",
               "fields": [
                 "label"
@@ -540,7 +545,7 @@
             "opacity": {
               "condition": {
                 "value": 1,
-                "selection": "selector034"
+                "selection": "selector007"
               },
               "value": 0.8
             },
@@ -590,7 +595,7 @@
                 "year": "2010"
               }
             },
-            "selector034": {
+            "selector007": {
               "type": "single",
               "on": "mouseover",
               "nearest": true,
@@ -688,14 +693,14 @@
                   "order": "ascending"
                 },
                 "title": "reasons",
-                "selection": "selector036"
+                "selection": "selector009"
               },
               "value": "lightgrey"
             },
             "opacity": {
               "condition": {
                 "value": 1,
-                "selection": "selector035"
+                "selection": "selector008"
               },
               "value": 0.8
             },
@@ -755,12 +760,12 @@
                 "year": "2010"
               }
             },
-            "selector035": {
+            "selector008": {
               "type": "single",
               "on": "mouseover",
               "clear": "click"
             },
-            "selector036": {
+            "selector009": {
               "type": "single",
               "fields": [
                 "label"
@@ -791,6 +796,7 @@
   ],
   "resolve": {
     "scale": {
+      "color": "independent",
       "y": "shared"
     }
   },
