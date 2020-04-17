@@ -55,8 +55,13 @@ small_multiples = ggplot(data=graphData,
 sm_plotly = ggplotly(small_multiples, tooltip = c("text"))
 
 
-saveWidget(sm_plotly, "sm_charts.html", selfcontained = F, libdir = "lib")
+htmlwidgets::saveWidget(frameableWidget(sm_plotly), "sm_charts_update.html")
   
 saveWidget(sm_plotly,paste0(wd,"sm_multiples.html"))
+
+
+
+
+
 plotly_json(sm_plotly)
 
