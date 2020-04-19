@@ -1,0 +1,218 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json",
+  "config": {
+    "view": {
+      "continuousHeight": 300,
+      "continuousWidth": 400
+    }
+  },
+  "data": {
+    "name": "data-55581163474c2a1f94c8cc69c98e6e15"
+  },
+  "datasets": {
+    "data-55581163474c2a1f94c8cc69c98e6e15": [
+      {
+        "Perc_US_residents_w_MB": "0.05%",
+        "Total_No_US_residents": 282162411,
+        "US_residents_w_MB": 154000,
+        "Unnamed: 0": 1,
+        "Year (FTTH)": 2000,
+        "total_w_mb": 154000
+      },
+      {
+        "Perc_US_residents_w_MB": "0.09%",
+        "Total_No_US_residents": 284968955,
+        "US_residents_w_MB": 246000,
+        "Unnamed: 0": 2,
+        "Year (FTTH)": 2001,
+        "total_w_mb": 92000
+      },
+      {
+        "Perc_US_residents_w_MB": "0.18%",
+        "Total_No_US_residents": 287625193,
+        "US_residents_w_MB": 526500,
+        "Unnamed: 0": 3,
+        "Year (FTTH)": 2002,
+        "total_w_mb": 280500
+      },
+      {
+        "Perc_US_residents_w_MB": "0.35%",
+        "Total_No_US_residents": 290107933,
+        "US_residents_w_MB": 1013000,
+        "Unnamed: 0": 4,
+        "Year (FTTH)": 2003,
+        "total_w_mb": 486500
+      },
+      {
+        "Perc_US_residents_w_MB": "0.37%",
+        "Total_No_US_residents": 292805298,
+        "US_residents_w_MB": 1080000,
+        "Unnamed: 0": 5,
+        "Year (FTTH)": 2004,
+        "total_w_mb": 67000
+      },
+      {
+        "Perc_US_residents_w_MB": "0.38%",
+        "Total_No_US_residents": 295516599,
+        "US_residents_w_MB": 1120100,
+        "Unnamed: 0": 6,
+        "Year (FTTH)": 2005,
+        "total_w_mb": 40100
+      },
+      {
+        "Perc_US_residents_w_MB": "0.39%",
+        "Total_No_US_residents": 298379912,
+        "US_residents_w_MB": 1174400,
+        "Unnamed: 0": 7,
+        "Year (FTTH)": 2006,
+        "total_w_mb": 54300
+      },
+      {
+        "Perc_US_residents_w_MB": "0.41%",
+        "Total_No_US_residents": 301231207,
+        "US_residents_w_MB": 1240500,
+        "Unnamed: 0": 8,
+        "Year (FTTH)": 2007,
+        "total_w_mb": 66100
+      },
+      {
+        "Perc_US_residents_w_MB": "0.48%",
+        "Total_No_US_residents": 304093966,
+        "US_residents_w_MB": 1447000,
+        "Unnamed: 0": 9,
+        "Year (FTTH)": 2008,
+        "total_w_mb": 206500
+      },
+      {
+        "Perc_US_residents_w_MB": "0.58%",
+        "Total_No_US_residents": 306771529,
+        "US_residents_w_MB": 1780500,
+        "Unnamed: 0": 10,
+        "Year (FTTH)": 2009,
+        "total_w_mb": 333500
+      },
+      {
+        "Perc_US_residents_w_MB": "0.60%",
+        "Total_No_US_residents": 309349689,
+        "US_residents_w_MB": 1845600,
+        "Unnamed: 0": 11,
+        "Year (FTTH)": 2010,
+        "total_w_mb": 65100
+      },
+      {
+        "Perc_US_residents_w_MB": "0.62%",
+        "Total_No_US_residents": 311556874,
+        "US_residents_w_MB": 1921200,
+        "Unnamed: 0": 12,
+        "Year (FTTH)": 2011,
+        "total_w_mb": 75600
+      },
+      {
+        "Perc_US_residents_w_MB": "0.62%",
+        "Total_No_US_residents": 313830990,
+        "US_residents_w_MB": 1942000,
+        "Unnamed: 0": 13,
+        "Year (FTTH)": 2012,
+        "total_w_mb": 20800
+      },
+      {
+        "Perc_US_residents_w_MB": "0.62%",
+        "Total_No_US_residents": 315993715,
+        "US_residents_w_MB": 1966112,
+        "Unnamed: 0": 14,
+        "Year (FTTH)": 2013,
+        "total_w_mb": 24112
+      },
+      {
+        "Perc_US_residents_w_MB": "0.66%",
+        "Total_No_US_residents": 318301008,
+        "US_residents_w_MB": 2088912,
+        "Unnamed: 0": 15,
+        "Year (FTTH)": 2014,
+        "total_w_mb": 122800
+      },
+      {
+        "Perc_US_residents_w_MB": "0.65%",
+        "Total_No_US_residents": 320635163,
+        "US_residents_w_MB": 2090712,
+        "Unnamed: 0": 16,
+        "Year (FTTH)": 2015,
+        "total_w_mb": 1800
+      },
+      {
+        "Perc_US_residents_w_MB": "0.67%",
+        "Total_No_US_residents": 322941311,
+        "US_residents_w_MB": 2156783,
+        "Unnamed: 0": 17,
+        "Year (FTTH)": 2016,
+        "total_w_mb": 66071
+      },
+      {
+        "Perc_US_residents_w_MB": "0.66%",
+        "Total_No_US_residents": 324985539,
+        "US_residents_w_MB": 2158683,
+        "Unnamed: 0": 18,
+        "Year (FTTH)": 2017,
+        "total_w_mb": 1900
+      },
+      {
+        "Perc_US_residents_w_MB": "0.68%",
+        "Total_No_US_residents": 326687501,
+        "US_residents_w_MB": 2234683,
+        "Unnamed: 0": 19,
+        "Year (FTTH)": 2018,
+        "total_w_mb": 76000
+      }
+    ]
+  },
+  "layer": [
+    {
+      "encoding": {
+        "tooltip": [
+          {
+            "field": "Total_No_US_residents",
+            "type": "quantitative"
+          }
+        ],
+        "x": {
+          "field": "Year (FTTH)",
+          "type": "nominal"
+        },
+        "y": {
+          "axis": {
+            "title": "No. of US residents"
+          },
+          "field": "Total_No_US_residents",
+          "type": "quantitative"
+        }
+      },
+      "mark": {
+        "color": "purple",
+        "type": "point"
+      }
+    },
+    {
+      "encoding": {
+        "tooltip": [
+          {
+            "field": "US_residents_w_MB",
+            "type": "quantitative"
+          },
+          {
+            "field": "Perc_US_residents_w_MB",
+            "type": "nominal"
+          }
+        ],
+        "x": {
+          "field": "Year (FTTH)",
+          "type": "nominal"
+        },
+        "y": {
+          "field": "US_residents_w_MB",
+          "type": "quantitative"
+        }
+      },
+      "mark": "point"
+    }
+  ]
+}

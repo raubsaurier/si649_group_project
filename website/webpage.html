@@ -46,7 +46,7 @@
 							</header>
 							<hr />
 							<p> <b>A digital divide</b> is an uneven distribution in the access to or usage of
-								Information and Communication Technologies (ICT), such as computers, smartphones, and internet.
+								Information and Communication Technologies (ICT), such as computers, smartphones, and Internet.
 								Often, these digital divides reflect broader divides between socioeconomic, age, and racial/ethnic groups,
 								and deepen existing inequities.
 								<a href="https://time.com/4718032/the-digital-divide/">In the US</a>,
@@ -69,23 +69,31 @@
 				<div class="inner">
 
 					<header class="align-center">
-						<h4> SI 649 Data Visualization</h4>
 
 						<h2>1. Digital Divides across Demographic Groups </h2>
+					</br>
+						<p>
+							Across all years of data, those in the lowest income groups, older
+		adults, and communities of color tend to have less access to Internet at home.
+						</br>The <b>expense of internet</b> is the first or second most oft-cited reason for lack of access.
+							
+							</p>
 						<div id="barchart_vis1"></div>
-										<p>
-
-										</p>
+										
 					</header>
 
 					<div>
     <div id="vis"></div>
     <br/>
-    (Caption)
+    <p><i> 
+		[<b>Mouse over bars to see more details.</b> On the right side of the chart,
+		which shows reasons for not going online at home, darker colors
+		represent structural reasons outside of the person's control, such as
+		expense or lack of availability. Lighter colors encode more subjective reasons
+		that reflect personal choice.] </i></p>
 </div>
 
-<p>
-    Some general descriptions of the data  </p>
+
 
 
 
@@ -99,24 +107,27 @@
 
 					<header class="align-center">
 						<h2>2. Recent geographic and regional trends</h2>
+					</br>
+						<p><b>Southern states</b> tend to report computer usage that falls <b>below</b> the national average,
+						</br>while <b>western states</b> tend to report computer usage <b>above</b> the national average.</p>
 						<div id="vis2"></div>
 										<p>
 
 			<div>
 			    <div><div id="vis2" style="float:center; width: 100%;"></div>
-			    </div> <br/>
-			  We can see that there are clear regional differences in US household computer access. In general, southern states tend to have lower than average computer access and western states have higher than average computer access.
+			    </div> 
+			  
 
 			  <!-- <div><div id="smvis" style="float:center; width: 200%, height: 100%;"></div> -->
-			</div> <br/>
-			Visualizing the state data in this form allows us to see the trends over time more clearly.
+			</div> 
 			   <!-- <img src="/img/sm_multiples.png"> -->
-					</div> <br/>
-				  State by state estimates of the % of households with computer access for selected years, plotted along with the national average for that year.
-
+					</div>
+				  
 			<div style="height:40em;width:100%;padding-left: 5em;padding-right:5em;"><iframe src="img/sm_charts_update.html" style="position:relative;height:100%;width:100%"></iframe></div></div>
-
+			<p><i> 
+							[<b>Mouse over bars to see more details.</b>] </i></p>
 			</div>
+			
 			
 
 				</div>
@@ -132,18 +143,19 @@
 						<h2>3. Municipal broadband: a growing solution? </h2>
 
 <div>
-	<p><img src="img/munic_broadband.png"></p>
-</div>
-    <div id="vis3"></div>    <br/>
+	<br/>
  Private internet providers have monopolies over their respective regions in the US, allowing them to drive up
  prices. Municipal broadband, or the provision of broadband by a public provider, has been proposed as one way
  to help areas with scarcer internet access bridge the divide.
- The number of US residents with access to municipal broadband has steadily increased over the past two decades,
- but this solution still only reaches less than 1% of the entire US population.
 
 </div>
+<div id="mb_vis1"></div>    
+ <br/>The number of US residents with access to municipal broadband has steadily increased over the past two decades,
+ but this solution still only reaches less than 1% of the entire US population.<br/>
+						<div id="mb_vis2"></div>
+</div>
 
-<p>Some takeaways</p>
+<p></p>
 		</section>
 
 
@@ -155,7 +167,10 @@
 						</div>
 						<div class="content">
 							<hr />
-							<p>Conclusions</p>
+							<p>Municipal broadband dataset from here.
+							</br>Internet and computer access dataset from here.
+						</br>US population data from Census.
+							</p>
 
 							<p>
 						</div>
@@ -199,11 +214,18 @@
 </script> -->
 
 <!-- # Megan's vis!  -->
-<!-- <script type="text/javascript">
-    jsonSpec = "json_files/IMG.json";
-    vegaEmbed("#vis3", jsonSpec, {theme: 'fivethirtyeight'}).then(function (result) {
+<script type="text/javascript">
+    jsonSpec = "json_files/mb.json";
+    vegaEmbed("#mb_vis1", jsonSpec, {theme: 'fivethirtyeight'}).then(function (result) {
     }).catch(
         console.error)
-</script> -->
-	</body>
+</script> 
+</html>
+
+<script type="text/javascript">
+    jsonSpec = "json_files/mb_plus_totalpop.json";
+    vegaEmbed("#mb_vis2", jsonSpec, {theme: 'fivethirtyeight'}).then(function (result) {
+    }).catch(
+        console.error)
+</script> 
 </html>
