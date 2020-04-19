@@ -1,0 +1,186 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json",
+    "config": {
+      "view": {
+        "continuousHeight": 300,
+        "continuousWidth": 400
+      }
+    },
+    "data": {
+      "name": "data-3e74e3ad462c9bc0bf5b3d326ecb210b"
+    },
+    "datasets": {
+      "data-3e74e3ad462c9bc0bf5b3d326ecb210b": [
+        {
+          "Unnamed: 0": 1,
+          "Year (FTTH)": 2000,
+          "percentage": "0.05%",
+          "total_population": 282162411,
+          "total_real_w_mb": 154000,
+          "total_w_mb": 154000
+        },
+        {
+          "Unnamed: 0": 2,
+          "Year (FTTH)": 2001,
+          "percentage": "0.09%",
+          "total_population": 284968955,
+          "total_real_w_mb": 246000,
+          "total_w_mb": 92000
+        },
+        {
+          "Unnamed: 0": 3,
+          "Year (FTTH)": 2002,
+          "percentage": "0.18%",
+          "total_population": 287625193,
+          "total_real_w_mb": 526500,
+          "total_w_mb": 280500
+        },
+        {
+          "Unnamed: 0": 4,
+          "Year (FTTH)": 2003,
+          "percentage": "0.35%",
+          "total_population": 290107933,
+          "total_real_w_mb": 1013000,
+          "total_w_mb": 486500
+        },
+        {
+          "Unnamed: 0": 5,
+          "Year (FTTH)": 2004,
+          "percentage": "0.37%",
+          "total_population": 292805298,
+          "total_real_w_mb": 1080000,
+          "total_w_mb": 67000
+        },
+        {
+          "Unnamed: 0": 6,
+          "Year (FTTH)": 2005,
+          "percentage": "0.38%",
+          "total_population": 295516599,
+          "total_real_w_mb": 1120100,
+          "total_w_mb": 40100
+        },
+        {
+          "Unnamed: 0": 7,
+          "Year (FTTH)": 2006,
+          "percentage": "0.39%",
+          "total_population": 298379912,
+          "total_real_w_mb": 1174400,
+          "total_w_mb": 54300
+        },
+        {
+          "Unnamed: 0": 8,
+          "Year (FTTH)": 2007,
+          "percentage": "0.41%",
+          "total_population": 301231207,
+          "total_real_w_mb": 1240500,
+          "total_w_mb": 66100
+        },
+        {
+          "Unnamed: 0": 9,
+          "Year (FTTH)": 2008,
+          "percentage": "0.48%",
+          "total_population": 304093966,
+          "total_real_w_mb": 1447000,
+          "total_w_mb": 206500
+        },
+        {
+          "Unnamed: 0": 10,
+          "Year (FTTH)": 2009,
+          "percentage": "0.58%",
+          "total_population": 306771529,
+          "total_real_w_mb": 1780500,
+          "total_w_mb": 333500
+        },
+        {
+          "Unnamed: 0": 11,
+          "Year (FTTH)": 2010,
+          "percentage": "0.60%",
+          "total_population": 309349689,
+          "total_real_w_mb": 1845600,
+          "total_w_mb": 65100
+        },
+        {
+          "Unnamed: 0": 12,
+          "Year (FTTH)": 2011,
+          "percentage": "0.62%",
+          "total_population": 311556874,
+          "total_real_w_mb": 1921200,
+          "total_w_mb": 75600
+        },
+        {
+          "Unnamed: 0": 13,
+          "Year (FTTH)": 2012,
+          "percentage": "0.62%",
+          "total_population": 313830990,
+          "total_real_w_mb": 1942000,
+          "total_w_mb": 20800
+        },
+        {
+          "Unnamed: 0": 14,
+          "Year (FTTH)": 2013,
+          "percentage": "0.62%",
+          "total_population": 315993715,
+          "total_real_w_mb": 1966112,
+          "total_w_mb": 24112
+        },
+        {
+          "Unnamed: 0": 15,
+          "Year (FTTH)": 2014,
+          "percentage": "0.66%",
+          "total_population": 318301008,
+          "total_real_w_mb": 2088912,
+          "total_w_mb": 122800
+        },
+        {
+          "Unnamed: 0": 16,
+          "Year (FTTH)": 2015,
+          "percentage": "0.65%",
+          "total_population": 320635163,
+          "total_real_w_mb": 2090712,
+          "total_w_mb": 1800
+        },
+        {
+          "Unnamed: 0": 17,
+          "Year (FTTH)": 2016,
+          "percentage": "0.67%",
+          "total_population": 322941311,
+          "total_real_w_mb": 2156783,
+          "total_w_mb": 66071
+        },
+        {
+          "Unnamed: 0": 18,
+          "Year (FTTH)": 2017,
+          "percentage": "0.66%",
+          "total_population": 324985539,
+          "total_real_w_mb": 2158683,
+          "total_w_mb": 1900
+        },
+        {
+          "Unnamed: 0": 19,
+          "Year (FTTH)": 2018,
+          "percentage": "0.68%",
+          "total_population": 326687501,
+          "total_real_w_mb": 2234683,
+          "total_w_mb": 76000
+        }
+      ]
+    },
+    "encoding": {
+      "tooltip": [
+        {
+          "field": "total_real_w_mb",
+          "type": "quantitative"
+        }
+      ],
+      "x": {
+        "field": "Year (FTTH)",
+        "type": "nominal"
+      },
+      "y": {
+        "field": "total_real_w_mb",
+        "title": "No. of US residents",
+        "type": "quantitative"
+      }
+    },
+    "mark": "point"
+  }
