@@ -416,7 +416,7 @@
                   ],
                   "clear": "click"
                 },
-                "selector034": {
+                "selector038": {
                   "type": "interval",
                   "bind": "scales",
                   "encodings": [
@@ -720,7 +720,7 @@
                   ],
                   "clear": "click"
                 },
-                "selector036": {
+                "selector037": {
                   "type": "interval",
                   "bind": "scales",
                   "encodings": [
@@ -1259,6 +1259,11 @@
                   }
                 }
               },
+              "title": {
+                "text": [
+                  ""
+                ]
+              },
               "transform": [
                 {
                   "filter": "((datum.type === 'reasons') && (datum.reason_type === 1))"
@@ -1420,6 +1425,11 @@
                     "year": "2010"
                   }
                 }
+              },
+              "title": {
+                "text": [
+                  ""
+                ]
               },
               "transform": [
                 {
@@ -1765,6 +1775,11 @@
                   }
                 }
               },
+              "title": {
+                "text": [
+                  ""
+                ]
+              },
               "transform": [
                 {
                   "filter": "((datum.type === 'reasons') && (datum.reason_type === 0))"
@@ -1928,6 +1943,11 @@
                     "year": "2010"
                   }
                 }
+              },
+              "title": {
+                "text": [
+                  ""
+                ]
               },
               "transform": [
                 {
