@@ -29,7 +29,7 @@
                 "opacity": {
                   "condition": {
                     "value": 1,
-                    "selection": "selector015"
+                    "selection": "selector001"
                   },
                   "value": 0
                 },
@@ -70,7 +70,7 @@
                 }
               },
               "selection": {
-                "selector016": {
+                "selector002": {
                   "type": "single",
                   "empty": "none",
                   "on": "mouseover",
@@ -79,7 +79,7 @@
                   ],
                   "clear": "click"
                 },
-                "selector019": {
+                "selector032": {
                   "type": "interval",
                   "bind": "scales",
                   "encodings": [
@@ -105,7 +105,7 @@
                     "year": "2010"
                   }
                 },
-                "selector015": {
+                "selector001": {
                   "type": "single",
                   "empty": "none",
                   "on": "mouseover",
@@ -143,7 +143,7 @@
                 "opacity": {
                   "condition": {
                     "value": 1,
-                    "selection": "selector015"
+                    "selection": "selector001"
                   },
                   "value": 0.8
                 },
@@ -156,7 +156,6 @@
                 ],
                 "x": {
                   "type": "quantitative",
-                  "axis": null,
                   "field": "value",
                   "scale": {
                     "domain": [
@@ -173,8 +172,7 @@
                     "50-74k",
                     "75-99k",
                     "100k or more"
-                  ],
-                  "title": null
+                  ]
                 },
                 "y": {
                   "type": "nominal",
@@ -193,7 +191,12 @@
                   "title": null
                 }
               },
-              "title": "% people w/ Internet at home and gaps",
+              "title": {
+                "text": [
+                  "% reasons for not going online at home",
+                  "income groups"
+                ]
+              },
               "transform": [
                 {
                   "filter": "(datum.type === 'access')"
@@ -213,7 +216,7 @@
                 "opacity": {
                   "condition": {
                     "value": 1,
-                    "selection": "selector015"
+                    "selection": "selector001"
                   },
                   "value": 0
                 },
@@ -231,7 +234,6 @@
                 ],
                 "x": {
                   "type": "quantitative",
-                  "axis": null,
                   "field": "value",
                   "scale": {
                     "domain": [
@@ -248,8 +250,7 @@
                     "50-74k",
                     "75-99k",
                     "100k or more"
-                  ],
-                  "title": null
+                  ]
                 },
                 "y": {
                   "type": "nominal",
@@ -268,7 +269,12 @@
                   "title": null
                 }
               },
-              "title": "% people w/ Internet at home and gaps",
+              "title": {
+                "text": [
+                  "% reasons for not going online at home",
+                  "income groups"
+                ]
+              },
               "transform": [
                 {
                   "filter": "(datum.type === 'access')"
@@ -357,7 +363,7 @@
                 "opacity": {
                   "condition": {
                     "value": 1,
-                    "selection": "selector016"
+                    "selection": "selector002"
                   },
                   "value": 0
                 },
@@ -401,7 +407,7 @@
                 }
               },
               "selection": {
-                "selector016": {
+                "selector002": {
                   "type": "single",
                   "empty": "none",
                   "on": "mouseover",
@@ -410,7 +416,7 @@
                   ],
                   "clear": "click"
                 },
-                "selector020": {
+                "selector034": {
                   "type": "interval",
                   "bind": "scales",
                   "encodings": [
@@ -465,7 +471,7 @@
                 "opacity": {
                   "condition": {
                     "value": 1,
-                    "selection": "selector016"
+                    "selection": "selector002"
                   },
                   "value": 0.8
                 },
@@ -509,6 +515,11 @@
                   "title": null
                 }
               },
+              "title": {
+                "text": [
+                  "age groups"
+                ]
+              },
               "transform": [
                 {
                   "filter": "(datum.type === 'access')"
@@ -528,7 +539,7 @@
                 "opacity": {
                   "condition": {
                     "value": 1,
-                    "selection": "selector016"
+                    "selection": "selector002"
                   },
                   "value": 0
                 },
@@ -576,6 +587,11 @@
                   ],
                   "title": null
                 }
+              },
+              "title": {
+                "text": [
+                  "age groups"
+                ]
               },
               "transform": [
                 {
@@ -656,7 +672,7 @@
                 "opacity": {
                   "condition": {
                     "value": 1,
-                    "selection": "selector017"
+                    "selection": "selector003"
                   },
                   "value": 0
                 },
@@ -695,7 +711,7 @@
                 }
               },
               "selection": {
-                "selector017": {
+                "selector003": {
                   "type": "single",
                   "empty": "none",
                   "on": "mouseover",
@@ -704,7 +720,7 @@
                   ],
                   "clear": "click"
                 },
-                "selector021": {
+                "selector036": {
                   "type": "interval",
                   "bind": "scales",
                   "encodings": [
@@ -759,7 +775,7 @@
                 "opacity": {
                   "condition": {
                     "value": 1,
-                    "selection": "selector017"
+                    "selection": "selector003"
                   },
                   "value": 0.8
                 },
@@ -797,6 +813,11 @@
                   "title": null
                 }
               },
+              "title": {
+                "text": [
+                  "ethnic groups"
+                ]
+              },
               "transform": [
                 {
                   "filter": "(datum.type === 'access')"
@@ -816,7 +837,7 @@
                 "opacity": {
                   "condition": {
                     "value": 1,
-                    "selection": "selector017"
+                    "selection": "selector003"
                   },
                   "value": 0
                 },
@@ -858,6 +879,11 @@
                   ],
                   "title": null
                 }
+              },
+              "title": {
+                "text": [
+                  "ethnic groups"
+                ]
               },
               "transform": [
                 {
@@ -969,14 +995,14 @@
                       "order": "ascending"
                     },
                     "title": "reasons",
-                    "selection": "selector018"
+                    "selection": "selector004"
                   },
                   "value": "lightgrey"
                 },
                 "opacity": {
                   "condition": {
                     "value": 1,
-                    "selection": "selector015"
+                    "selection": "selector001"
                   },
                   "value": 0.8
                 },
@@ -1020,7 +1046,7 @@
                 }
               },
               "selection": {
-                "selector015": {
+                "selector001": {
                   "type": "single",
                   "empty": "none",
                   "on": "mouseover",
@@ -1029,7 +1055,7 @@
                   ],
                   "clear": "click"
                 },
-                "selector018": {
+                "selector004": {
                   "type": "single",
                   "fields": [
                     "label"
@@ -1055,7 +1081,12 @@
                   }
                 }
               },
-              "title": "structural reasons",
+              "title": {
+                "text": [
+                  "structural reasons",
+                  ""
+                ]
+              },
               "transform": [
                 {
                   "filter": "((datum.type === 'reasons') && (datum.reason_type === 1))"
@@ -1133,14 +1164,14 @@
                       "order": "ascending"
                     },
                     "title": "reasons",
-                    "selection": "selector018"
+                    "selection": "selector004"
                   },
                   "value": "lightgrey"
                 },
                 "opacity": {
                   "condition": {
                     "value": 1,
-                    "selection": "selector016"
+                    "selection": "selector002"
                   },
                   "value": 0.8
                 },
@@ -1193,7 +1224,7 @@
                 }
               },
               "selection": {
-                "selector016": {
+                "selector002": {
                   "type": "single",
                   "empty": "none",
                   "on": "mouseover",
@@ -1202,7 +1233,7 @@
                   ],
                   "clear": "click"
                 },
-                "selector018": {
+                "selector004": {
                   "type": "single",
                   "fields": [
                     "label"
@@ -1305,14 +1336,14 @@
                       "order": "ascending"
                     },
                     "title": "reasons",
-                    "selection": "selector018"
+                    "selection": "selector004"
                   },
                   "value": "lightgrey"
                 },
                 "opacity": {
                   "condition": {
                     "value": 1,
-                    "selection": "selector017"
+                    "selection": "selector003"
                   },
                   "value": 0.8
                 },
@@ -1355,7 +1386,7 @@
                 }
               },
               "selection": {
-                "selector017": {
+                "selector003": {
                   "type": "single",
                   "empty": "none",
                   "on": "mouseover",
@@ -1364,7 +1395,7 @@
                   ],
                   "clear": "click"
                 },
-                "selector018": {
+                "selector004": {
                   "type": "single",
                   "fields": [
                     "label"
@@ -1475,14 +1506,14 @@
                       "order": "ascending"
                     },
                     "title": "reasons",
-                    "selection": "selector018"
+                    "selection": "selector004"
                   },
                   "value": "lightgrey"
                 },
                 "opacity": {
                   "condition": {
                     "value": 1,
-                    "selection": "selector015"
+                    "selection": "selector001"
                   },
                   "value": 0.8
                 },
@@ -1528,7 +1559,7 @@
                 }
               },
               "selection": {
-                "selector015": {
+                "selector001": {
                   "type": "single",
                   "empty": "none",
                   "on": "mouseover",
@@ -1537,7 +1568,7 @@
                   ],
                   "clear": "click"
                 },
-                "selector018": {
+                "selector004": {
                   "type": "single",
                   "fields": [
                     "label"
@@ -1563,7 +1594,12 @@
                   }
                 }
               },
-              "title": "subjective reasons",
+              "title": {
+                "text": [
+                  "subjective reasons",
+                  ""
+                ]
+              },
               "transform": [
                 {
                   "filter": "((datum.type === 'reasons') && (datum.reason_type === 0))"
@@ -1641,14 +1677,14 @@
                       "order": "ascending"
                     },
                     "title": "reasons",
-                    "selection": "selector018"
+                    "selection": "selector004"
                   },
                   "value": "lightgrey"
                 },
                 "opacity": {
                   "condition": {
                     "value": 1,
-                    "selection": "selector016"
+                    "selection": "selector002"
                   },
                   "value": 0.8
                 },
@@ -1694,7 +1730,7 @@
                 }
               },
               "selection": {
-                "selector016": {
+                "selector002": {
                   "type": "single",
                   "empty": "none",
                   "on": "mouseover",
@@ -1703,7 +1739,7 @@
                   ],
                   "clear": "click"
                 },
-                "selector018": {
+                "selector004": {
                   "type": "single",
                   "fields": [
                     "label"
@@ -1806,14 +1842,14 @@
                       "order": "ascending"
                     },
                     "title": "reasons",
-                    "selection": "selector018"
+                    "selection": "selector004"
                   },
                   "value": "lightgrey"
                 },
                 "opacity": {
                   "condition": {
                     "value": 1,
-                    "selection": "selector017"
+                    "selection": "selector003"
                   },
                   "value": 0.8
                 },
@@ -1858,7 +1894,7 @@
                 }
               },
               "selection": {
-                "selector017": {
+                "selector003": {
                   "type": "single",
                   "empty": "none",
                   "on": "mouseover",
@@ -1867,7 +1903,7 @@
                   ],
                   "clear": "click"
                 },
-                "selector018": {
+                "selector004": {
                   "type": "single",
                   "fields": [
                     "label"
