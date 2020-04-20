@@ -79,7 +79,7 @@
                   ],
                   "clear": "click"
                 },
-                "selector032": {
+                "selector041": {
                   "type": "interval",
                   "bind": "scales",
                   "encodings": [
@@ -156,6 +156,7 @@
                 ],
                 "x": {
                   "type": "quantitative",
+                  "axis": null,
                   "field": "value",
                   "scale": {
                     "domain": [
@@ -172,7 +173,8 @@
                     "50-74k",
                     "75-99k",
                     "100k or more"
-                  ]
+                  ],
+                  "title": null
                 },
                 "y": {
                   "type": "nominal",
@@ -234,6 +236,7 @@
                 ],
                 "x": {
                   "type": "quantitative",
+                  "axis": null,
                   "field": "value",
                   "scale": {
                     "domain": [
@@ -250,7 +253,8 @@
                     "50-74k",
                     "75-99k",
                     "100k or more"
-                  ]
+                  ],
+                  "title": null
                 },
                 "y": {
                   "type": "nominal",
@@ -416,7 +420,7 @@
                   ],
                   "clear": "click"
                 },
-                "selector038": {
+                "selector042": {
                   "type": "interval",
                   "bind": "scales",
                   "encodings": [
@@ -720,7 +724,7 @@
                   ],
                   "clear": "click"
                 },
-                "selector037": {
+                "selector043": {
                   "type": "interval",
                   "bind": "scales",
                   "encodings": [
