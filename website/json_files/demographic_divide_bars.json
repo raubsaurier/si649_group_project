@@ -29,7 +29,7 @@
                 "opacity": {
                   "condition": {
                     "value": 1,
-                    "selection": "selector029"
+                    "selection": "selector001"
                   },
                   "value": 0
                 },
@@ -37,7 +37,7 @@
                   {
                     "type": "quantitative",
                     "field": "value",
-                    "title": "percent"
+                    "title": "% people w/ Internet at home"
                   }
                 ],
                 "x": {
@@ -57,18 +57,20 @@
                   "axis": null,
                   "field": "income",
                   "sort": [
-                    "Asian",
-                    "Pacific Islander",
-                    "White",
-                    "Hispanic",
-                    "Black",
-                    "AI/AN"
+                    "Less than 10k",
+                    "10-19k",
+                    "20-29k",
+                    "30-39k",
+                    "40-49k",
+                    "50-74k",
+                    "75-99k",
+                    "100k or more"
                   ],
                   "title": null
                 }
               },
               "selection": {
-                "selector030": {
+                "selector002": {
                   "type": "single",
                   "empty": "none",
                   "on": "mouseover",
@@ -77,7 +79,7 @@
                   ],
                   "clear": "click"
                 },
-                "selector042": {
+                "selector009": {
                   "type": "interval",
                   "bind": "scales",
                   "encodings": [
@@ -103,7 +105,7 @@
                     "year": "2010"
                   }
                 },
-                "selector029": {
+                "selector001": {
                   "type": "single",
                   "empty": "none",
                   "on": "mouseover",
@@ -136,12 +138,12 @@
               "mark": "bar",
               "encoding": {
                 "color": {
-                  "value": "#136"
+                  "value": "#578"
                 },
                 "opacity": {
                   "condition": {
                     "value": 1,
-                    "selection": "selector029"
+                    "selection": "selector001"
                   },
                   "value": 0.8
                 },
@@ -149,7 +151,7 @@
                   {
                     "type": "quantitative",
                     "field": "value",
-                    "title": "percent"
+                    "title": "% people w/ Internet at home"
                   }
                 ],
                 "x": {
@@ -162,7 +164,16 @@
                       100
                     ]
                   },
-                  "sort": "descending",
+                  "sort": [
+                    "Less than 10k",
+                    "10-19k",
+                    "20-29k",
+                    "30-39k",
+                    "40-49k",
+                    "50-74k",
+                    "75-99k",
+                    "100k or more"
+                  ],
                   "title": null
                 },
                 "y": {
@@ -182,7 +193,7 @@
                   "title": null
                 }
               },
-              "title": "% having access to Internet at home",
+              "title": "% people w/ Internet at home and gaps",
               "transform": [
                 {
                   "filter": "(datum.type === 'access')"
@@ -197,12 +208,12 @@
               },
               "encoding": {
                 "color": {
-                  "value": "#136"
+                  "value": "#578"
                 },
                 "opacity": {
                   "condition": {
                     "value": 1,
-                    "selection": "selector029"
+                    "selection": "selector001"
                   },
                   "value": 0
                 },
@@ -215,7 +226,7 @@
                   {
                     "type": "quantitative",
                     "field": "value",
-                    "title": "percent"
+                    "title": "% people w/ Internet at home"
                   }
                 ],
                 "x": {
@@ -228,7 +239,16 @@
                       100
                     ]
                   },
-                  "sort": "descending",
+                  "sort": [
+                    "Less than 10k",
+                    "10-19k",
+                    "20-29k",
+                    "30-39k",
+                    "40-49k",
+                    "50-74k",
+                    "75-99k",
+                    "100k or more"
+                  ],
                   "title": null
                 },
                 "y": {
@@ -248,7 +268,7 @@
                   "title": null
                 }
               },
-              "title": "% having access to Internet at home",
+              "title": "% people w/ Internet at home and gaps",
               "transform": [
                 {
                   "filter": "(datum.type === 'access')"
@@ -268,6 +288,10 @@
                 {
                   "calculate": "((datum.max_value - datum.value) / 100)",
                   "as": "diff"
+                },
+                {
+                  "calculate": "('gap = ' + datum.diff)",
+                  "as": "text"
                 }
               ],
               "width": 250
@@ -307,7 +331,7 @@
             }
           ],
           "data": {
-            "name": "data-02740ed6174d9b6e35827a5909b69ad4"
+            "name": "data-4808f5eb1e8ff5786c4c74fc1a3eeae7"
           },
           "resolve": {
             "scale": {
@@ -333,7 +357,7 @@
                 "opacity": {
                   "condition": {
                     "value": 1,
-                    "selection": "selector030"
+                    "selection": "selector002"
                   },
                   "value": 0
                 },
@@ -341,7 +365,7 @@
                   {
                     "type": "quantitative",
                     "field": "value",
-                    "title": "percent"
+                    "title": "% people w/ Internet at home"
                   }
                 ],
                 "x": {
@@ -361,18 +385,23 @@
                   "axis": null,
                   "field": "age",
                   "sort": [
-                    "Asian",
-                    "Pacific Islander",
-                    "White",
-                    "Hispanic",
-                    "Black",
-                    "AI/AN"
+                    "3 and 4",
+                    "5 to 10",
+                    "11 to 14",
+                    "15 to 18",
+                    "19 to 24",
+                    "25 to 29",
+                    "30 to 39",
+                    "40 to 49",
+                    "50 to 59",
+                    "60 to 69",
+                    "70 or older"
                   ],
                   "title": null
                 }
               },
               "selection": {
-                "selector030": {
+                "selector002": {
                   "type": "single",
                   "empty": "none",
                   "on": "mouseover",
@@ -381,7 +410,7 @@
                   ],
                   "clear": "click"
                 },
-                "selector046": {
+                "selector006": {
                   "type": "interval",
                   "bind": "scales",
                   "encodings": [
@@ -431,12 +460,12 @@
               "mark": "bar",
               "encoding": {
                 "color": {
-                  "value": "#136"
+                  "value": "#578"
                 },
                 "opacity": {
                   "condition": {
                     "value": 1,
-                    "selection": "selector030"
+                    "selection": "selector002"
                   },
                   "value": 0.8
                 },
@@ -444,7 +473,7 @@
                   {
                     "type": "quantitative",
                     "field": "value",
-                    "title": "percent"
+                    "title": "% people w/ Internet at home"
                   }
                 ],
                 "x": {
@@ -494,12 +523,12 @@
               },
               "encoding": {
                 "color": {
-                  "value": "#136"
+                  "value": "#578"
                 },
                 "opacity": {
                   "condition": {
                     "value": 1,
-                    "selection": "selector030"
+                    "selection": "selector002"
                   },
                   "value": 0
                 },
@@ -512,7 +541,7 @@
                   {
                     "type": "quantitative",
                     "field": "value",
-                    "title": "percent"
+                    "title": "% people w/ Internet at home"
                   }
                 ],
                 "x": {
@@ -601,7 +630,7 @@
             }
           ],
           "data": {
-            "name": "data-83dfb59df745e34034d1aadd0b5072aa"
+            "name": "data-de5556057df76438d5c359fd825cf5ae"
           },
           "resolve": {
             "scale": {
@@ -627,7 +656,7 @@
                 "opacity": {
                   "condition": {
                     "value": 1,
-                    "selection": "selector031"
+                    "selection": "selector003"
                   },
                   "value": 0
                 },
@@ -635,7 +664,7 @@
                   {
                     "type": "quantitative",
                     "field": "value",
-                    "title": "percent"
+                    "title": "% people w/ Internet at home"
                   }
                 ],
                 "x": {
@@ -644,7 +673,7 @@
                   "scale": {
                     "domain": [
                       0,
-                      100
+                      120
                     ]
                   },
                   "sort": "descending",
@@ -666,7 +695,7 @@
                 }
               },
               "selection": {
-                "selector031": {
+                "selector003": {
                   "type": "single",
                   "empty": "none",
                   "on": "mouseover",
@@ -675,7 +704,7 @@
                   ],
                   "clear": "click"
                 },
-                "selector045": {
+                "selector008": {
                   "type": "interval",
                   "bind": "scales",
                   "encodings": [
@@ -725,12 +754,12 @@
               "mark": "bar",
               "encoding": {
                 "color": {
-                  "value": "#136"
+                  "value": "#578"
                 },
                 "opacity": {
                   "condition": {
                     "value": 1,
-                    "selection": "selector031"
+                    "selection": "selector003"
                   },
                   "value": 0.8
                 },
@@ -738,7 +767,7 @@
                   {
                     "type": "quantitative",
                     "field": "value",
-                    "title": "percent"
+                    "title": "% people w/ Internet at home"
                   }
                 ],
                 "x": {
@@ -782,12 +811,12 @@
               },
               "encoding": {
                 "color": {
-                  "value": "#136"
+                  "value": "#578"
                 },
                 "opacity": {
                   "condition": {
                     "value": 1,
-                    "selection": "selector031"
+                    "selection": "selector003"
                   },
                   "value": 0
                 },
@@ -800,7 +829,7 @@
                   {
                     "type": "quantitative",
                     "field": "value",
-                    "title": "percent"
+                    "title": "% people w/ Internet at home"
                   }
                 ],
                 "x": {
@@ -867,7 +896,7 @@
                   "scale": {
                     "domain": [
                       0,
-                      100
+                      120
                     ]
                   },
                   "sort": "descending",
@@ -883,7 +912,7 @@
             }
           ],
           "data": {
-            "name": "data-adc1695a4fd835a174c4af72724816ba"
+            "name": "data-05b31332e377ab0c10723a8445308b3a"
           },
           "resolve": {
             "scale": {
@@ -924,8 +953,7 @@
                         "Privacy or security concerns",
                         "Too expensive",
                         "No computer or computer inadequate",
-                        "Not available in area",
-                        "Other reasons"
+                        "Not available in area"
                       ],
                       "range": [
                         "#fb9",
@@ -933,8 +961,7 @@
                         "#eec",
                         "#824",
                         "#d35",
-                        "#f66",
-                        "#eee"
+                        "#f66"
                       ]
                     },
                     "sort": {
@@ -942,14 +969,14 @@
                       "order": "ascending"
                     },
                     "title": "reasons",
-                    "selection": "selector032"
+                    "selection": "selector004"
                   },
                   "value": "lightgrey"
                 },
                 "opacity": {
                   "condition": {
                     "value": 1,
-                    "selection": "selector029"
+                    "selection": "selector001"
                   },
                   "value": 0.8
                 },
@@ -967,7 +994,7 @@
                   {
                     "type": "quantitative",
                     "field": "value",
-                    "title": "percent"
+                    "title": "% people choosing this reason"
                   }
                 ],
                 "x": {
@@ -993,7 +1020,7 @@
                 }
               },
               "selection": {
-                "selector029": {
+                "selector001": {
                   "type": "single",
                   "empty": "none",
                   "on": "mouseover",
@@ -1002,7 +1029,7 @@
                   ],
                   "clear": "click"
                 },
-                "selector032": {
+                "selector004": {
                   "type": "single",
                   "fields": [
                     "label"
@@ -1063,7 +1090,7 @@
             }
           ],
           "data": {
-            "name": "data-02740ed6174d9b6e35827a5909b69ad4"
+            "name": "data-4808f5eb1e8ff5786c4c74fc1a3eeae7"
           },
           "transform": [
             {
@@ -1090,8 +1117,7 @@
                         "Privacy or security concerns",
                         "Too expensive",
                         "No computer or computer inadequate",
-                        "Not available in area",
-                        "Other reasons"
+                        "Not available in area"
                       ],
                       "range": [
                         "#fb9",
@@ -1099,8 +1125,7 @@
                         "#eec",
                         "#824",
                         "#d35",
-                        "#f66",
-                        "#eee"
+                        "#f66"
                       ]
                     },
                     "sort": {
@@ -1108,14 +1133,14 @@
                       "order": "ascending"
                     },
                     "title": "reasons",
-                    "selection": "selector032"
+                    "selection": "selector004"
                   },
                   "value": "lightgrey"
                 },
                 "opacity": {
                   "condition": {
                     "value": 1,
-                    "selection": "selector030"
+                    "selection": "selector002"
                   },
                   "value": 0.8
                 },
@@ -1133,7 +1158,7 @@
                   {
                     "type": "quantitative",
                     "field": "value",
-                    "title": "percent"
+                    "title": "% people choosing this reason"
                   }
                 ],
                 "x": {
@@ -1151,15 +1176,24 @@
                 "y": {
                   "type": "nominal",
                   "field": "age",
-                  "sort": {
-                    "field": "order",
-                    "order": "ascending"
-                  },
+                  "sort": [
+                    "3 and 4",
+                    "5 to 10",
+                    "11 to 14",
+                    "15 to 18",
+                    "19 to 24",
+                    "25 to 29",
+                    "30 to 39",
+                    "40 to 49",
+                    "50 to 59",
+                    "60 to 69",
+                    "70 or older"
+                  ],
                   "title": null
                 }
               },
               "selection": {
-                "selector030": {
+                "selector002": {
                   "type": "single",
                   "empty": "none",
                   "on": "mouseover",
@@ -1168,7 +1202,7 @@
                   ],
                   "clear": "click"
                 },
-                "selector032": {
+                "selector004": {
                   "type": "single",
                   "fields": [
                     "label"
@@ -1228,7 +1262,7 @@
             }
           ],
           "data": {
-            "name": "data-83dfb59df745e34034d1aadd0b5072aa"
+            "name": "data-de5556057df76438d5c359fd825cf5ae"
           },
           "transform": [
             {
@@ -1255,8 +1289,7 @@
                         "Privacy or security concerns",
                         "Too expensive",
                         "No computer or computer inadequate",
-                        "Not available in area",
-                        "Other reasons"
+                        "Not available in area"
                       ],
                       "range": [
                         "#fb9",
@@ -1264,8 +1297,7 @@
                         "#eec",
                         "#824",
                         "#d35",
-                        "#f66",
-                        "#eee"
+                        "#f66"
                       ]
                     },
                     "sort": {
@@ -1273,14 +1305,14 @@
                       "order": "ascending"
                     },
                     "title": "reasons",
-                    "selection": "selector032"
+                    "selection": "selector004"
                   },
                   "value": "lightgrey"
                 },
                 "opacity": {
                   "condition": {
                     "value": 1,
-                    "selection": "selector031"
+                    "selection": "selector003"
                   },
                   "value": 0.8
                 },
@@ -1298,7 +1330,7 @@
                   {
                     "type": "quantitative",
                     "field": "value",
-                    "title": "percent"
+                    "title": "% people choosing this reason"
                   }
                 ],
                 "x": {
@@ -1323,7 +1355,7 @@
                 }
               },
               "selection": {
-                "selector031": {
+                "selector003": {
                   "type": "single",
                   "empty": "none",
                   "on": "mouseover",
@@ -1332,7 +1364,7 @@
                   ],
                   "clear": "click"
                 },
-                "selector032": {
+                "selector004": {
                   "type": "single",
                   "fields": [
                     "label"
@@ -1392,7 +1424,7 @@
             }
           ],
           "data": {
-            "name": "data-adc1695a4fd835a174c4af72724816ba"
+            "name": "data-05b31332e377ab0c10723a8445308b3a"
           },
           "transform": [
             {
@@ -1427,8 +1459,7 @@
                         "Privacy or security concerns",
                         "Too expensive",
                         "No computer or computer inadequate",
-                        "Not available in area",
-                        "Other reasons"
+                        "Not available in area"
                       ],
                       "range": [
                         "#fb9",
@@ -1436,8 +1467,7 @@
                         "#eec",
                         "#824",
                         "#d35",
-                        "#f66",
-                        "#eee"
+                        "#f66"
                       ]
                     },
                     "sort": {
@@ -1445,14 +1475,14 @@
                       "order": "ascending"
                     },
                     "title": "reasons",
-                    "selection": "selector032"
+                    "selection": "selector004"
                   },
                   "value": "lightgrey"
                 },
                 "opacity": {
                   "condition": {
                     "value": 1,
-                    "selection": "selector029"
+                    "selection": "selector001"
                   },
                   "value": 0.8
                 },
@@ -1464,11 +1494,13 @@
                 "tooltip": [
                   {
                     "type": "nominal",
-                    "field": "label"
+                    "field": "label",
+                    "title": "reason"
                   },
                   {
                     "type": "quantitative",
-                    "field": "value"
+                    "field": "value",
+                    "title": "% people choosing this reason"
                   }
                 ],
                 "x": {
@@ -1496,7 +1528,7 @@
                 }
               },
               "selection": {
-                "selector029": {
+                "selector001": {
                   "type": "single",
                   "empty": "none",
                   "on": "mouseover",
@@ -1505,7 +1537,7 @@
                   ],
                   "clear": "click"
                 },
-                "selector032": {
+                "selector004": {
                   "type": "single",
                   "fields": [
                     "label"
@@ -1542,7 +1574,7 @@
             {
               "mark": {
                 "type": "rule",
-                "color": "coral"
+                "color": "gold"
               },
               "encoding": {
                 "x": {
@@ -1567,7 +1599,7 @@
             }
           ],
           "data": {
-            "name": "data-02740ed6174d9b6e35827a5909b69ad4"
+            "name": "data-4808f5eb1e8ff5786c4c74fc1a3eeae7"
           },
           "transform": [
             {
@@ -1593,8 +1625,7 @@
                         "Privacy or security concerns",
                         "Too expensive",
                         "No computer or computer inadequate",
-                        "Not available in area",
-                        "Other reasons"
+                        "Not available in area"
                       ],
                       "range": [
                         "#fb9",
@@ -1602,8 +1633,7 @@
                         "#eec",
                         "#824",
                         "#d35",
-                        "#f66",
-                        "#eee"
+                        "#f66"
                       ]
                     },
                     "sort": {
@@ -1611,14 +1641,14 @@
                       "order": "ascending"
                     },
                     "title": "reasons",
-                    "selection": "selector032"
+                    "selection": "selector004"
                   },
                   "value": "lightgrey"
                 },
                 "opacity": {
                   "condition": {
                     "value": 1,
-                    "selection": "selector030"
+                    "selection": "selector002"
                   },
                   "value": 0.8
                 },
@@ -1636,7 +1666,7 @@
                   {
                     "type": "quantitative",
                     "field": "value",
-                    "title": "percent"
+                    "title": "% people choosing this reason"
                   }
                 ],
                 "x": {
@@ -1664,7 +1694,7 @@
                 }
               },
               "selection": {
-                "selector030": {
+                "selector002": {
                   "type": "single",
                   "empty": "none",
                   "on": "mouseover",
@@ -1673,7 +1703,7 @@
                   ],
                   "clear": "click"
                 },
-                "selector032": {
+                "selector004": {
                   "type": "single",
                   "fields": [
                     "label"
@@ -1709,7 +1739,7 @@
             {
               "mark": {
                 "type": "rule",
-                "color": "coral"
+                "color": "gold"
               },
               "encoding": {
                 "x": {
@@ -1734,7 +1764,7 @@
             }
           ],
           "data": {
-            "name": "data-83dfb59df745e34034d1aadd0b5072aa"
+            "name": "data-de5556057df76438d5c359fd825cf5ae"
           },
           "transform": [
             {
@@ -1760,8 +1790,7 @@
                         "Privacy or security concerns",
                         "Too expensive",
                         "No computer or computer inadequate",
-                        "Not available in area",
-                        "Other reasons"
+                        "Not available in area"
                       ],
                       "range": [
                         "#fb9",
@@ -1769,8 +1798,7 @@
                         "#eec",
                         "#824",
                         "#d35",
-                        "#f66",
-                        "#eee"
+                        "#f66"
                       ]
                     },
                     "sort": {
@@ -1778,14 +1806,14 @@
                       "order": "ascending"
                     },
                     "title": "reasons",
-                    "selection": "selector032"
+                    "selection": "selector004"
                   },
                   "value": "lightgrey"
                 },
                 "opacity": {
                   "condition": {
                     "value": 1,
-                    "selection": "selector031"
+                    "selection": "selector003"
                   },
                   "value": 0.8
                 },
@@ -1803,7 +1831,7 @@
                   {
                     "type": "quantitative",
                     "field": "value",
-                    "title": "percent"
+                    "title": "% people choosing this reason"
                   }
                 ],
                 "x": {
@@ -1830,7 +1858,7 @@
                 }
               },
               "selection": {
-                "selector031": {
+                "selector003": {
                   "type": "single",
                   "empty": "none",
                   "on": "mouseover",
@@ -1839,7 +1867,7 @@
                   ],
                   "clear": "click"
                 },
-                "selector032": {
+                "selector004": {
                   "type": "single",
                   "fields": [
                     "label"
@@ -1875,7 +1903,7 @@
             {
               "mark": {
                 "type": "rule",
-                "color": "coral"
+                "color": "gold"
               },
               "encoding": {
                 "x": {
@@ -1900,7 +1928,7 @@
             }
           ],
           "data": {
-            "name": "data-adc1695a4fd835a174c4af72724816ba"
+            "name": "data-05b31332e377ab0c10723a8445308b3a"
           },
           "transform": [
             {
@@ -1926,11 +1954,11 @@
   },
   "$schema": "https://vega.github.io/schema/vega-lite/v4.0.2.json",
   "datasets": {
-    "data-02740ed6174d9b6e35827a5909b69ad4": [
+    "data-4808f5eb1e8ff5786c4c74fc1a3eeae7": [
       {
         "income": "Less than 10k",
         "variable": "2010_no_access",
-        "value": 44.098487,
+        "value": 44.1,
         "year": "2010",
         "label": "with access at home",
         "type": "access",
@@ -1941,7 +1969,7 @@
       {
         "income": "10-19k",
         "variable": "2010_no_access",
-        "value": 50.338777,
+        "value": 50.34,
         "year": "2010",
         "label": "with access at home",
         "type": "access",
@@ -1952,7 +1980,7 @@
       {
         "income": "20-29k",
         "variable": "2010_no_access",
-        "value": 60.275089,
+        "value": 60.28,
         "year": "2010",
         "label": "with access at home",
         "type": "access",
@@ -1963,7 +1991,7 @@
       {
         "income": "30-39k",
         "variable": "2010_no_access",
-        "value": 71.072366,
+        "value": 71.07,
         "year": "2010",
         "label": "with access at home",
         "type": "access",
@@ -1974,7 +2002,7 @@
       {
         "income": "40-49k",
         "variable": "2010_no_access",
-        "value": 81.235631,
+        "value": 81.24,
         "year": "2010",
         "label": "with access at home",
         "type": "access",
@@ -1985,7 +2013,7 @@
       {
         "income": "50-74k",
         "variable": "2010_no_access",
-        "value": 85.548813,
+        "value": 85.55,
         "year": "2010",
         "label": "with access at home",
         "type": "access",
@@ -1996,7 +2024,7 @@
       {
         "income": "75-99k",
         "variable": "2010_no_access",
-        "value": 91.26814,
+        "value": 91.27,
         "year": "2010",
         "label": "with access at home",
         "type": "access",
@@ -2007,7 +2035,7 @@
       {
         "income": "100k or more",
         "variable": "2010_no_access",
-        "value": 95.238828,
+        "value": 95.24,
         "year": "2010",
         "label": "with access at home",
         "type": "access",
@@ -2018,7 +2046,7 @@
       {
         "income": "Less than 10k",
         "variable": "2015_no_access",
-        "value": 53.807404999999996,
+        "value": 53.81,
         "year": "2015",
         "label": "with access at home",
         "type": "access",
@@ -2029,7 +2057,7 @@
       {
         "income": "10-19k",
         "variable": "2015_no_access",
-        "value": 54.717488,
+        "value": 54.72,
         "year": "2015",
         "label": "with access at home",
         "type": "access",
@@ -2040,7 +2068,7 @@
       {
         "income": "20-29k",
         "variable": "2015_no_access",
-        "value": 64.05284,
+        "value": 64.05,
         "year": "2015",
         "label": "with access at home",
         "type": "access",
@@ -2051,7 +2079,7 @@
       {
         "income": "30-39k",
         "variable": "2015_no_access",
-        "value": 70.750995,
+        "value": 70.75,
         "year": "2015",
         "label": "with access at home",
         "type": "access",
@@ -2062,7 +2090,7 @@
       {
         "income": "40-49k",
         "variable": "2015_no_access",
-        "value": 77.806714,
+        "value": 77.81,
         "year": "2015",
         "label": "with access at home",
         "type": "access",
@@ -2073,7 +2101,7 @@
       {
         "income": "50-74k",
         "variable": "2015_no_access",
-        "value": 84.260359,
+        "value": 84.26,
         "year": "2015",
         "label": "with access at home",
         "type": "access",
@@ -2084,7 +2112,7 @@
       {
         "income": "75-99k",
         "variable": "2015_no_access",
-        "value": 87.627148,
+        "value": 87.63,
         "year": "2015",
         "label": "with access at home",
         "type": "access",
@@ -2095,7 +2123,7 @@
       {
         "income": "100k or more",
         "variable": "2015_no_access",
-        "value": 89.969093,
+        "value": 89.97,
         "year": "2015",
         "label": "with access at home",
         "type": "access",
@@ -2106,7 +2134,7 @@
       {
         "income": "Less than 10k",
         "variable": "2017_no_access",
-        "value": 62.927341,
+        "value": 62.93,
         "year": "2017",
         "label": "with access at home",
         "type": "access",
@@ -2117,7 +2145,7 @@
       {
         "income": "10-19k",
         "variable": "2017_no_access",
-        "value": 61.28374,
+        "value": 61.28,
         "year": "2017",
         "label": "with access at home",
         "type": "access",
@@ -2128,7 +2156,7 @@
       {
         "income": "20-29k",
         "variable": "2017_no_access",
-        "value": 71.724788,
+        "value": 71.72,
         "year": "2017",
         "label": "with access at home",
         "type": "access",
@@ -2139,7 +2167,7 @@
       {
         "income": "30-39k",
         "variable": "2017_no_access",
-        "value": 75.067035,
+        "value": 75.07,
         "year": "2017",
         "label": "with access at home",
         "type": "access",
@@ -2150,7 +2178,7 @@
       {
         "income": "40-49k",
         "variable": "2017_no_access",
-        "value": 83.877201,
+        "value": 83.88,
         "year": "2017",
         "label": "with access at home",
         "type": "access",
@@ -2161,7 +2189,7 @@
       {
         "income": "50-74k",
         "variable": "2017_no_access",
-        "value": 86.104511,
+        "value": 86.1,
         "year": "2017",
         "label": "with access at home",
         "type": "access",
@@ -2172,7 +2200,7 @@
       {
         "income": "75-99k",
         "variable": "2017_no_access",
-        "value": 89.81493,
+        "value": 89.81,
         "year": "2017",
         "label": "with access at home",
         "type": "access",
@@ -2183,7 +2211,7 @@
       {
         "income": "100k or more",
         "variable": "2017_no_access",
-        "value": 90.467544,
+        "value": 90.47,
         "year": "2017",
         "label": "with access at home",
         "type": "access",
@@ -2194,7 +2222,7 @@
       {
         "income": "Less than 10k",
         "variable": "2010_1",
-        "value": 30.862084000000003,
+        "value": 30.86,
         "year": "2010",
         "label": "Don’t need it (not interested)",
         "type": "reasons",
@@ -2205,7 +2233,7 @@
       {
         "income": "10-19k",
         "variable": "2010_1",
-        "value": 41.329476,
+        "value": 41.33,
         "year": "2010",
         "label": "Don’t need it (not interested)",
         "type": "reasons",
@@ -2216,7 +2244,7 @@
       {
         "income": "20-29k",
         "variable": "2010_1",
-        "value": 40.457514,
+        "value": 40.46,
         "year": "2010",
         "label": "Don’t need it (not interested)",
         "type": "reasons",
@@ -2227,7 +2255,7 @@
       {
         "income": "30-39k",
         "variable": "2010_1",
-        "value": 42.66852,
+        "value": 42.67,
         "year": "2010",
         "label": "Don’t need it (not interested)",
         "type": "reasons",
@@ -2238,7 +2266,7 @@
       {
         "income": "40-49k",
         "variable": "2010_1",
-        "value": 41.510531,
+        "value": 41.51,
         "year": "2010",
         "label": "Don’t need it (not interested)",
         "type": "reasons",
@@ -2249,7 +2277,7 @@
       {
         "income": "50-74k",
         "variable": "2010_1",
-        "value": 42.708921000000004,
+        "value": 42.71,
         "year": "2010",
         "label": "Don’t need it (not interested)",
         "type": "reasons",
@@ -2260,7 +2288,7 @@
       {
         "income": "75-99k",
         "variable": "2010_1",
-        "value": 43.704048,
+        "value": 43.7,
         "year": "2010",
         "label": "Don’t need it (not interested)",
         "type": "reasons",
@@ -2271,7 +2299,7 @@
       {
         "income": "100k or more",
         "variable": "2010_1",
-        "value": 44.098169,
+        "value": 44.1,
         "year": "2010",
         "label": "Don’t need it (not interested)",
         "type": "reasons",
@@ -2282,7 +2310,7 @@
       {
         "income": "Less than 10k",
         "variable": "2010_2",
-        "value": 39.890187,
+        "value": 39.89,
         "year": "2010",
         "label": "Too expensive",
         "type": "reasons",
@@ -2293,7 +2321,7 @@
       {
         "income": "10-19k",
         "variable": "2010_2",
-        "value": 31.307251,
+        "value": 31.31,
         "year": "2010",
         "label": "Too expensive",
         "type": "reasons",
@@ -2304,7 +2332,7 @@
       {
         "income": "20-29k",
         "variable": "2010_2",
-        "value": 32.267537,
+        "value": 32.27,
         "year": "2010",
         "label": "Too expensive",
         "type": "reasons",
@@ -2315,7 +2343,7 @@
       {
         "income": "30-39k",
         "variable": "2010_2",
-        "value": 28.798315000000002,
+        "value": 28.8,
         "year": "2010",
         "label": "Too expensive",
         "type": "reasons",
@@ -2326,7 +2354,7 @@
       {
         "income": "40-49k",
         "variable": "2010_2",
-        "value": 26.626469,
+        "value": 26.63,
         "year": "2010",
         "label": "Too expensive",
         "type": "reasons",
@@ -2337,7 +2365,7 @@
       {
         "income": "50-74k",
         "variable": "2010_2",
-        "value": 22.594138,
+        "value": 22.59,
         "year": "2010",
         "label": "Too expensive",
         "type": "reasons",
@@ -2348,7 +2376,7 @@
       {
         "income": "75-99k",
         "variable": "2010_2",
-        "value": 20.812962,
+        "value": 20.81,
         "year": "2010",
         "label": "Too expensive",
         "type": "reasons",
@@ -2359,7 +2387,7 @@
       {
         "income": "100k or more",
         "variable": "2010_2",
-        "value": 20.798393,
+        "value": 20.8,
         "year": "2010",
         "label": "Too expensive",
         "type": "reasons",
@@ -2370,7 +2398,7 @@
       {
         "income": "Less than 10k",
         "variable": "2010_3",
-        "value": 4.158728,
+        "value": 4.16,
         "year": "2010",
         "label": "Can use it somewhere else",
         "type": "reasons",
@@ -2381,7 +2409,7 @@
       {
         "income": "10-19k",
         "variable": "2010_3",
-        "value": 3.52713,
+        "value": 3.53,
         "year": "2010",
         "label": "Can use it somewhere else",
         "type": "reasons",
@@ -2392,7 +2420,7 @@
       {
         "income": "20-29k",
         "variable": "2010_3",
-        "value": 4.064113,
+        "value": 4.06,
         "year": "2010",
         "label": "Can use it somewhere else",
         "type": "reasons",
@@ -2403,7 +2431,7 @@
       {
         "income": "30-39k",
         "variable": "2010_3",
-        "value": 5.944933,
+        "value": 5.94,
         "year": "2010",
         "label": "Can use it somewhere else",
         "type": "reasons",
@@ -2414,7 +2442,7 @@
       {
         "income": "40-49k",
         "variable": "2010_3",
-        "value": 6.368174,
+        "value": 6.37,
         "year": "2010",
         "label": "Can use it somewhere else",
         "type": "reasons",
@@ -2425,7 +2453,7 @@
       {
         "income": "50-74k",
         "variable": "2010_3",
-        "value": 8.819823,
+        "value": 8.82,
         "year": "2010",
         "label": "Can use it somewhere else",
         "type": "reasons",
@@ -2436,7 +2464,7 @@
       {
         "income": "75-99k",
         "variable": "2010_3",
-        "value": 9.562407,
+        "value": 9.56,
         "year": "2010",
         "label": "Can use it somewhere else",
         "type": "reasons",
@@ -2447,7 +2475,7 @@
       {
         "income": "100k or more",
         "variable": "2010_3",
-        "value": 10.511052000000001,
+        "value": 10.51,
         "year": "2010",
         "label": "Can use it somewhere else",
         "type": "reasons",
@@ -2458,7 +2486,7 @@
       {
         "income": "Less than 10k",
         "variable": "2010_4",
-        "value": 0.604355,
+        "value": 0.6,
         "year": "2010",
         "label": "Not available in area",
         "type": "reasons",
@@ -2469,7 +2497,7 @@
       {
         "income": "10-19k",
         "variable": "2010_4",
-        "value": 0.455517,
+        "value": 0.46,
         "year": "2010",
         "label": "Not available in area",
         "type": "reasons",
@@ -2480,7 +2508,7 @@
       {
         "income": "20-29k",
         "variable": "2010_4",
-        "value": 1.0299530000000001,
+        "value": 1.03,
         "year": "2010",
         "label": "Not available in area",
         "type": "reasons",
@@ -2491,7 +2519,7 @@
       {
         "income": "30-39k",
         "variable": "2010_4",
-        "value": 0.949274,
+        "value": 0.95,
         "year": "2010",
         "label": "Not available in area",
         "type": "reasons",
@@ -2502,7 +2530,7 @@
       {
         "income": "40-49k",
         "variable": "2010_4",
-        "value": 1.350076,
+        "value": 1.35,
         "year": "2010",
         "label": "Not available in area",
         "type": "reasons",
@@ -2513,7 +2541,7 @@
       {
         "income": "50-74k",
         "variable": "2010_4",
-        "value": 1.533167,
+        "value": 1.53,
         "year": "2010",
         "label": "Not available in area",
         "type": "reasons",
@@ -2524,7 +2552,7 @@
       {
         "income": "75-99k",
         "variable": "2010_4",
-        "value": 2.9355450000000003,
+        "value": 2.94,
         "year": "2010",
         "label": "Not available in area",
         "type": "reasons",
@@ -2535,7 +2563,7 @@
       {
         "income": "100k or more",
         "variable": "2010_4",
-        "value": 3.484479,
+        "value": 3.48,
         "year": "2010",
         "label": "Not available in area",
         "type": "reasons",
@@ -2546,7 +2574,7 @@
       {
         "income": "Less than 10k",
         "variable": "2010_5",
-        "value": 18.682666,
+        "value": 18.68,
         "year": "2010",
         "label": "No computer or computer inadequate",
         "type": "reasons",
@@ -2557,7 +2585,7 @@
       {
         "income": "10-19k",
         "variable": "2010_5",
-        "value": 17.191437,
+        "value": 17.19,
         "year": "2010",
         "label": "No computer or computer inadequate",
         "type": "reasons",
@@ -2568,7 +2596,7 @@
       {
         "income": "20-29k",
         "variable": "2010_5",
-        "value": 14.897673999999999,
+        "value": 14.9,
         "year": "2010",
         "label": "No computer or computer inadequate",
         "type": "reasons",
@@ -2579,7 +2607,7 @@
       {
         "income": "30-39k",
         "variable": "2010_5",
-        "value": 14.280978,
+        "value": 14.28,
         "year": "2010",
         "label": "No computer or computer inadequate",
         "type": "reasons",
@@ -2590,7 +2618,7 @@
       {
         "income": "40-49k",
         "variable": "2010_5",
-        "value": 15.412085000000001,
+        "value": 15.41,
         "year": "2010",
         "label": "No computer or computer inadequate",
         "type": "reasons",
@@ -2601,7 +2629,7 @@
       {
         "income": "50-74k",
         "variable": "2010_5",
-        "value": 15.013166,
+        "value": 15.01,
         "year": "2010",
         "label": "No computer or computer inadequate",
         "type": "reasons",
@@ -2612,7 +2640,7 @@
       {
         "income": "75-99k",
         "variable": "2010_5",
-        "value": 13.888330999999999,
+        "value": 13.89,
         "year": "2010",
         "label": "No computer or computer inadequate",
         "type": "reasons",
@@ -2623,106 +2651,18 @@
       {
         "income": "100k or more",
         "variable": "2010_5",
-        "value": 9.517083,
+        "value": 9.52,
         "year": "2010",
         "label": "No computer or computer inadequate",
         "type": "reasons",
         "reason_type": 1,
-        "order": 8,
-        "aux": 50
-      },
-      {
-        "income": "Less than 10k",
-        "variable": "2010_7",
-        "value": 5.80198,
-        "year": "2010",
-        "label": "Other reasons",
-        "type": "reasons",
-        "reason_type": 0,
-        "order": 1,
-        "aux": 50
-      },
-      {
-        "income": "10-19k",
-        "variable": "2010_7",
-        "value": 6.189189,
-        "year": "2010",
-        "label": "Other reasons",
-        "type": "reasons",
-        "reason_type": 0,
-        "order": 2,
-        "aux": 50
-      },
-      {
-        "income": "20-29k",
-        "variable": "2010_7",
-        "value": 7.283208,
-        "year": "2010",
-        "label": "Other reasons",
-        "type": "reasons",
-        "reason_type": 0,
-        "order": 3,
-        "aux": 50
-      },
-      {
-        "income": "30-39k",
-        "variable": "2010_7",
-        "value": 7.357981,
-        "year": "2010",
-        "label": "Other reasons",
-        "type": "reasons",
-        "reason_type": 0,
-        "order": 4,
-        "aux": 50
-      },
-      {
-        "income": "40-49k",
-        "variable": "2010_7",
-        "value": 8.732664999999999,
-        "year": "2010",
-        "label": "Other reasons",
-        "type": "reasons",
-        "reason_type": 0,
-        "order": 5,
-        "aux": 50
-      },
-      {
-        "income": "50-74k",
-        "variable": "2010_7",
-        "value": 9.330786,
-        "year": "2010",
-        "label": "Other reasons",
-        "type": "reasons",
-        "reason_type": 0,
-        "order": 6,
-        "aux": 50
-      },
-      {
-        "income": "75-99k",
-        "variable": "2010_7",
-        "value": 9.096706,
-        "year": "2010",
-        "label": "Other reasons",
-        "type": "reasons",
-        "reason_type": 0,
-        "order": 7,
-        "aux": 50
-      },
-      {
-        "income": "100k or more",
-        "variable": "2010_7",
-        "value": 11.590825,
-        "year": "2010",
-        "label": "Other reasons",
-        "type": "reasons",
-        "reason_type": 0,
         "order": 8,
         "aux": 50
       },
       {
         "income": "Less than 10k",
         "variable": "2013_1",
-        "value": 32.303000000000004,
+        "value": 32.3,
         "year": "2013",
         "label": "Don’t need it (not interested)",
         "type": "reasons",
@@ -2733,7 +2673,7 @@
       {
         "income": "10-19k",
         "variable": "2013_1",
-        "value": 41.9542,
+        "value": 41.95,
         "year": "2013",
         "label": "Don’t need it (not interested)",
         "type": "reasons",
@@ -2744,7 +2684,7 @@
       {
         "income": "20-29k",
         "variable": "2013_1",
-        "value": 43.1331,
+        "value": 43.13,
         "year": "2013",
         "label": "Don’t need it (not interested)",
         "type": "reasons",
@@ -2755,7 +2695,7 @@
       {
         "income": "30-39k",
         "variable": "2013_1",
-        "value": 42.8311,
+        "value": 42.83,
         "year": "2013",
         "label": "Don’t need it (not interested)",
         "type": "reasons",
@@ -2766,7 +2706,7 @@
       {
         "income": "40-49k",
         "variable": "2013_1",
-        "value": 44.5498,
+        "value": 44.55,
         "year": "2013",
         "label": "Don’t need it (not interested)",
         "type": "reasons",
@@ -2777,7 +2717,7 @@
       {
         "income": "50-74k",
         "variable": "2013_1",
-        "value": 40.6559,
+        "value": 40.66,
         "year": "2013",
         "label": "Don’t need it (not interested)",
         "type": "reasons",
@@ -2788,7 +2728,7 @@
       {
         "income": "75-99k",
         "variable": "2013_1",
-        "value": 44.3455,
+        "value": 44.35,
         "year": "2013",
         "label": "Don’t need it (not interested)",
         "type": "reasons",
@@ -2799,7 +2739,7 @@
       {
         "income": "100k or more",
         "variable": "2013_1",
-        "value": 46.6715,
+        "value": 46.67,
         "year": "2013",
         "label": "Don’t need it (not interested)",
         "type": "reasons",
@@ -2810,7 +2750,7 @@
       {
         "income": "Less than 10k",
         "variable": "2013_2",
-        "value": 45.1196,
+        "value": 45.12,
         "year": "2013",
         "label": "Too expensive",
         "type": "reasons",
@@ -2821,7 +2761,7 @@
       {
         "income": "10-19k",
         "variable": "2013_2",
-        "value": 34.8852,
+        "value": 34.89,
         "year": "2013",
         "label": "Too expensive",
         "type": "reasons",
@@ -2843,7 +2783,7 @@
       {
         "income": "30-39k",
         "variable": "2013_2",
-        "value": 31.6946,
+        "value": 31.69,
         "year": "2013",
         "label": "Too expensive",
         "type": "reasons",
@@ -2854,7 +2794,7 @@
       {
         "income": "40-49k",
         "variable": "2013_2",
-        "value": 29.3782,
+        "value": 29.38,
         "year": "2013",
         "label": "Too expensive",
         "type": "reasons",
@@ -2865,7 +2805,7 @@
       {
         "income": "50-74k",
         "variable": "2013_2",
-        "value": 28.4161,
+        "value": 28.42,
         "year": "2013",
         "label": "Too expensive",
         "type": "reasons",
@@ -2876,7 +2816,7 @@
       {
         "income": "75-99k",
         "variable": "2013_2",
-        "value": 25.9287,
+        "value": 25.93,
         "year": "2013",
         "label": "Too expensive",
         "type": "reasons",
@@ -2887,7 +2827,7 @@
       {
         "income": "100k or more",
         "variable": "2013_2",
-        "value": 20.0409,
+        "value": 20.04,
         "year": "2013",
         "label": "Too expensive",
         "type": "reasons",
@@ -2898,7 +2838,7 @@
       {
         "income": "Less than 10k",
         "variable": "2013_3",
-        "value": 2.2452,
+        "value": 2.25,
         "year": "2013",
         "label": "Can use it somewhere else",
         "type": "reasons",
@@ -2909,7 +2849,7 @@
       {
         "income": "10-19k",
         "variable": "2013_3",
-        "value": 1.5423,
+        "value": 1.54,
         "year": "2013",
         "label": "Can use it somewhere else",
         "type": "reasons",
@@ -2920,7 +2860,7 @@
       {
         "income": "20-29k",
         "variable": "2013_3",
-        "value": 2.4808,
+        "value": 2.48,
         "year": "2013",
         "label": "Can use it somewhere else",
         "type": "reasons",
@@ -2931,7 +2871,7 @@
       {
         "income": "30-39k",
         "variable": "2013_3",
-        "value": 2.9534,
+        "value": 2.95,
         "year": "2013",
         "label": "Can use it somewhere else",
         "type": "reasons",
@@ -2942,7 +2882,7 @@
       {
         "income": "40-49k",
         "variable": "2013_3",
-        "value": 2.8346,
+        "value": 2.83,
         "year": "2013",
         "label": "Can use it somewhere else",
         "type": "reasons",
@@ -2953,7 +2893,7 @@
       {
         "income": "50-74k",
         "variable": "2013_3",
-        "value": 6.402,
+        "value": 6.4,
         "year": "2013",
         "label": "Can use it somewhere else",
         "type": "reasons",
@@ -2964,7 +2904,7 @@
       {
         "income": "75-99k",
         "variable": "2013_3",
-        "value": 7.3189,
+        "value": 7.32,
         "year": "2013",
         "label": "Can use it somewhere else",
         "type": "reasons",
@@ -2975,7 +2915,7 @@
       {
         "income": "100k or more",
         "variable": "2013_3",
-        "value": 6.4615,
+        "value": 6.46,
         "year": "2013",
         "label": "Can use it somewhere else",
         "type": "reasons",
@@ -2986,7 +2926,7 @@
       {
         "income": "Less than 10k",
         "variable": "2013_4",
-        "value": 1.4889,
+        "value": 1.49,
         "year": "2013",
         "label": "Not available in area",
         "type": "reasons",
@@ -2997,7 +2937,7 @@
       {
         "income": "10-19k",
         "variable": "2013_4",
-        "value": 1.3504,
+        "value": 1.35,
         "year": "2013",
         "label": "Not available in area",
         "type": "reasons",
@@ -3008,7 +2948,7 @@
       {
         "income": "20-29k",
         "variable": "2013_4",
-        "value": 1.4259,
+        "value": 1.43,
         "year": "2013",
         "label": "Not available in area",
         "type": "reasons",
@@ -3019,7 +2959,7 @@
       {
         "income": "30-39k",
         "variable": "2013_4",
-        "value": 1.9486,
+        "value": 1.95,
         "year": "2013",
         "label": "Not available in area",
         "type": "reasons",
@@ -3030,7 +2970,7 @@
       {
         "income": "40-49k",
         "variable": "2013_4",
-        "value": 1.9580000000000002,
+        "value": 1.96,
         "year": "2013",
         "label": "Not available in area",
         "type": "reasons",
@@ -3041,7 +2981,7 @@
       {
         "income": "50-74k",
         "variable": "2013_4",
-        "value": 4.2503,
+        "value": 4.25,
         "year": "2013",
         "label": "Not available in area",
         "type": "reasons",
@@ -3052,7 +2992,7 @@
       {
         "income": "75-99k",
         "variable": "2013_4",
-        "value": 6.9672,
+        "value": 6.97,
         "year": "2013",
         "label": "Not available in area",
         "type": "reasons",
@@ -3063,7 +3003,7 @@
       {
         "income": "100k or more",
         "variable": "2013_4",
-        "value": 5.0654,
+        "value": 5.07,
         "year": "2013",
         "label": "Not available in area",
         "type": "reasons",
@@ -3074,7 +3014,7 @@
       {
         "income": "Less than 10k",
         "variable": "2013_5",
-        "value": 12.0846,
+        "value": 12.08,
         "year": "2013",
         "label": "No computer or computer inadequate",
         "type": "reasons",
@@ -3085,7 +3025,7 @@
       {
         "income": "10-19k",
         "variable": "2013_5",
-        "value": 12.3138,
+        "value": 12.31,
         "year": "2013",
         "label": "No computer or computer inadequate",
         "type": "reasons",
@@ -3096,7 +3036,7 @@
       {
         "income": "20-29k",
         "variable": "2013_5",
-        "value": 12.5266,
+        "value": 12.53,
         "year": "2013",
         "label": "No computer or computer inadequate",
         "type": "reasons",
@@ -3107,7 +3047,7 @@
       {
         "income": "30-39k",
         "variable": "2013_5",
-        "value": 12.2838,
+        "value": 12.28,
         "year": "2013",
         "label": "No computer or computer inadequate",
         "type": "reasons",
@@ -3118,7 +3058,7 @@
       {
         "income": "40-49k",
         "variable": "2013_5",
-        "value": 12.5607,
+        "value": 12.56,
         "year": "2013",
         "label": "No computer or computer inadequate",
         "type": "reasons",
@@ -3129,7 +3069,7 @@
       {
         "income": "50-74k",
         "variable": "2013_5",
-        "value": 11.4668,
+        "value": 11.47,
         "year": "2013",
         "label": "No computer or computer inadequate",
         "type": "reasons",
@@ -3151,7 +3091,7 @@
       {
         "income": "100k or more",
         "variable": "2013_5",
-        "value": 9.9939,
+        "value": 9.99,
         "year": "2013",
         "label": "No computer or computer inadequate",
         "type": "reasons",
@@ -3161,96 +3101,8 @@
       },
       {
         "income": "Less than 10k",
-        "variable": "2013_7",
-        "value": 6.7586,
-        "year": "2013",
-        "label": "Other reasons",
-        "type": "reasons",
-        "reason_type": 0,
-        "order": 1,
-        "aux": 50
-      },
-      {
-        "income": "10-19k",
-        "variable": "2013_7",
-        "value": 7.9541,
-        "year": "2013",
-        "label": "Other reasons",
-        "type": "reasons",
-        "reason_type": 0,
-        "order": 2,
-        "aux": 50
-      },
-      {
-        "income": "20-29k",
-        "variable": "2013_7",
-        "value": 6.6136,
-        "year": "2013",
-        "label": "Other reasons",
-        "type": "reasons",
-        "reason_type": 0,
-        "order": 3,
-        "aux": 50
-      },
-      {
-        "income": "30-39k",
-        "variable": "2013_7",
-        "value": 8.2885,
-        "year": "2013",
-        "label": "Other reasons",
-        "type": "reasons",
-        "reason_type": 0,
-        "order": 4,
-        "aux": 50
-      },
-      {
-        "income": "40-49k",
-        "variable": "2013_7",
-        "value": 8.7186,
-        "year": "2013",
-        "label": "Other reasons",
-        "type": "reasons",
-        "reason_type": 0,
-        "order": 5,
-        "aux": 50
-      },
-      {
-        "income": "50-74k",
-        "variable": "2013_7",
-        "value": 8.8091,
-        "year": "2013",
-        "label": "Other reasons",
-        "type": "reasons",
-        "reason_type": 0,
-        "order": 6,
-        "aux": 50
-      },
-      {
-        "income": "75-99k",
-        "variable": "2013_7",
-        "value": 8.7797,
-        "year": "2013",
-        "label": "Other reasons",
-        "type": "reasons",
-        "reason_type": 0,
-        "order": 7,
-        "aux": 50
-      },
-      {
-        "income": "100k or more",
-        "variable": "2013_7",
-        "value": 11.7668,
-        "year": "2013",
-        "label": "Other reasons",
-        "type": "reasons",
-        "reason_type": 0,
-        "order": 8,
-        "aux": 50
-      },
-      {
-        "income": "Less than 10k",
         "variable": "2015_1",
-        "value": 41.282306,
+        "value": 41.28,
         "year": "2015",
         "label": "Don’t need it (not interested)",
         "type": "reasons",
@@ -3261,7 +3113,7 @@
       {
         "income": "10-19k",
         "variable": "2015_1",
-        "value": 48.304867,
+        "value": 48.3,
         "year": "2015",
         "label": "Don’t need it (not interested)",
         "type": "reasons",
@@ -3272,7 +3124,7 @@
       {
         "income": "20-29k",
         "variable": "2015_1",
-        "value": 48.81847,
+        "value": 48.82,
         "year": "2015",
         "label": "Don’t need it (not interested)",
         "type": "reasons",
@@ -3283,7 +3135,7 @@
       {
         "income": "30-39k",
         "variable": "2015_1",
-        "value": 50.066734999999994,
+        "value": 50.07,
         "year": "2015",
         "label": "Don’t need it (not interested)",
         "type": "reasons",
@@ -3294,7 +3146,7 @@
       {
         "income": "40-49k",
         "variable": "2015_1",
-        "value": 52.745429,
+        "value": 52.75,
         "year": "2015",
         "label": "Don’t need it (not interested)",
         "type": "reasons",
@@ -3305,7 +3157,7 @@
       {
         "income": "50-74k",
         "variable": "2015_1",
-        "value": 60.514928000000005,
+        "value": 60.51,
         "year": "2015",
         "label": "Don’t need it (not interested)",
         "type": "reasons",
@@ -3316,7 +3168,7 @@
       {
         "income": "75-99k",
         "variable": "2015_1",
-        "value": 58.325192,
+        "value": 58.33,
         "year": "2015",
         "label": "Don’t need it (not interested)",
         "type": "reasons",
@@ -3327,7 +3179,7 @@
       {
         "income": "100k or more",
         "variable": "2015_1",
-        "value": 56.986048,
+        "value": 56.99,
         "year": "2015",
         "label": "Don’t need it (not interested)",
         "type": "reasons",
@@ -3338,7 +3190,7 @@
       {
         "income": "Less than 10k",
         "variable": "2015_2",
-        "value": 40.895604,
+        "value": 40.9,
         "year": "2015",
         "label": "Too expensive",
         "type": "reasons",
@@ -3349,7 +3201,7 @@
       {
         "income": "10-19k",
         "variable": "2015_2",
-        "value": 31.863561999999998,
+        "value": 31.86,
         "year": "2015",
         "label": "Too expensive",
         "type": "reasons",
@@ -3360,7 +3212,7 @@
       {
         "income": "20-29k",
         "variable": "2015_2",
-        "value": 29.707318,
+        "value": 29.71,
         "year": "2015",
         "label": "Too expensive",
         "type": "reasons",
@@ -3371,7 +3223,7 @@
       {
         "income": "30-39k",
         "variable": "2015_2",
-        "value": 28.581809000000003,
+        "value": 28.58,
         "year": "2015",
         "label": "Too expensive",
         "type": "reasons",
@@ -3382,7 +3234,7 @@
       {
         "income": "40-49k",
         "variable": "2015_2",
-        "value": 24.180625,
+        "value": 24.18,
         "year": "2015",
         "label": "Too expensive",
         "type": "reasons",
@@ -3393,7 +3245,7 @@
       {
         "income": "50-74k",
         "variable": "2015_2",
-        "value": 16.759539,
+        "value": 16.76,
         "year": "2015",
         "label": "Too expensive",
         "type": "reasons",
@@ -3404,7 +3256,7 @@
       {
         "income": "75-99k",
         "variable": "2015_2",
-        "value": 16.156847,
+        "value": 16.16,
         "year": "2015",
         "label": "Too expensive",
         "type": "reasons",
@@ -3415,7 +3267,7 @@
       {
         "income": "100k or more",
         "variable": "2015_2",
-        "value": 15.709495,
+        "value": 15.71,
         "year": "2015",
         "label": "Too expensive",
         "type": "reasons",
@@ -3426,7 +3278,7 @@
       {
         "income": "Less than 10k",
         "variable": "2015_3",
-        "value": 1.269475,
+        "value": 1.27,
         "year": "2015",
         "label": "Can use it somewhere else",
         "type": "reasons",
@@ -3437,7 +3289,7 @@
       {
         "income": "10-19k",
         "variable": "2015_3",
-        "value": 1.0332379999999999,
+        "value": 1.03,
         "year": "2015",
         "label": "Can use it somewhere else",
         "type": "reasons",
@@ -3448,7 +3300,7 @@
       {
         "income": "20-29k",
         "variable": "2015_3",
-        "value": 1.304302,
+        "value": 1.3,
         "year": "2015",
         "label": "Can use it somewhere else",
         "type": "reasons",
@@ -3459,7 +3311,7 @@
       {
         "income": "30-39k",
         "variable": "2015_3",
-        "value": 1.6904919999999999,
+        "value": 1.69,
         "year": "2015",
         "label": "Can use it somewhere else",
         "type": "reasons",
@@ -3470,7 +3322,7 @@
       {
         "income": "40-49k",
         "variable": "2015_3",
-        "value": 3.248859,
+        "value": 3.25,
         "year": "2015",
         "label": "Can use it somewhere else",
         "type": "reasons",
@@ -3481,7 +3333,7 @@
       {
         "income": "50-74k",
         "variable": "2015_3",
-        "value": 2.983978,
+        "value": 2.98,
         "year": "2015",
         "label": "Can use it somewhere else",
         "type": "reasons",
@@ -3492,7 +3344,7 @@
       {
         "income": "75-99k",
         "variable": "2015_3",
-        "value": 5.176594000000001,
+        "value": 5.18,
         "year": "2015",
         "label": "Can use it somewhere else",
         "type": "reasons",
@@ -3503,7 +3355,7 @@
       {
         "income": "100k or more",
         "variable": "2015_3",
-        "value": 3.687158,
+        "value": 3.69,
         "year": "2015",
         "label": "Can use it somewhere else",
         "type": "reasons",
@@ -3514,7 +3366,7 @@
       {
         "income": "Less than 10k",
         "variable": "2015_4",
-        "value": 1.205087,
+        "value": 1.21,
         "year": "2015",
         "label": "Not available in area",
         "type": "reasons",
@@ -3525,7 +3377,7 @@
       {
         "income": "10-19k",
         "variable": "2015_4",
-        "value": 1.523601,
+        "value": 1.52,
         "year": "2015",
         "label": "Not available in area",
         "type": "reasons",
@@ -3536,7 +3388,7 @@
       {
         "income": "20-29k",
         "variable": "2015_4",
-        "value": 1.247515,
+        "value": 1.25,
         "year": "2015",
         "label": "Not available in area",
         "type": "reasons",
@@ -3547,7 +3399,7 @@
       {
         "income": "30-39k",
         "variable": "2015_4",
-        "value": 2.1188990000000003,
+        "value": 2.12,
         "year": "2015",
         "label": "Not available in area",
         "type": "reasons",
@@ -3558,7 +3410,7 @@
       {
         "income": "40-49k",
         "variable": "2015_4",
-        "value": 4.048188,
+        "value": 4.05,
         "year": "2015",
         "label": "Not available in area",
         "type": "reasons",
@@ -3569,7 +3421,7 @@
       {
         "income": "50-74k",
         "variable": "2015_4",
-        "value": 5.903886,
+        "value": 5.9,
         "year": "2015",
         "label": "Not available in area",
         "type": "reasons",
@@ -3580,7 +3432,7 @@
       {
         "income": "75-99k",
         "variable": "2015_4",
-        "value": 4.617361,
+        "value": 4.62,
         "year": "2015",
         "label": "Not available in area",
         "type": "reasons",
@@ -3591,7 +3443,7 @@
       {
         "income": "100k or more",
         "variable": "2015_4",
-        "value": 6.333241,
+        "value": 6.33,
         "year": "2015",
         "label": "Not available in area",
         "type": "reasons",
@@ -3602,7 +3454,7 @@
       {
         "income": "Less than 10k",
         "variable": "2015_5",
-        "value": 8.402742,
+        "value": 8.4,
         "year": "2015",
         "label": "No computer or computer inadequate",
         "type": "reasons",
@@ -3613,7 +3465,7 @@
       {
         "income": "10-19k",
         "variable": "2015_5",
-        "value": 9.403751,
+        "value": 9.4,
         "year": "2015",
         "label": "No computer or computer inadequate",
         "type": "reasons",
@@ -3624,7 +3476,7 @@
       {
         "income": "20-29k",
         "variable": "2015_5",
-        "value": 8.482689,
+        "value": 8.48,
         "year": "2015",
         "label": "No computer or computer inadequate",
         "type": "reasons",
@@ -3635,7 +3487,7 @@
       {
         "income": "30-39k",
         "variable": "2015_5",
-        "value": 9.249542,
+        "value": 9.25,
         "year": "2015",
         "label": "No computer or computer inadequate",
         "type": "reasons",
@@ -3646,7 +3498,7 @@
       {
         "income": "40-49k",
         "variable": "2015_5",
-        "value": 6.68001,
+        "value": 6.68,
         "year": "2015",
         "label": "No computer or computer inadequate",
         "type": "reasons",
@@ -3657,7 +3509,7 @@
       {
         "income": "50-74k",
         "variable": "2015_5",
-        "value": 5.562901,
+        "value": 5.56,
         "year": "2015",
         "label": "No computer or computer inadequate",
         "type": "reasons",
@@ -3668,7 +3520,7 @@
       {
         "income": "75-99k",
         "variable": "2015_5",
-        "value": 5.106726999999999,
+        "value": 5.11,
         "year": "2015",
         "label": "No computer or computer inadequate",
         "type": "reasons",
@@ -3679,7 +3531,7 @@
       {
         "income": "100k or more",
         "variable": "2015_5",
-        "value": 5.063466,
+        "value": 5.06,
         "year": "2015",
         "label": "No computer or computer inadequate",
         "type": "reasons",
@@ -3690,7 +3542,7 @@
       {
         "income": "Less than 10k",
         "variable": "2015_6",
-        "value": 0.738135,
+        "value": 0.74,
         "year": "2015",
         "label": "Privacy or security concerns",
         "type": "reasons",
@@ -3701,7 +3553,7 @@
       {
         "income": "10-19k",
         "variable": "2015_6",
-        "value": 1.042608,
+        "value": 1.04,
         "year": "2015",
         "label": "Privacy or security concerns",
         "type": "reasons",
@@ -3712,7 +3564,7 @@
       {
         "income": "20-29k",
         "variable": "2015_6",
-        "value": 1.258063,
+        "value": 1.26,
         "year": "2015",
         "label": "Privacy or security concerns",
         "type": "reasons",
@@ -3723,7 +3575,7 @@
       {
         "income": "30-39k",
         "variable": "2015_6",
-        "value": 1.032163,
+        "value": 1.03,
         "year": "2015",
         "label": "Privacy or security concerns",
         "type": "reasons",
@@ -3734,7 +3586,7 @@
       {
         "income": "40-49k",
         "variable": "2015_6",
-        "value": 1.838689,
+        "value": 1.84,
         "year": "2015",
         "label": "Privacy or security concerns",
         "type": "reasons",
@@ -3745,7 +3597,7 @@
       {
         "income": "50-74k",
         "variable": "2015_6",
-        "value": 1.330905,
+        "value": 1.33,
         "year": "2015",
         "label": "Privacy or security concerns",
         "type": "reasons",
@@ -3756,7 +3608,7 @@
       {
         "income": "75-99k",
         "variable": "2015_6",
-        "value": 1.87035,
+        "value": 1.87,
         "year": "2015",
         "label": "Privacy or security concerns",
         "type": "reasons",
@@ -3767,7 +3619,7 @@
       {
         "income": "100k or more",
         "variable": "2015_6",
-        "value": 3.262312,
+        "value": 3.26,
         "year": "2015",
         "label": "Privacy or security concerns",
         "type": "reasons",
@@ -3777,96 +3629,8 @@
       },
       {
         "income": "Less than 10k",
-        "variable": "2015_7",
-        "value": 6.206651,
-        "year": "2015",
-        "label": "Other reasons",
-        "type": "reasons",
-        "reason_type": 0,
-        "order": 1,
-        "aux": 50
-      },
-      {
-        "income": "10-19k",
-        "variable": "2015_7",
-        "value": 6.828373,
-        "year": "2015",
-        "label": "Other reasons",
-        "type": "reasons",
-        "reason_type": 0,
-        "order": 2,
-        "aux": 50
-      },
-      {
-        "income": "20-29k",
-        "variable": "2015_7",
-        "value": 9.181644,
-        "year": "2015",
-        "label": "Other reasons",
-        "type": "reasons",
-        "reason_type": 0,
-        "order": 3,
-        "aux": 50
-      },
-      {
-        "income": "30-39k",
-        "variable": "2015_7",
-        "value": 7.260361,
-        "year": "2015",
-        "label": "Other reasons",
-        "type": "reasons",
-        "reason_type": 0,
-        "order": 4,
-        "aux": 50
-      },
-      {
-        "income": "40-49k",
-        "variable": "2015_7",
-        "value": 7.258199,
-        "year": "2015",
-        "label": "Other reasons",
-        "type": "reasons",
-        "reason_type": 0,
-        "order": 5,
-        "aux": 50
-      },
-      {
-        "income": "50-74k",
-        "variable": "2015_7",
-        "value": 6.943861999999999,
-        "year": "2015",
-        "label": "Other reasons",
-        "type": "reasons",
-        "reason_type": 0,
-        "order": 6,
-        "aux": 50
-      },
-      {
-        "income": "75-99k",
-        "variable": "2015_7",
-        "value": 8.746927000000001,
-        "year": "2015",
-        "label": "Other reasons",
-        "type": "reasons",
-        "reason_type": 0,
-        "order": 7,
-        "aux": 50
-      },
-      {
-        "income": "100k or more",
-        "variable": "2015_7",
-        "value": 8.958279,
-        "year": "2015",
-        "label": "Other reasons",
-        "type": "reasons",
-        "reason_type": 0,
-        "order": 8,
-        "aux": 50
-      },
-      {
-        "income": "Less than 10k",
         "variable": "2017_1",
-        "value": 47.319783,
+        "value": 47.32,
         "year": "2017",
         "label": "Don’t need it (not interested)",
         "type": "reasons",
@@ -3877,7 +3641,7 @@
       {
         "income": "10-19k",
         "variable": "2017_1",
-        "value": 52.970725,
+        "value": 52.97,
         "year": "2017",
         "label": "Don’t need it (not interested)",
         "type": "reasons",
@@ -3888,7 +3652,7 @@
       {
         "income": "20-29k",
         "variable": "2017_1",
-        "value": 54.934676,
+        "value": 54.93,
         "year": "2017",
         "label": "Don’t need it (not interested)",
         "type": "reasons",
@@ -3899,7 +3663,7 @@
       {
         "income": "30-39k",
         "variable": "2017_1",
-        "value": 58.094151000000004,
+        "value": 58.09,
         "year": "2017",
         "label": "Don’t need it (not interested)",
         "type": "reasons",
@@ -3910,7 +3674,7 @@
       {
         "income": "40-49k",
         "variable": "2017_1",
-        "value": 59.172401,
+        "value": 59.17,
         "year": "2017",
         "label": "Don’t need it (not interested)",
         "type": "reasons",
@@ -3921,7 +3685,7 @@
       {
         "income": "50-74k",
         "variable": "2017_1",
-        "value": 60.108092000000006,
+        "value": 60.11,
         "year": "2017",
         "label": "Don’t need it (not interested)",
         "type": "reasons",
@@ -3932,7 +3696,7 @@
       {
         "income": "75-99k",
         "variable": "2017_1",
-        "value": 56.766845999999994,
+        "value": 56.77,
         "year": "2017",
         "label": "Don’t need it (not interested)",
         "type": "reasons",
@@ -3943,7 +3707,7 @@
       {
         "income": "100k or more",
         "variable": "2017_1",
-        "value": 51.105795,
+        "value": 51.11,
         "year": "2017",
         "label": "Don’t need it (not interested)",
         "type": "reasons",
@@ -3954,7 +3718,7 @@
       {
         "income": "Less than 10k",
         "variable": "2017_2",
-        "value": 34.227615,
+        "value": 34.23,
         "year": "2017",
         "label": "Too expensive",
         "type": "reasons",
@@ -3965,7 +3729,7 @@
       {
         "income": "10-19k",
         "variable": "2017_2",
-        "value": 28.529874,
+        "value": 28.53,
         "year": "2017",
         "label": "Too expensive",
         "type": "reasons",
@@ -3976,7 +3740,7 @@
       {
         "income": "20-29k",
         "variable": "2017_2",
-        "value": 27.780963,
+        "value": 27.78,
         "year": "2017",
         "label": "Too expensive",
         "type": "reasons",
@@ -3987,7 +3751,7 @@
       {
         "income": "30-39k",
         "variable": "2017_2",
-        "value": 22.417845,
+        "value": 22.42,
         "year": "2017",
         "label": "Too expensive",
         "type": "reasons",
@@ -3998,7 +3762,7 @@
       {
         "income": "40-49k",
         "variable": "2017_2",
-        "value": 21.558393,
+        "value": 21.56,
         "year": "2017",
         "label": "Too expensive",
         "type": "reasons",
@@ -4009,7 +3773,7 @@
       {
         "income": "50-74k",
         "variable": "2017_2",
-        "value": 18.449859,
+        "value": 18.45,
         "year": "2017",
         "label": "Too expensive",
         "type": "reasons",
@@ -4020,7 +3784,7 @@
       {
         "income": "75-99k",
         "variable": "2017_2",
-        "value": 16.307082,
+        "value": 16.31,
         "year": "2017",
         "label": "Too expensive",
         "type": "reasons",
@@ -4031,7 +3795,7 @@
       {
         "income": "100k or more",
         "variable": "2017_2",
-        "value": 17.521627,
+        "value": 17.52,
         "year": "2017",
         "label": "Too expensive",
         "type": "reasons",
@@ -4042,7 +3806,7 @@
       {
         "income": "Less than 10k",
         "variable": "2017_3",
-        "value": 2.221476,
+        "value": 2.22,
         "year": "2017",
         "label": "Can use it somewhere else",
         "type": "reasons",
@@ -4053,7 +3817,7 @@
       {
         "income": "10-19k",
         "variable": "2017_3",
-        "value": 1.2374040000000002,
+        "value": 1.24,
         "year": "2017",
         "label": "Can use it somewhere else",
         "type": "reasons",
@@ -4064,7 +3828,7 @@
       {
         "income": "20-29k",
         "variable": "2017_3",
-        "value": 1.2203110000000001,
+        "value": 1.22,
         "year": "2017",
         "label": "Can use it somewhere else",
         "type": "reasons",
@@ -4075,7 +3839,7 @@
       {
         "income": "30-39k",
         "variable": "2017_3",
-        "value": 2.112894,
+        "value": 2.11,
         "year": "2017",
         "label": "Can use it somewhere else",
         "type": "reasons",
@@ -4086,7 +3850,7 @@
       {
         "income": "40-49k",
         "variable": "2017_3",
-        "value": 1.6922560000000002,
+        "value": 1.69,
         "year": "2017",
         "label": "Can use it somewhere else",
         "type": "reasons",
@@ -4097,7 +3861,7 @@
       {
         "income": "50-74k",
         "variable": "2017_3",
-        "value": 3.5982550000000004,
+        "value": 3.6,
         "year": "2017",
         "label": "Can use it somewhere else",
         "type": "reasons",
@@ -4108,7 +3872,7 @@
       {
         "income": "75-99k",
         "variable": "2017_3",
-        "value": 3.934945,
+        "value": 3.93,
         "year": "2017",
         "label": "Can use it somewhere else",
         "type": "reasons",
@@ -4119,7 +3883,7 @@
       {
         "income": "100k or more",
         "variable": "2017_3",
-        "value": 4.228662,
+        "value": 4.23,
         "year": "2017",
         "label": "Can use it somewhere else",
         "type": "reasons",
@@ -4130,7 +3894,7 @@
       {
         "income": "Less than 10k",
         "variable": "2017_4",
-        "value": 1.65533,
+        "value": 1.66,
         "year": "2017",
         "label": "Not available in area",
         "type": "reasons",
@@ -4141,7 +3905,7 @@
       {
         "income": "10-19k",
         "variable": "2017_4",
-        "value": 1.759408,
+        "value": 1.76,
         "year": "2017",
         "label": "Not available in area",
         "type": "reasons",
@@ -4152,7 +3916,7 @@
       {
         "income": "20-29k",
         "variable": "2017_4",
-        "value": 1.9175669999999998,
+        "value": 1.92,
         "year": "2017",
         "label": "Not available in area",
         "type": "reasons",
@@ -4163,7 +3927,7 @@
       {
         "income": "30-39k",
         "variable": "2017_4",
-        "value": 1.79152,
+        "value": 1.79,
         "year": "2017",
         "label": "Not available in area",
         "type": "reasons",
@@ -4174,7 +3938,7 @@
       {
         "income": "40-49k",
         "variable": "2017_4",
-        "value": 3.867258,
+        "value": 3.87,
         "year": "2017",
         "label": "Not available in area",
         "type": "reasons",
@@ -4185,7 +3949,7 @@
       {
         "income": "50-74k",
         "variable": "2017_4",
-        "value": 3.435687,
+        "value": 3.44,
         "year": "2017",
         "label": "Not available in area",
         "type": "reasons",
@@ -4196,7 +3960,7 @@
       {
         "income": "75-99k",
         "variable": "2017_4",
-        "value": 5.370255,
+        "value": 5.37,
         "year": "2017",
         "label": "Not available in area",
         "type": "reasons",
@@ -4207,7 +3971,7 @@
       {
         "income": "100k or more",
         "variable": "2017_4",
-        "value": 4.339618,
+        "value": 4.34,
         "year": "2017",
         "label": "Not available in area",
         "type": "reasons",
@@ -4218,7 +3982,7 @@
       {
         "income": "Less than 10k",
         "variable": "2017_5",
-        "value": 3.7521419999999996,
+        "value": 3.75,
         "year": "2017",
         "label": "No computer or computer inadequate",
         "type": "reasons",
@@ -4229,7 +3993,7 @@
       {
         "income": "10-19k",
         "variable": "2017_5",
-        "value": 3.315675,
+        "value": 3.32,
         "year": "2017",
         "label": "No computer or computer inadequate",
         "type": "reasons",
@@ -4240,7 +4004,7 @@
       {
         "income": "20-29k",
         "variable": "2017_5",
-        "value": 4.707232,
+        "value": 4.71,
         "year": "2017",
         "label": "No computer or computer inadequate",
         "type": "reasons",
@@ -4251,7 +4015,7 @@
       {
         "income": "30-39k",
         "variable": "2017_5",
-        "value": 5.475669,
+        "value": 5.48,
         "year": "2017",
         "label": "No computer or computer inadequate",
         "type": "reasons",
@@ -4262,7 +4026,7 @@
       {
         "income": "40-49k",
         "variable": "2017_5",
-        "value": 3.383165,
+        "value": 3.38,
         "year": "2017",
         "label": "No computer or computer inadequate",
         "type": "reasons",
@@ -4273,7 +4037,7 @@
       {
         "income": "50-74k",
         "variable": "2017_5",
-        "value": 3.632886,
+        "value": 3.63,
         "year": "2017",
         "label": "No computer or computer inadequate",
         "type": "reasons",
@@ -4284,7 +4048,7 @@
       {
         "income": "75-99k",
         "variable": "2017_5",
-        "value": 5.474264,
+        "value": 5.47,
         "year": "2017",
         "label": "No computer or computer inadequate",
         "type": "reasons",
@@ -4295,7 +4059,7 @@
       {
         "income": "100k or more",
         "variable": "2017_5",
-        "value": 5.127794000000001,
+        "value": 5.13,
         "year": "2017",
         "label": "No computer or computer inadequate",
         "type": "reasons",
@@ -4306,7 +4070,7 @@
       {
         "income": "Less than 10k",
         "variable": "2017_6",
-        "value": 0.997027,
+        "value": 1,
         "year": "2017",
         "label": "Privacy or security concerns",
         "type": "reasons",
@@ -4317,7 +4081,7 @@
       {
         "income": "10-19k",
         "variable": "2017_6",
-        "value": 1.305426,
+        "value": 1.31,
         "year": "2017",
         "label": "Privacy or security concerns",
         "type": "reasons",
@@ -4328,7 +4092,7 @@
       {
         "income": "20-29k",
         "variable": "2017_6",
-        "value": 1.344324,
+        "value": 1.34,
         "year": "2017",
         "label": "Privacy or security concerns",
         "type": "reasons",
@@ -4339,7 +4103,7 @@
       {
         "income": "30-39k",
         "variable": "2017_6",
-        "value": 0.985614,
+        "value": 0.99,
         "year": "2017",
         "label": "Privacy or security concerns",
         "type": "reasons",
@@ -4350,7 +4114,7 @@
       {
         "income": "40-49k",
         "variable": "2017_6",
-        "value": 2.320273,
+        "value": 2.32,
         "year": "2017",
         "label": "Privacy or security concerns",
         "type": "reasons",
@@ -4361,7 +4125,7 @@
       {
         "income": "50-74k",
         "variable": "2017_6",
-        "value": 2.009183,
+        "value": 2.01,
         "year": "2017",
         "label": "Privacy or security concerns",
         "type": "reasons",
@@ -4372,7 +4136,7 @@
       {
         "income": "75-99k",
         "variable": "2017_6",
-        "value": 1.33378,
+        "value": 1.33,
         "year": "2017",
         "label": "Privacy or security concerns",
         "type": "reasons",
@@ -4383,108 +4147,20 @@
       {
         "income": "100k or more",
         "variable": "2017_6",
-        "value": 3.479052,
+        "value": 3.48,
         "year": "2017",
         "label": "Privacy or security concerns",
-        "type": "reasons",
-        "reason_type": 0,
-        "order": 8,
-        "aux": 50
-      },
-      {
-        "income": "Less than 10k",
-        "variable": "2017_7",
-        "value": 9.826626,
-        "year": "2017",
-        "label": "Other reasons",
-        "type": "reasons",
-        "reason_type": 0,
-        "order": 1,
-        "aux": 50
-      },
-      {
-        "income": "10-19k",
-        "variable": "2017_7",
-        "value": 10.881489,
-        "year": "2017",
-        "label": "Other reasons",
-        "type": "reasons",
-        "reason_type": 0,
-        "order": 2,
-        "aux": 50
-      },
-      {
-        "income": "20-29k",
-        "variable": "2017_7",
-        "value": 8.094928,
-        "year": "2017",
-        "label": "Other reasons",
-        "type": "reasons",
-        "reason_type": 0,
-        "order": 3,
-        "aux": 50
-      },
-      {
-        "income": "30-39k",
-        "variable": "2017_7",
-        "value": 9.122306,
-        "year": "2017",
-        "label": "Other reasons",
-        "type": "reasons",
-        "reason_type": 0,
-        "order": 4,
-        "aux": 50
-      },
-      {
-        "income": "40-49k",
-        "variable": "2017_7",
-        "value": 8.006254,
-        "year": "2017",
-        "label": "Other reasons",
-        "type": "reasons",
-        "reason_type": 0,
-        "order": 5,
-        "aux": 50
-      },
-      {
-        "income": "50-74k",
-        "variable": "2017_7",
-        "value": 8.766039,
-        "year": "2017",
-        "label": "Other reasons",
-        "type": "reasons",
-        "reason_type": 0,
-        "order": 6,
-        "aux": 50
-      },
-      {
-        "income": "75-99k",
-        "variable": "2017_7",
-        "value": 10.812828,
-        "year": "2017",
-        "label": "Other reasons",
-        "type": "reasons",
-        "reason_type": 0,
-        "order": 7,
-        "aux": 50
-      },
-      {
-        "income": "100k or more",
-        "variable": "2017_7",
-        "value": 14.197451000000001,
-        "year": "2017",
-        "label": "Other reasons",
         "type": "reasons",
         "reason_type": 0,
         "order": 8,
         "aux": 50
       }
     ],
-    "data-83dfb59df745e34034d1aadd0b5072aa": [
+    "data-de5556057df76438d5c359fd825cf5ae": [
       {
         "age": "3 and 4",
         "variable": "2010_no_access",
-        "value": 73.704342,
+        "value": 73.7,
         "year": "2010",
         "label": "with access at home",
         "type": "access",
@@ -4495,7 +4171,7 @@
       {
         "age": "5 to 10",
         "variable": "2010_no_access",
-        "value": 77.703952,
+        "value": 77.7,
         "year": "2010",
         "label": "with access at home",
         "type": "access",
@@ -4506,7 +4182,7 @@
       {
         "age": "11 to 14",
         "variable": "2010_no_access",
-        "value": 81.883263,
+        "value": 81.88,
         "year": "2010",
         "label": "with access at home",
         "type": "access",
@@ -4517,7 +4193,7 @@
       {
         "age": "15 to 18",
         "variable": "2010_no_access",
-        "value": 81.79306,
+        "value": 81.79,
         "year": "2010",
         "label": "with access at home",
         "type": "access",
@@ -4528,7 +4204,7 @@
       {
         "age": "19 to 24",
         "variable": "2010_no_access",
-        "value": 78.55364399999999,
+        "value": 78.55,
         "year": "2010",
         "label": "with access at home",
         "type": "access",
@@ -4539,7 +4215,7 @@
       {
         "age": "25 to 29",
         "variable": "2010_no_access",
-        "value": 77.132365,
+        "value": 77.13,
         "year": "2010",
         "label": "with access at home",
         "type": "access",
@@ -4550,7 +4226,7 @@
       {
         "age": "30 to 39",
         "variable": "2010_no_access",
-        "value": 81.054714,
+        "value": 81.05,
         "year": "2010",
         "label": "with access at home",
         "type": "access",
@@ -4561,7 +4237,7 @@
       {
         "age": "40 to 49",
         "variable": "2010_no_access",
-        "value": 81.676134,
+        "value": 81.68,
         "year": "2010",
         "label": "with access at home",
         "type": "access",
@@ -4572,7 +4248,7 @@
       {
         "age": "50 to 59",
         "variable": "2010_no_access",
-        "value": 77.166875,
+        "value": 77.17,
         "year": "2010",
         "label": "with access at home",
         "type": "access",
@@ -4583,7 +4259,7 @@
       {
         "age": "60 to 69",
         "variable": "2010_no_access",
-        "value": 71.723962,
+        "value": 71.72,
         "year": "2010",
         "label": "with access at home",
         "type": "access",
@@ -4594,7 +4270,7 @@
       {
         "age": "70 or older",
         "variable": "2010_no_access",
-        "value": 49.956528000000006,
+        "value": 49.96,
         "year": "2010",
         "label": "with access at home",
         "type": "access",
@@ -4605,7 +4281,7 @@
       {
         "age": "3 and 4",
         "variable": "2015_no_access",
-        "value": 80.22521,
+        "value": 80.23,
         "year": "2015",
         "label": "with access at home",
         "type": "access",
@@ -4616,7 +4292,7 @@
       {
         "age": "5 to 10",
         "variable": "2015_no_access",
-        "value": 79.976893,
+        "value": 79.98,
         "year": "2015",
         "label": "with access at home",
         "type": "access",
@@ -4627,7 +4303,7 @@
       {
         "age": "11 to 14",
         "variable": "2015_no_access",
-        "value": 81.572733,
+        "value": 81.57,
         "year": "2015",
         "label": "with access at home",
         "type": "access",
@@ -4638,7 +4314,7 @@
       {
         "age": "15 to 18",
         "variable": "2015_no_access",
-        "value": 81.81250299999999,
+        "value": 81.81,
         "year": "2015",
         "label": "with access at home",
         "type": "access",
@@ -4649,7 +4325,7 @@
       {
         "age": "19 to 24",
         "variable": "2015_no_access",
-        "value": 82.221037,
+        "value": 82.22,
         "year": "2015",
         "label": "with access at home",
         "type": "access",
@@ -4660,7 +4336,7 @@
       {
         "age": "25 to 29",
         "variable": "2015_no_access",
-        "value": 80.947265,
+        "value": 80.95,
         "year": "2015",
         "label": "with access at home",
         "type": "access",
@@ -4671,7 +4347,7 @@
       {
         "age": "30 to 39",
         "variable": "2015_no_access",
-        "value": 80.840405,
+        "value": 80.84,
         "year": "2015",
         "label": "with access at home",
         "type": "access",
@@ -4682,7 +4358,7 @@
       {
         "age": "40 to 49",
         "variable": "2015_no_access",
-        "value": 81.309883,
+        "value": 81.31,
         "year": "2015",
         "label": "with access at home",
         "type": "access",
@@ -4693,7 +4369,7 @@
       {
         "age": "50 to 59",
         "variable": "2015_no_access",
-        "value": 76.695114,
+        "value": 76.7,
         "year": "2015",
         "label": "with access at home",
         "type": "access",
@@ -4704,7 +4380,7 @@
       {
         "age": "60 to 69",
         "variable": "2015_no_access",
-        "value": 74.03680299999999,
+        "value": 74.04,
         "year": "2015",
         "label": "with access at home",
         "type": "access",
@@ -4715,7 +4391,7 @@
       {
         "age": "70 or older",
         "variable": "2015_no_access",
-        "value": 58.287387,
+        "value": 58.29,
         "year": "2015",
         "label": "with access at home",
         "type": "access",
@@ -4726,7 +4402,7 @@
       {
         "age": "3 and 4",
         "variable": "2017_no_access",
-        "value": 85.362796,
+        "value": 85.36,
         "year": "2017",
         "label": "with access at home",
         "type": "access",
@@ -4737,7 +4413,7 @@
       {
         "age": "5 to 10",
         "variable": "2017_no_access",
-        "value": 85.446643,
+        "value": 85.45,
         "year": "2017",
         "label": "with access at home",
         "type": "access",
@@ -4748,7 +4424,7 @@
       {
         "age": "11 to 14",
         "variable": "2017_no_access",
-        "value": 85.465998,
+        "value": 85.47,
         "year": "2017",
         "label": "with access at home",
         "type": "access",
@@ -4759,7 +4435,7 @@
       {
         "age": "15 to 18",
         "variable": "2017_no_access",
-        "value": 86.326722,
+        "value": 86.33,
         "year": "2017",
         "label": "with access at home",
         "type": "access",
@@ -4770,7 +4446,7 @@
       {
         "age": "19 to 24",
         "variable": "2017_no_access",
-        "value": 85.186705,
+        "value": 85.19,
         "year": "2017",
         "label": "with access at home",
         "type": "access",
@@ -4781,7 +4457,7 @@
       {
         "age": "25 to 29",
         "variable": "2017_no_access",
-        "value": 85.74444,
+        "value": 85.74,
         "year": "2017",
         "label": "with access at home",
         "type": "access",
@@ -4792,7 +4468,7 @@
       {
         "age": "30 to 39",
         "variable": "2017_no_access",
-        "value": 85.584416,
+        "value": 85.58,
         "year": "2017",
         "label": "with access at home",
         "type": "access",
@@ -4803,7 +4479,7 @@
       {
         "age": "40 to 49",
         "variable": "2017_no_access",
-        "value": 85.858098,
+        "value": 85.86,
         "year": "2017",
         "label": "with access at home",
         "type": "access",
@@ -4814,7 +4490,7 @@
       {
         "age": "50 to 59",
         "variable": "2017_no_access",
-        "value": 80.739768,
+        "value": 80.74,
         "year": "2017",
         "label": "with access at home",
         "type": "access",
@@ -4825,7 +4501,7 @@
       {
         "age": "60 to 69",
         "variable": "2017_no_access",
-        "value": 77.800361,
+        "value": 77.8,
         "year": "2017",
         "label": "with access at home",
         "type": "access",
@@ -4836,7 +4512,7 @@
       {
         "age": "70 or older",
         "variable": "2017_no_access",
-        "value": 64.566641,
+        "value": 64.57,
         "year": "2017",
         "label": "with access at home",
         "type": "access",
@@ -4847,7 +4523,7 @@
       {
         "age": "3 and 4",
         "variable": "2010_1",
-        "value": 20.968277,
+        "value": 20.97,
         "year": "2010",
         "label": "Don’t need it (not interested)",
         "type": "reasons",
@@ -4858,7 +4534,7 @@
       {
         "age": "5 to 10",
         "variable": "2010_1",
-        "value": 21.491974,
+        "value": 21.49,
         "year": "2010",
         "label": "Don’t need it (not interested)",
         "type": "reasons",
@@ -4869,7 +4545,7 @@
       {
         "age": "11 to 14",
         "variable": "2010_1",
-        "value": 21.841247,
+        "value": 21.84,
         "year": "2010",
         "label": "Don’t need it (not interested)",
         "type": "reasons",
@@ -4880,7 +4556,7 @@
       {
         "age": "15 to 18",
         "variable": "2010_1",
-        "value": 22.080982000000002,
+        "value": 22.08,
         "year": "2010",
         "label": "Don’t need it (not interested)",
         "type": "reasons",
@@ -4891,7 +4567,7 @@
       {
         "age": "19 to 24",
         "variable": "2010_1",
-        "value": 24.242601,
+        "value": 24.24,
         "year": "2010",
         "label": "Don’t need it (not interested)",
         "type": "reasons",
@@ -4902,7 +4578,7 @@
       {
         "age": "25 to 29",
         "variable": "2010_1",
-        "value": 26.606125,
+        "value": 26.61,
         "year": "2010",
         "label": "Don’t need it (not interested)",
         "type": "reasons",
@@ -4913,7 +4589,7 @@
       {
         "age": "30 to 39",
         "variable": "2010_1",
-        "value": 27.110663,
+        "value": 27.11,
         "year": "2010",
         "label": "Don’t need it (not interested)",
         "type": "reasons",
@@ -4924,7 +4600,7 @@
       {
         "age": "40 to 49",
         "variable": "2010_1",
-        "value": 31.928396999999997,
+        "value": 31.93,
         "year": "2010",
         "label": "Don’t need it (not interested)",
         "type": "reasons",
@@ -4935,7 +4611,7 @@
       {
         "age": "50 to 59",
         "variable": "2010_1",
-        "value": 44.525043,
+        "value": 44.53,
         "year": "2010",
         "label": "Don’t need it (not interested)",
         "type": "reasons",
@@ -4946,7 +4622,7 @@
       {
         "age": "60 to 69",
         "variable": "2010_1",
-        "value": 54.348231000000006,
+        "value": 54.35,
         "year": "2010",
         "label": "Don’t need it (not interested)",
         "type": "reasons",
@@ -4957,7 +4633,7 @@
       {
         "age": "70 or older",
         "variable": "2010_1",
-        "value": 69.82980699999999,
+        "value": 69.83,
         "year": "2010",
         "label": "Don’t need it (not interested)",
         "type": "reasons",
@@ -4968,7 +4644,7 @@
       {
         "age": "3 and 4",
         "variable": "2010_2",
-        "value": 48.263985,
+        "value": 48.26,
         "year": "2010",
         "label": "Too expensive",
         "type": "reasons",
@@ -4979,7 +4655,7 @@
       {
         "age": "5 to 10",
         "variable": "2010_2",
-        "value": 46.017192,
+        "value": 46.02,
         "year": "2010",
         "label": "Too expensive",
         "type": "reasons",
@@ -4990,7 +4666,7 @@
       {
         "age": "11 to 14",
         "variable": "2010_2",
-        "value": 47.545233,
+        "value": 47.55,
         "year": "2010",
         "label": "Too expensive",
         "type": "reasons",
@@ -5001,7 +4677,7 @@
       {
         "age": "15 to 18",
         "variable": "2010_2",
-        "value": 45.242965999999996,
+        "value": 45.24,
         "year": "2010",
         "label": "Too expensive",
         "type": "reasons",
@@ -5012,7 +4688,7 @@
       {
         "age": "19 to 24",
         "variable": "2010_2",
-        "value": 44.175062,
+        "value": 44.18,
         "year": "2010",
         "label": "Too expensive",
         "type": "reasons",
@@ -5023,7 +4699,7 @@
       {
         "age": "25 to 29",
         "variable": "2010_2",
-        "value": 40.732234000000005,
+        "value": 40.73,
         "year": "2010",
         "label": "Too expensive",
         "type": "reasons",
@@ -5034,7 +4710,7 @@
       {
         "age": "30 to 39",
         "variable": "2010_2",
-        "value": 39.803292,
+        "value": 39.8,
         "year": "2010",
         "label": "Too expensive",
         "type": "reasons",
@@ -5045,7 +4721,7 @@
       {
         "age": "40 to 49",
         "variable": "2010_2",
-        "value": 35.329384999999995,
+        "value": 35.33,
         "year": "2010",
         "label": "Too expensive",
         "type": "reasons",
@@ -5056,7 +4732,7 @@
       {
         "age": "50 to 59",
         "variable": "2010_2",
-        "value": 26.695583000000003,
+        "value": 26.7,
         "year": "2010",
         "label": "Too expensive",
         "type": "reasons",
@@ -5067,7 +4743,7 @@
       {
         "age": "60 to 69",
         "variable": "2010_2",
-        "value": 17.866874,
+        "value": 17.87,
         "year": "2010",
         "label": "Too expensive",
         "type": "reasons",
@@ -5078,7 +4754,7 @@
       {
         "age": "70 or older",
         "variable": "2010_2",
-        "value": 6.994122,
+        "value": 6.99,
         "year": "2010",
         "label": "Too expensive",
         "type": "reasons",
@@ -5089,7 +4765,7 @@
       {
         "age": "3 and 4",
         "variable": "2010_3",
-        "value": 3.8928839999999996,
+        "value": 3.89,
         "year": "2010",
         "label": "Can use it somewhere else",
         "type": "reasons",
@@ -5100,7 +4776,7 @@
       {
         "age": "5 to 10",
         "variable": "2010_3",
-        "value": 5.696428,
+        "value": 5.7,
         "year": "2010",
         "label": "Can use it somewhere else",
         "type": "reasons",
@@ -5111,7 +4787,7 @@
       {
         "age": "11 to 14",
         "variable": "2010_3",
-        "value": 7.069317999999999,
+        "value": 7.07,
         "year": "2010",
         "label": "Can use it somewhere else",
         "type": "reasons",
@@ -5122,7 +4798,7 @@
       {
         "age": "15 to 18",
         "variable": "2010_3",
-        "value": 7.628156,
+        "value": 7.63,
         "year": "2010",
         "label": "Can use it somewhere else",
         "type": "reasons",
@@ -5133,7 +4809,7 @@
       {
         "age": "19 to 24",
         "variable": "2010_3",
-        "value": 7.593481,
+        "value": 7.59,
         "year": "2010",
         "label": "Can use it somewhere else",
         "type": "reasons",
@@ -5144,7 +4820,7 @@
       {
         "age": "25 to 29",
         "variable": "2010_3",
-        "value": 8.042889,
+        "value": 8.04,
         "year": "2010",
         "label": "Can use it somewhere else",
         "type": "reasons",
@@ -5155,7 +4831,7 @@
       {
         "age": "30 to 39",
         "variable": "2010_3",
-        "value": 6.793946000000001,
+        "value": 6.79,
         "year": "2010",
         "label": "Can use it somewhere else",
         "type": "reasons",
@@ -5166,7 +4842,7 @@
       {
         "age": "40 to 49",
         "variable": "2010_3",
-        "value": 7.106877000000001,
+        "value": 7.11,
         "year": "2010",
         "label": "Can use it somewhere else",
         "type": "reasons",
@@ -5177,7 +4853,7 @@
       {
         "age": "50 to 59",
         "variable": "2010_3",
-        "value": 4.607406,
+        "value": 4.61,
         "year": "2010",
         "label": "Can use it somewhere else",
         "type": "reasons",
@@ -5188,7 +4864,7 @@
       {
         "age": "60 to 69",
         "variable": "2010_3",
-        "value": 4.590433999999999,
+        "value": 4.59,
         "year": "2010",
         "label": "Can use it somewhere else",
         "type": "reasons",
@@ -5199,7 +4875,7 @@
       {
         "age": "70 or older",
         "variable": "2010_3",
-        "value": 1.9815619999999998,
+        "value": 1.98,
         "year": "2010",
         "label": "Can use it somewhere else",
         "type": "reasons",
@@ -5210,7 +4886,7 @@
       {
         "age": "3 and 4",
         "variable": "2010_4",
-        "value": 0.9466370000000001,
+        "value": 0.95,
         "year": "2010",
         "label": "Not available in area",
         "type": "reasons",
@@ -5221,7 +4897,7 @@
       {
         "age": "5 to 10",
         "variable": "2010_4",
-        "value": 1.439992,
+        "value": 1.44,
         "year": "2010",
         "label": "Not available in area",
         "type": "reasons",
@@ -5232,7 +4908,7 @@
       {
         "age": "11 to 14",
         "variable": "2010_4",
-        "value": 1.7575630000000002,
+        "value": 1.76,
         "year": "2010",
         "label": "Not available in area",
         "type": "reasons",
@@ -5243,7 +4919,7 @@
       {
         "age": "15 to 18",
         "variable": "2010_4",
-        "value": 1.8956529999999998,
+        "value": 1.9,
         "year": "2010",
         "label": "Not available in area",
         "type": "reasons",
@@ -5254,7 +4930,7 @@
       {
         "age": "19 to 24",
         "variable": "2010_4",
-        "value": 1.054702,
+        "value": 1.05,
         "year": "2010",
         "label": "Not available in area",
         "type": "reasons",
@@ -5265,7 +4941,7 @@
       {
         "age": "25 to 29",
         "variable": "2010_4",
-        "value": 0.977281,
+        "value": 0.98,
         "year": "2010",
         "label": "Not available in area",
         "type": "reasons",
@@ -5276,7 +4952,7 @@
       {
         "age": "30 to 39",
         "variable": "2010_4",
-        "value": 1.419478,
+        "value": 1.42,
         "year": "2010",
         "label": "Not available in area",
         "type": "reasons",
@@ -5287,7 +4963,7 @@
       {
         "age": "40 to 49",
         "variable": "2010_4",
-        "value": 1.908768,
+        "value": 1.91,
         "year": "2010",
         "label": "Not available in area",
         "type": "reasons",
@@ -5298,7 +4974,7 @@
       {
         "age": "50 to 59",
         "variable": "2010_4",
-        "value": 1.0255239999999999,
+        "value": 1.03,
         "year": "2010",
         "label": "Not available in area",
         "type": "reasons",
@@ -5309,7 +4985,7 @@
       {
         "age": "60 to 69",
         "variable": "2010_4",
-        "value": 0.6078560000000001,
+        "value": 0.61,
         "year": "2010",
         "label": "Not available in area",
         "type": "reasons",
@@ -5320,7 +4996,7 @@
       {
         "age": "70 or older",
         "variable": "2010_4",
-        "value": 0.23904,
+        "value": 0.24,
         "year": "2010",
         "label": "Not available in area",
         "type": "reasons",
@@ -5331,7 +5007,7 @@
       {
         "age": "3 and 4",
         "variable": "2010_5",
-        "value": 17.580014000000002,
+        "value": 17.58,
         "year": "2010",
         "label": "No computer or computer inadequate",
         "type": "reasons",
@@ -5342,7 +5018,7 @@
       {
         "age": "5 to 10",
         "variable": "2010_5",
-        "value": 18.292007,
+        "value": 18.29,
         "year": "2010",
         "label": "No computer or computer inadequate",
         "type": "reasons",
@@ -5353,7 +5029,7 @@
       {
         "age": "11 to 14",
         "variable": "2010_5",
-        "value": 15.159864,
+        "value": 15.16,
         "year": "2010",
         "label": "No computer or computer inadequate",
         "type": "reasons",
@@ -5364,7 +5040,7 @@
       {
         "age": "15 to 18",
         "variable": "2010_5",
-        "value": 14.043697,
+        "value": 14.04,
         "year": "2010",
         "label": "No computer or computer inadequate",
         "type": "reasons",
@@ -5375,7 +5051,7 @@
       {
         "age": "19 to 24",
         "variable": "2010_5",
-        "value": 15.677235000000001,
+        "value": 15.68,
         "year": "2010",
         "label": "No computer or computer inadequate",
         "type": "reasons",
@@ -5386,7 +5062,7 @@
       {
         "age": "25 to 29",
         "variable": "2010_5",
-        "value": 17.023714000000002,
+        "value": 17.02,
         "year": "2010",
         "label": "No computer or computer inadequate",
         "type": "reasons",
@@ -5397,7 +5073,7 @@
       {
         "age": "30 to 39",
         "variable": "2010_5",
-        "value": 16.654657,
+        "value": 16.65,
         "year": "2010",
         "label": "No computer or computer inadequate",
         "type": "reasons",
@@ -5408,7 +5084,7 @@
       {
         "age": "40 to 49",
         "variable": "2010_5",
-        "value": 15.327981,
+        "value": 15.33,
         "year": "2010",
         "label": "No computer or computer inadequate",
         "type": "reasons",
@@ -5419,7 +5095,7 @@
       {
         "age": "50 to 59",
         "variable": "2010_5",
-        "value": 16.019627,
+        "value": 16.02,
         "year": "2010",
         "label": "No computer or computer inadequate",
         "type": "reasons",
@@ -5430,7 +5106,7 @@
       {
         "age": "60 to 69",
         "variable": "2010_5",
-        "value": 15.627457999999999,
+        "value": 15.63,
         "year": "2010",
         "label": "No computer or computer inadequate",
         "type": "reasons",
@@ -5441,7 +5117,7 @@
       {
         "age": "70 or older",
         "variable": "2010_5",
-        "value": 14.280085,
+        "value": 14.28,
         "year": "2010",
         "label": "No computer or computer inadequate",
         "type": "reasons",
@@ -5451,129 +5127,8 @@
       },
       {
         "age": "3 and 4",
-        "variable": "2010_7",
-        "value": 8.348203,
-        "year": "2010",
-        "label": "Other reasons",
-        "type": "reasons",
-        "reason_type": 0,
-        "order": 1,
-        "aux": 50
-      },
-      {
-        "age": "5 to 10",
-        "variable": "2010_7",
-        "value": 7.062407,
-        "year": "2010",
-        "label": "Other reasons",
-        "type": "reasons",
-        "reason_type": 0,
-        "order": 2,
-        "aux": 50
-      },
-      {
-        "age": "11 to 14",
-        "variable": "2010_7",
-        "value": 6.626774,
-        "year": "2010",
-        "label": "Other reasons",
-        "type": "reasons",
-        "reason_type": 0,
-        "order": 3,
-        "aux": 50
-      },
-      {
-        "age": "15 to 18",
-        "variable": "2010_7",
-        "value": 9.108546,
-        "year": "2010",
-        "label": "Other reasons",
-        "type": "reasons",
-        "reason_type": 0,
-        "order": 4,
-        "aux": 50
-      },
-      {
-        "age": "19 to 24",
-        "variable": "2010_7",
-        "value": 7.256919,
-        "year": "2010",
-        "label": "Other reasons",
-        "type": "reasons",
-        "reason_type": 0,
-        "order": 5,
-        "aux": 50
-      },
-      {
-        "age": "25 to 29",
-        "variable": "2010_7",
-        "value": 6.617757000000001,
-        "year": "2010",
-        "label": "Other reasons",
-        "type": "reasons",
-        "reason_type": 0,
-        "order": 6,
-        "aux": 50
-      },
-      {
-        "age": "30 to 39",
-        "variable": "2010_7",
-        "value": 8.217963000000001,
-        "year": "2010",
-        "label": "Other reasons",
-        "type": "reasons",
-        "reason_type": 0,
-        "order": 7,
-        "aux": 50
-      },
-      {
-        "age": "40 to 49",
-        "variable": "2010_7",
-        "value": 8.398593,
-        "year": "2010",
-        "label": "Other reasons",
-        "type": "reasons",
-        "reason_type": 0,
-        "order": 8,
-        "aux": 50
-      },
-      {
-        "age": "50 to 59",
-        "variable": "2010_7",
-        "value": 7.126816000000001,
-        "year": "2010",
-        "label": "Other reasons",
-        "type": "reasons",
-        "reason_type": 0,
-        "order": 9,
-        "aux": 50
-      },
-      {
-        "age": "60 to 69",
-        "variable": "2010_7",
-        "value": 6.959147,
-        "year": "2010",
-        "label": "Other reasons",
-        "type": "reasons",
-        "reason_type": 0,
-        "order": 10,
-        "aux": 50
-      },
-      {
-        "age": "70 or older",
-        "variable": "2010_7",
-        "value": 6.675383,
-        "year": "2010",
-        "label": "Other reasons",
-        "type": "reasons",
-        "reason_type": 0,
-        "order": 11,
-        "aux": 50
-      },
-      {
-        "age": "3 and 4",
         "variable": "2015_1",
-        "value": 34.489227,
+        "value": 34.49,
         "year": "2015",
         "label": "Don’t need it (not interested)",
         "type": "reasons",
@@ -5584,7 +5139,7 @@
       {
         "age": "5 to 10",
         "variable": "2015_1",
-        "value": 36.147075,
+        "value": 36.15,
         "year": "2015",
         "label": "Don’t need it (not interested)",
         "type": "reasons",
@@ -5595,7 +5150,7 @@
       {
         "age": "11 to 14",
         "variable": "2015_1",
-        "value": 38.24013,
+        "value": 38.24,
         "year": "2015",
         "label": "Don’t need it (not interested)",
         "type": "reasons",
@@ -5606,7 +5161,7 @@
       {
         "age": "15 to 18",
         "variable": "2015_1",
-        "value": 41.155257,
+        "value": 41.16,
         "year": "2015",
         "label": "Don’t need it (not interested)",
         "type": "reasons",
@@ -5617,7 +5172,7 @@
       {
         "age": "19 to 24",
         "variable": "2015_1",
-        "value": 43.055332,
+        "value": 43.06,
         "year": "2015",
         "label": "Don’t need it (not interested)",
         "type": "reasons",
@@ -5628,7 +5183,7 @@
       {
         "age": "25 to 29",
         "variable": "2015_1",
-        "value": 40.464794,
+        "value": 40.46,
         "year": "2015",
         "label": "Don’t need it (not interested)",
         "type": "reasons",
@@ -5639,7 +5194,7 @@
       {
         "age": "30 to 39",
         "variable": "2015_1",
-        "value": 40.195076,
+        "value": 40.2,
         "year": "2015",
         "label": "Don’t need it (not interested)",
         "type": "reasons",
@@ -5650,7 +5205,7 @@
       {
         "age": "40 to 49",
         "variable": "2015_1",
-        "value": 41.576623,
+        "value": 41.58,
         "year": "2015",
         "label": "Don’t need it (not interested)",
         "type": "reasons",
@@ -5661,7 +5216,7 @@
       {
         "age": "50 to 59",
         "variable": "2015_1",
-        "value": 58.010974,
+        "value": 58.01,
         "year": "2015",
         "label": "Don’t need it (not interested)",
         "type": "reasons",
@@ -5672,7 +5227,7 @@
       {
         "age": "60 to 69",
         "variable": "2015_1",
-        "value": 60.781504000000005,
+        "value": 60.78,
         "year": "2015",
         "label": "Don’t need it (not interested)",
         "type": "reasons",
@@ -5683,7 +5238,7 @@
       {
         "age": "70 or older",
         "variable": "2015_1",
-        "value": 72.16513,
+        "value": 72.17,
         "year": "2015",
         "label": "Don’t need it (not interested)",
         "type": "reasons",
@@ -5694,7 +5249,7 @@
       {
         "age": "3 and 4",
         "variable": "2015_2",
-        "value": 41.416263,
+        "value": 41.42,
         "year": "2015",
         "label": "Too expensive",
         "type": "reasons",
@@ -5705,7 +5260,7 @@
       {
         "age": "5 to 10",
         "variable": "2015_2",
-        "value": 38.687863,
+        "value": 38.69,
         "year": "2015",
         "label": "Too expensive",
         "type": "reasons",
@@ -5716,7 +5271,7 @@
       {
         "age": "11 to 14",
         "variable": "2015_2",
-        "value": 37.365544,
+        "value": 37.37,
         "year": "2015",
         "label": "Too expensive",
         "type": "reasons",
@@ -5727,7 +5282,7 @@
       {
         "age": "15 to 18",
         "variable": "2015_2",
-        "value": 35.565216,
+        "value": 35.57,
         "year": "2015",
         "label": "Too expensive",
         "type": "reasons",
@@ -5738,7 +5293,7 @@
       {
         "age": "19 to 24",
         "variable": "2015_2",
-        "value": 33.963575,
+        "value": 33.96,
         "year": "2015",
         "label": "Too expensive",
         "type": "reasons",
@@ -5749,7 +5304,7 @@
       {
         "age": "25 to 29",
         "variable": "2015_2",
-        "value": 39.207797,
+        "value": 39.21,
         "year": "2015",
         "label": "Too expensive",
         "type": "reasons",
@@ -5760,7 +5315,7 @@
       {
         "age": "30 to 39",
         "variable": "2015_2",
-        "value": 36.174898,
+        "value": 36.17,
         "year": "2015",
         "label": "Too expensive",
         "type": "reasons",
@@ -5771,7 +5326,7 @@
       {
         "age": "40 to 49",
         "variable": "2015_2",
-        "value": 33.559664,
+        "value": 33.56,
         "year": "2015",
         "label": "Too expensive",
         "type": "reasons",
@@ -5782,7 +5337,7 @@
       {
         "age": "50 to 59",
         "variable": "2015_2",
-        "value": 21.667176,
+        "value": 21.67,
         "year": "2015",
         "label": "Too expensive",
         "type": "reasons",
@@ -5793,7 +5348,7 @@
       {
         "age": "60 to 69",
         "variable": "2015_2",
-        "value": 18.284114000000002,
+        "value": 18.28,
         "year": "2015",
         "label": "Too expensive",
         "type": "reasons",
@@ -5804,7 +5359,7 @@
       {
         "age": "70 or older",
         "variable": "2015_2",
-        "value": 9.132006,
+        "value": 9.13,
         "year": "2015",
         "label": "Too expensive",
         "type": "reasons",
@@ -5815,7 +5370,7 @@
       {
         "age": "3 and 4",
         "variable": "2015_3",
-        "value": 1.879255,
+        "value": 1.88,
         "year": "2015",
         "label": "Can use it somewhere else",
         "type": "reasons",
@@ -5826,7 +5381,7 @@
       {
         "age": "5 to 10",
         "variable": "2015_3",
-        "value": 2.456156,
+        "value": 2.46,
         "year": "2015",
         "label": "Can use it somewhere else",
         "type": "reasons",
@@ -5837,7 +5392,7 @@
       {
         "age": "11 to 14",
         "variable": "2015_3",
-        "value": 2.238315,
+        "value": 2.24,
         "year": "2015",
         "label": "Can use it somewhere else",
         "type": "reasons",
@@ -5848,7 +5403,7 @@
       {
         "age": "15 to 18",
         "variable": "2015_3",
-        "value": 3.4524690000000002,
+        "value": 3.45,
         "year": "2015",
         "label": "Can use it somewhere else",
         "type": "reasons",
@@ -5859,7 +5414,7 @@
       {
         "age": "19 to 24",
         "variable": "2015_3",
-        "value": 3.297475,
+        "value": 3.3,
         "year": "2015",
         "label": "Can use it somewhere else",
         "type": "reasons",
@@ -5870,7 +5425,7 @@
       {
         "age": "25 to 29",
         "variable": "2015_3",
-        "value": 2.46239,
+        "value": 2.46,
         "year": "2015",
         "label": "Can use it somewhere else",
         "type": "reasons",
@@ -5881,7 +5436,7 @@
       {
         "age": "30 to 39",
         "variable": "2015_3",
-        "value": 2.63231,
+        "value": 2.63,
         "year": "2015",
         "label": "Can use it somewhere else",
         "type": "reasons",
@@ -5892,7 +5447,7 @@
       {
         "age": "40 to 49",
         "variable": "2015_3",
-        "value": 2.64397,
+        "value": 2.64,
         "year": "2015",
         "label": "Can use it somewhere else",
         "type": "reasons",
@@ -5903,7 +5458,7 @@
       {
         "age": "50 to 59",
         "variable": "2015_3",
-        "value": 2.259138,
+        "value": 2.26,
         "year": "2015",
         "label": "Can use it somewhere else",
         "type": "reasons",
@@ -5914,7 +5469,7 @@
       {
         "age": "60 to 69",
         "variable": "2015_3",
-        "value": 1.691728,
+        "value": 1.69,
         "year": "2015",
         "label": "Can use it somewhere else",
         "type": "reasons",
@@ -5925,7 +5480,7 @@
       {
         "age": "70 or older",
         "variable": "2015_3",
-        "value": 1.147119,
+        "value": 1.15,
         "year": "2015",
         "label": "Can use it somewhere else",
         "type": "reasons",
@@ -5936,7 +5491,7 @@
       {
         "age": "3 and 4",
         "variable": "2015_4",
-        "value": 4.252838,
+        "value": 4.25,
         "year": "2015",
         "label": "Not available in area",
         "type": "reasons",
@@ -5947,7 +5502,7 @@
       {
         "age": "5 to 10",
         "variable": "2015_4",
-        "value": 4.465955999999999,
+        "value": 4.47,
         "year": "2015",
         "label": "Not available in area",
         "type": "reasons",
@@ -5958,7 +5513,7 @@
       {
         "age": "11 to 14",
         "variable": "2015_4",
-        "value": 5.849918,
+        "value": 5.85,
         "year": "2015",
         "label": "Not available in area",
         "type": "reasons",
@@ -5969,7 +5524,7 @@
       {
         "age": "15 to 18",
         "variable": "2015_4",
-        "value": 4.924721,
+        "value": 4.92,
         "year": "2015",
         "label": "Not available in area",
         "type": "reasons",
@@ -5980,7 +5535,7 @@
       {
         "age": "19 to 24",
         "variable": "2015_4",
-        "value": 3.757369,
+        "value": 3.76,
         "year": "2015",
         "label": "Not available in area",
         "type": "reasons",
@@ -5991,7 +5546,7 @@
       {
         "age": "25 to 29",
         "variable": "2015_4",
-        "value": 3.439535,
+        "value": 3.44,
         "year": "2015",
         "label": "Not available in area",
         "type": "reasons",
@@ -6002,7 +5557,7 @@
       {
         "age": "30 to 39",
         "variable": "2015_4",
-        "value": 4.2627809999999995,
+        "value": 4.26,
         "year": "2015",
         "label": "Not available in area",
         "type": "reasons",
@@ -6013,7 +5568,7 @@
       {
         "age": "40 to 49",
         "variable": "2015_4",
-        "value": 5.253138,
+        "value": 5.25,
         "year": "2015",
         "label": "Not available in area",
         "type": "reasons",
@@ -6024,7 +5579,7 @@
       {
         "age": "50 to 59",
         "variable": "2015_4",
-        "value": 1.876341,
+        "value": 1.88,
         "year": "2015",
         "label": "Not available in area",
         "type": "reasons",
@@ -6035,7 +5590,7 @@
       {
         "age": "60 to 69",
         "variable": "2015_4",
-        "value": 1.3401299999999998,
+        "value": 1.34,
         "year": "2015",
         "label": "Not available in area",
         "type": "reasons",
@@ -6046,7 +5601,7 @@
       {
         "age": "70 or older",
         "variable": "2015_4",
-        "value": 0.806284,
+        "value": 0.81,
         "year": "2015",
         "label": "Not available in area",
         "type": "reasons",
@@ -6057,7 +5612,7 @@
       {
         "age": "3 and 4",
         "variable": "2015_5",
-        "value": 8.076888,
+        "value": 8.08,
         "year": "2015",
         "label": "No computer or computer inadequate",
         "type": "reasons",
@@ -6068,7 +5623,7 @@
       {
         "age": "5 to 10",
         "variable": "2015_5",
-        "value": 9.499303,
+        "value": 9.5,
         "year": "2015",
         "label": "No computer or computer inadequate",
         "type": "reasons",
@@ -6079,7 +5634,7 @@
       {
         "age": "11 to 14",
         "variable": "2015_5",
-        "value": 8.151003999999999,
+        "value": 8.15,
         "year": "2015",
         "label": "No computer or computer inadequate",
         "type": "reasons",
@@ -6090,7 +5645,7 @@
       {
         "age": "15 to 18",
         "variable": "2015_5",
-        "value": 6.630675,
+        "value": 6.63,
         "year": "2015",
         "label": "No computer or computer inadequate",
         "type": "reasons",
@@ -6101,7 +5656,7 @@
       {
         "age": "19 to 24",
         "variable": "2015_5",
-        "value": 7.231433,
+        "value": 7.23,
         "year": "2015",
         "label": "No computer or computer inadequate",
         "type": "reasons",
@@ -6112,7 +5667,7 @@
       {
         "age": "25 to 29",
         "variable": "2015_5",
-        "value": 6.8559589999999995,
+        "value": 6.86,
         "year": "2015",
         "label": "No computer or computer inadequate",
         "type": "reasons",
@@ -6123,7 +5678,7 @@
       {
         "age": "30 to 39",
         "variable": "2015_5",
-        "value": 7.710716000000001,
+        "value": 7.71,
         "year": "2015",
         "label": "No computer or computer inadequate",
         "type": "reasons",
@@ -6134,7 +5689,7 @@
       {
         "age": "40 to 49",
         "variable": "2015_5",
-        "value": 7.812519,
+        "value": 7.81,
         "year": "2015",
         "label": "No computer or computer inadequate",
         "type": "reasons",
@@ -6145,7 +5700,7 @@
       {
         "age": "50 to 59",
         "variable": "2015_5",
-        "value": 7.845428,
+        "value": 7.85,
         "year": "2015",
         "label": "No computer or computer inadequate",
         "type": "reasons",
@@ -6156,7 +5711,7 @@
       {
         "age": "60 to 69",
         "variable": "2015_5",
-        "value": 8.317477,
+        "value": 8.32,
         "year": "2015",
         "label": "No computer or computer inadequate",
         "type": "reasons",
@@ -6167,7 +5722,7 @@
       {
         "age": "70 or older",
         "variable": "2015_5",
-        "value": 6.513749,
+        "value": 6.51,
         "year": "2015",
         "label": "No computer or computer inadequate",
         "type": "reasons",
@@ -6189,7 +5744,7 @@
       {
         "age": "5 to 10",
         "variable": "2015_6",
-        "value": 1.96745,
+        "value": 1.97,
         "year": "2015",
         "label": "Privacy or security concerns",
         "type": "reasons",
@@ -6200,7 +5755,7 @@
       {
         "age": "11 to 14",
         "variable": "2015_6",
-        "value": 1.121391,
+        "value": 1.12,
         "year": "2015",
         "label": "Privacy or security concerns",
         "type": "reasons",
@@ -6211,7 +5766,7 @@
       {
         "age": "15 to 18",
         "variable": "2015_6",
-        "value": 1.607343,
+        "value": 1.61,
         "year": "2015",
         "label": "Privacy or security concerns",
         "type": "reasons",
@@ -6222,7 +5777,7 @@
       {
         "age": "19 to 24",
         "variable": "2015_6",
-        "value": 1.078742,
+        "value": 1.08,
         "year": "2015",
         "label": "Privacy or security concerns",
         "type": "reasons",
@@ -6233,7 +5788,7 @@
       {
         "age": "25 to 29",
         "variable": "2015_6",
-        "value": 0.462733,
+        "value": 0.46,
         "year": "2015",
         "label": "Privacy or security concerns",
         "type": "reasons",
@@ -6244,7 +5799,7 @@
       {
         "age": "30 to 39",
         "variable": "2015_6",
-        "value": 1.6721119999999998,
+        "value": 1.67,
         "year": "2015",
         "label": "Privacy or security concerns",
         "type": "reasons",
@@ -6255,7 +5810,7 @@
       {
         "age": "40 to 49",
         "variable": "2015_6",
-        "value": 1.498907,
+        "value": 1.5,
         "year": "2015",
         "label": "Privacy or security concerns",
         "type": "reasons",
@@ -6266,7 +5821,7 @@
       {
         "age": "50 to 59",
         "variable": "2015_6",
-        "value": 1.547819,
+        "value": 1.55,
         "year": "2015",
         "label": "Privacy or security concerns",
         "type": "reasons",
@@ -6277,7 +5832,7 @@
       {
         "age": "60 to 69",
         "variable": "2015_6",
-        "value": 1.616364,
+        "value": 1.62,
         "year": "2015",
         "label": "Privacy or security concerns",
         "type": "reasons",
@@ -6288,130 +5843,9 @@
       {
         "age": "70 or older",
         "variable": "2015_6",
-        "value": 1.339813,
+        "value": 1.34,
         "year": "2015",
         "label": "Privacy or security concerns",
-        "type": "reasons",
-        "reason_type": 0,
-        "order": 11,
-        "aux": 50
-      },
-      {
-        "age": "3 and 4",
-        "variable": "2015_7",
-        "value": 8.751373,
-        "year": "2015",
-        "label": "Other reasons",
-        "type": "reasons",
-        "reason_type": 0,
-        "order": 1,
-        "aux": 50
-      },
-      {
-        "age": "5 to 10",
-        "variable": "2015_7",
-        "value": 6.7761960000000006,
-        "year": "2015",
-        "label": "Other reasons",
-        "type": "reasons",
-        "reason_type": 0,
-        "order": 2,
-        "aux": 50
-      },
-      {
-        "age": "11 to 14",
-        "variable": "2015_7",
-        "value": 7.033697,
-        "year": "2015",
-        "label": "Other reasons",
-        "type": "reasons",
-        "reason_type": 0,
-        "order": 3,
-        "aux": 50
-      },
-      {
-        "age": "15 to 18",
-        "variable": "2015_7",
-        "value": 6.66432,
-        "year": "2015",
-        "label": "Other reasons",
-        "type": "reasons",
-        "reason_type": 0,
-        "order": 4,
-        "aux": 50
-      },
-      {
-        "age": "19 to 24",
-        "variable": "2015_7",
-        "value": 7.616075,
-        "year": "2015",
-        "label": "Other reasons",
-        "type": "reasons",
-        "reason_type": 0,
-        "order": 5,
-        "aux": 50
-      },
-      {
-        "age": "25 to 29",
-        "variable": "2015_7",
-        "value": 7.106791,
-        "year": "2015",
-        "label": "Other reasons",
-        "type": "reasons",
-        "reason_type": 0,
-        "order": 6,
-        "aux": 50
-      },
-      {
-        "age": "30 to 39",
-        "variable": "2015_7",
-        "value": 7.352106,
-        "year": "2015",
-        "label": "Other reasons",
-        "type": "reasons",
-        "reason_type": 0,
-        "order": 7,
-        "aux": 50
-      },
-      {
-        "age": "40 to 49",
-        "variable": "2015_7",
-        "value": 7.655177,
-        "year": "2015",
-        "label": "Other reasons",
-        "type": "reasons",
-        "reason_type": 0,
-        "order": 8,
-        "aux": 50
-      },
-      {
-        "age": "50 to 59",
-        "variable": "2015_7",
-        "value": 6.793124000000001,
-        "year": "2015",
-        "label": "Other reasons",
-        "type": "reasons",
-        "reason_type": 0,
-        "order": 9,
-        "aux": 50
-      },
-      {
-        "age": "60 to 69",
-        "variable": "2015_7",
-        "value": 7.968684,
-        "year": "2015",
-        "label": "Other reasons",
-        "type": "reasons",
-        "reason_type": 0,
-        "order": 10,
-        "aux": 50
-      },
-      {
-        "age": "70 or older",
-        "variable": "2015_7",
-        "value": 8.895899,
-        "year": "2015",
-        "label": "Other reasons",
         "type": "reasons",
         "reason_type": 0,
         "order": 11,
@@ -6420,7 +5854,7 @@
       {
         "age": "3 and 4",
         "variable": "2017_1",
-        "value": 41.160262,
+        "value": 41.16,
         "year": "2017",
         "label": "Don’t need it (not interested)",
         "type": "reasons",
@@ -6431,7 +5865,7 @@
       {
         "age": "5 to 10",
         "variable": "2017_1",
-        "value": 42.105222,
+        "value": 42.11,
         "year": "2017",
         "label": "Don’t need it (not interested)",
         "type": "reasons",
@@ -6442,7 +5876,7 @@
       {
         "age": "11 to 14",
         "variable": "2017_1",
-        "value": 41.792195,
+        "value": 41.79,
         "year": "2017",
         "label": "Don’t need it (not interested)",
         "type": "reasons",
@@ -6453,7 +5887,7 @@
       {
         "age": "15 to 18",
         "variable": "2017_1",
-        "value": 46.697276,
+        "value": 46.7,
         "year": "2017",
         "label": "Don’t need it (not interested)",
         "type": "reasons",
@@ -6464,7 +5898,7 @@
       {
         "age": "19 to 24",
         "variable": "2017_1",
-        "value": 45.775894,
+        "value": 45.78,
         "year": "2017",
         "label": "Don’t need it (not interested)",
         "type": "reasons",
@@ -6475,7 +5909,7 @@
       {
         "age": "25 to 29",
         "variable": "2017_1",
-        "value": 44.071389,
+        "value": 44.07,
         "year": "2017",
         "label": "Don’t need it (not interested)",
         "type": "reasons",
@@ -6486,7 +5920,7 @@
       {
         "age": "30 to 39",
         "variable": "2017_1",
-        "value": 40.388309,
+        "value": 40.39,
         "year": "2017",
         "label": "Don’t need it (not interested)",
         "type": "reasons",
@@ -6497,7 +5931,7 @@
       {
         "age": "40 to 49",
         "variable": "2017_1",
-        "value": 43.258094,
+        "value": 43.26,
         "year": "2017",
         "label": "Don’t need it (not interested)",
         "type": "reasons",
@@ -6508,7 +5942,7 @@
       {
         "age": "50 to 59",
         "variable": "2017_1",
-        "value": 59.301799,
+        "value": 59.3,
         "year": "2017",
         "label": "Don’t need it (not interested)",
         "type": "reasons",
@@ -6519,7 +5953,7 @@
       {
         "age": "60 to 69",
         "variable": "2017_1",
-        "value": 65.426731,
+        "value": 65.43,
         "year": "2017",
         "label": "Don’t need it (not interested)",
         "type": "reasons",
@@ -6530,7 +5964,7 @@
       {
         "age": "70 or older",
         "variable": "2017_1",
-        "value": 72.58896,
+        "value": 72.59,
         "year": "2017",
         "label": "Don’t need it (not interested)",
         "type": "reasons",
@@ -6541,7 +5975,7 @@
       {
         "age": "3 and 4",
         "variable": "2017_2",
-        "value": 34.682527,
+        "value": 34.68,
         "year": "2017",
         "label": "Too expensive",
         "type": "reasons",
@@ -6552,7 +5986,7 @@
       {
         "age": "5 to 10",
         "variable": "2017_2",
-        "value": 36.32825,
+        "value": 36.33,
         "year": "2017",
         "label": "Too expensive",
         "type": "reasons",
@@ -6563,7 +5997,7 @@
       {
         "age": "11 to 14",
         "variable": "2017_2",
-        "value": 33.578616,
+        "value": 33.58,
         "year": "2017",
         "label": "Too expensive",
         "type": "reasons",
@@ -6574,7 +6008,7 @@
       {
         "age": "15 to 18",
         "variable": "2017_2",
-        "value": 31.089719,
+        "value": 31.09,
         "year": "2017",
         "label": "Too expensive",
         "type": "reasons",
@@ -6585,7 +6019,7 @@
       {
         "age": "19 to 24",
         "variable": "2017_2",
-        "value": 31.305981,
+        "value": 31.31,
         "year": "2017",
         "label": "Too expensive",
         "type": "reasons",
@@ -6596,7 +6030,7 @@
       {
         "age": "25 to 29",
         "variable": "2017_2",
-        "value": 32.161972,
+        "value": 32.16,
         "year": "2017",
         "label": "Too expensive",
         "type": "reasons",
@@ -6607,7 +6041,7 @@
       {
         "age": "30 to 39",
         "variable": "2017_2",
-        "value": 34.268038,
+        "value": 34.27,
         "year": "2017",
         "label": "Too expensive",
         "type": "reasons",
@@ -6618,7 +6052,7 @@
       {
         "age": "40 to 49",
         "variable": "2017_2",
-        "value": 31.656340000000004,
+        "value": 31.66,
         "year": "2017",
         "label": "Too expensive",
         "type": "reasons",
@@ -6629,7 +6063,7 @@
       {
         "age": "50 to 59",
         "variable": "2017_2",
-        "value": 19.396514,
+        "value": 19.4,
         "year": "2017",
         "label": "Too expensive",
         "type": "reasons",
@@ -6640,7 +6074,7 @@
       {
         "age": "60 to 69",
         "variable": "2017_2",
-        "value": 17.123683,
+        "value": 17.12,
         "year": "2017",
         "label": "Too expensive",
         "type": "reasons",
@@ -6651,7 +6085,7 @@
       {
         "age": "70 or older",
         "variable": "2017_2",
-        "value": 9.545912,
+        "value": 9.55,
         "year": "2017",
         "label": "Too expensive",
         "type": "reasons",
@@ -6662,7 +6096,7 @@
       {
         "age": "3 and 4",
         "variable": "2017_3",
-        "value": 2.213664,
+        "value": 2.21,
         "year": "2017",
         "label": "Can use it somewhere else",
         "type": "reasons",
@@ -6673,7 +6107,7 @@
       {
         "age": "5 to 10",
         "variable": "2017_3",
-        "value": 3.086512,
+        "value": 3.09,
         "year": "2017",
         "label": "Can use it somewhere else",
         "type": "reasons",
@@ -6684,7 +6118,7 @@
       {
         "age": "11 to 14",
         "variable": "2017_3",
-        "value": 2.720925,
+        "value": 2.72,
         "year": "2017",
         "label": "Can use it somewhere else",
         "type": "reasons",
@@ -6695,7 +6129,7 @@
       {
         "age": "15 to 18",
         "variable": "2017_3",
-        "value": 2.9343619999999997,
+        "value": 2.93,
         "year": "2017",
         "label": "Can use it somewhere else",
         "type": "reasons",
@@ -6706,7 +6140,7 @@
       {
         "age": "19 to 24",
         "variable": "2017_3",
-        "value": 4.119209,
+        "value": 4.12,
         "year": "2017",
         "label": "Can use it somewhere else",
         "type": "reasons",
@@ -6717,7 +6151,7 @@
       {
         "age": "25 to 29",
         "variable": "2017_3",
-        "value": 3.275058,
+        "value": 3.28,
         "year": "2017",
         "label": "Can use it somewhere else",
         "type": "reasons",
@@ -6728,7 +6162,7 @@
       {
         "age": "30 to 39",
         "variable": "2017_3",
-        "value": 3.097033,
+        "value": 3.1,
         "year": "2017",
         "label": "Can use it somewhere else",
         "type": "reasons",
@@ -6739,7 +6173,7 @@
       {
         "age": "40 to 49",
         "variable": "2017_3",
-        "value": 2.565241,
+        "value": 2.57,
         "year": "2017",
         "label": "Can use it somewhere else",
         "type": "reasons",
@@ -6750,7 +6184,7 @@
       {
         "age": "50 to 59",
         "variable": "2017_3",
-        "value": 2.696187,
+        "value": 2.7,
         "year": "2017",
         "label": "Can use it somewhere else",
         "type": "reasons",
@@ -6761,7 +6195,7 @@
       {
         "age": "60 to 69",
         "variable": "2017_3",
-        "value": 2.013353,
+        "value": 2.01,
         "year": "2017",
         "label": "Can use it somewhere else",
         "type": "reasons",
@@ -6772,7 +6206,7 @@
       {
         "age": "70 or older",
         "variable": "2017_3",
-        "value": 1.132938,
+        "value": 1.13,
         "year": "2017",
         "label": "Can use it somewhere else",
         "type": "reasons",
@@ -6783,7 +6217,7 @@
       {
         "age": "3 and 4",
         "variable": "2017_4",
-        "value": 5.3160110000000005,
+        "value": 5.32,
         "year": "2017",
         "label": "Not available in area",
         "type": "reasons",
@@ -6794,7 +6228,7 @@
       {
         "age": "5 to 10",
         "variable": "2017_4",
-        "value": 2.774453,
+        "value": 2.77,
         "year": "2017",
         "label": "Not available in area",
         "type": "reasons",
@@ -6805,7 +6239,7 @@
       {
         "age": "11 to 14",
         "variable": "2017_4",
-        "value": 4.1538260000000005,
+        "value": 4.15,
         "year": "2017",
         "label": "Not available in area",
         "type": "reasons",
@@ -6816,7 +6250,7 @@
       {
         "age": "15 to 18",
         "variable": "2017_4",
-        "value": 4.440109,
+        "value": 4.44,
         "year": "2017",
         "label": "Not available in area",
         "type": "reasons",
@@ -6827,7 +6261,7 @@
       {
         "age": "19 to 24",
         "variable": "2017_4",
-        "value": 3.8522529999999997,
+        "value": 3.85,
         "year": "2017",
         "label": "Not available in area",
         "type": "reasons",
@@ -6838,7 +6272,7 @@
       {
         "age": "25 to 29",
         "variable": "2017_4",
-        "value": 3.500422,
+        "value": 3.5,
         "year": "2017",
         "label": "Not available in area",
         "type": "reasons",
@@ -6849,7 +6283,7 @@
       {
         "age": "30 to 39",
         "variable": "2017_4",
-        "value": 4.003615,
+        "value": 4,
         "year": "2017",
         "label": "Not available in area",
         "type": "reasons",
@@ -6860,7 +6294,7 @@
       {
         "age": "40 to 49",
         "variable": "2017_4",
-        "value": 4.768819000000001,
+        "value": 4.77,
         "year": "2017",
         "label": "Not available in area",
         "type": "reasons",
@@ -6871,7 +6305,7 @@
       {
         "age": "50 to 59",
         "variable": "2017_4",
-        "value": 2.371357,
+        "value": 2.37,
         "year": "2017",
         "label": "Not available in area",
         "type": "reasons",
@@ -6882,7 +6316,7 @@
       {
         "age": "60 to 69",
         "variable": "2017_4",
-        "value": 1.4357739999999999,
+        "value": 1.44,
         "year": "2017",
         "label": "Not available in area",
         "type": "reasons",
@@ -6893,7 +6327,7 @@
       {
         "age": "70 or older",
         "variable": "2017_4",
-        "value": 1.023447,
+        "value": 1.02,
         "year": "2017",
         "label": "Not available in area",
         "type": "reasons",
@@ -6904,7 +6338,7 @@
       {
         "age": "3 and 4",
         "variable": "2017_5",
-        "value": 3.354222,
+        "value": 3.35,
         "year": "2017",
         "label": "No computer or computer inadequate",
         "type": "reasons",
@@ -6915,7 +6349,7 @@
       {
         "age": "5 to 10",
         "variable": "2017_5",
-        "value": 4.497227,
+        "value": 4.5,
         "year": "2017",
         "label": "No computer or computer inadequate",
         "type": "reasons",
@@ -6926,7 +6360,7 @@
       {
         "age": "11 to 14",
         "variable": "2017_5",
-        "value": 4.480128,
+        "value": 4.48,
         "year": "2017",
         "label": "No computer or computer inadequate",
         "type": "reasons",
@@ -6937,7 +6371,7 @@
       {
         "age": "15 to 18",
         "variable": "2017_5",
-        "value": 3.757742,
+        "value": 3.76,
         "year": "2017",
         "label": "No computer or computer inadequate",
         "type": "reasons",
@@ -6948,7 +6382,7 @@
       {
         "age": "19 to 24",
         "variable": "2017_5",
-        "value": 3.932433,
+        "value": 3.93,
         "year": "2017",
         "label": "No computer or computer inadequate",
         "type": "reasons",
@@ -6959,7 +6393,7 @@
       {
         "age": "25 to 29",
         "variable": "2017_5",
-        "value": 3.959318,
+        "value": 3.96,
         "year": "2017",
         "label": "No computer or computer inadequate",
         "type": "reasons",
@@ -6970,7 +6404,7 @@
       {
         "age": "30 to 39",
         "variable": "2017_5",
-        "value": 4.978376,
+        "value": 4.98,
         "year": "2017",
         "label": "No computer or computer inadequate",
         "type": "reasons",
@@ -6981,7 +6415,7 @@
       {
         "age": "40 to 49",
         "variable": "2017_5",
-        "value": 5.044356,
+        "value": 5.04,
         "year": "2017",
         "label": "No computer or computer inadequate",
         "type": "reasons",
@@ -6992,7 +6426,7 @@
       {
         "age": "50 to 59",
         "variable": "2017_5",
-        "value": 4.08528,
+        "value": 4.09,
         "year": "2017",
         "label": "No computer or computer inadequate",
         "type": "reasons",
@@ -7003,7 +6437,7 @@
       {
         "age": "60 to 69",
         "variable": "2017_5",
-        "value": 3.938964,
+        "value": 3.94,
         "year": "2017",
         "label": "No computer or computer inadequate",
         "type": "reasons",
@@ -7014,7 +6448,7 @@
       {
         "age": "70 or older",
         "variable": "2017_5",
-        "value": 4.531059,
+        "value": 4.53,
         "year": "2017",
         "label": "No computer or computer inadequate",
         "type": "reasons",
@@ -7036,7 +6470,7 @@
       {
         "age": "5 to 10",
         "variable": "2017_6",
-        "value": 1.75131,
+        "value": 1.75,
         "year": "2017",
         "label": "Privacy or security concerns",
         "type": "reasons",
@@ -7047,7 +6481,7 @@
       {
         "age": "11 to 14",
         "variable": "2017_6",
-        "value": 1.944639,
+        "value": 1.94,
         "year": "2017",
         "label": "Privacy or security concerns",
         "type": "reasons",
@@ -7058,7 +6492,7 @@
       {
         "age": "15 to 18",
         "variable": "2017_6",
-        "value": 1.337491,
+        "value": 1.34,
         "year": "2017",
         "label": "Privacy or security concerns",
         "type": "reasons",
@@ -7069,7 +6503,7 @@
       {
         "age": "19 to 24",
         "variable": "2017_6",
-        "value": 2.128742,
+        "value": 2.13,
         "year": "2017",
         "label": "Privacy or security concerns",
         "type": "reasons",
@@ -7080,7 +6514,7 @@
       {
         "age": "25 to 29",
         "variable": "2017_6",
-        "value": 1.87188,
+        "value": 1.87,
         "year": "2017",
         "label": "Privacy or security concerns",
         "type": "reasons",
@@ -7091,7 +6525,7 @@
       {
         "age": "30 to 39",
         "variable": "2017_6",
-        "value": 1.564776,
+        "value": 1.56,
         "year": "2017",
         "label": "Privacy or security concerns",
         "type": "reasons",
@@ -7102,7 +6536,7 @@
       {
         "age": "40 to 49",
         "variable": "2017_6",
-        "value": 2.41792,
+        "value": 2.42,
         "year": "2017",
         "label": "Privacy or security concerns",
         "type": "reasons",
@@ -7113,7 +6547,7 @@
       {
         "age": "50 to 59",
         "variable": "2017_6",
-        "value": 1.528958,
+        "value": 1.53,
         "year": "2017",
         "label": "Privacy or security concerns",
         "type": "reasons",
@@ -7124,7 +6558,7 @@
       {
         "age": "60 to 69",
         "variable": "2017_6",
-        "value": 1.8450400000000002,
+        "value": 1.85,
         "year": "2017",
         "label": "Privacy or security concerns",
         "type": "reasons",
@@ -7135,141 +6569,20 @@
       {
         "age": "70 or older",
         "variable": "2017_6",
-        "value": 1.480483,
+        "value": 1.48,
         "year": "2017",
         "label": "Privacy or security concerns",
-        "type": "reasons",
-        "reason_type": 0,
-        "order": 11,
-        "aux": 50
-      },
-      {
-        "age": "3 and 4",
-        "variable": "2017_7",
-        "value": 13.273313,
-        "year": "2017",
-        "label": "Other reasons",
-        "type": "reasons",
-        "reason_type": 0,
-        "order": 1,
-        "aux": 50
-      },
-      {
-        "age": "5 to 10",
-        "variable": "2017_7",
-        "value": 9.457027,
-        "year": "2017",
-        "label": "Other reasons",
-        "type": "reasons",
-        "reason_type": 0,
-        "order": 2,
-        "aux": 50
-      },
-      {
-        "age": "11 to 14",
-        "variable": "2017_7",
-        "value": 11.32967,
-        "year": "2017",
-        "label": "Other reasons",
-        "type": "reasons",
-        "reason_type": 0,
-        "order": 3,
-        "aux": 50
-      },
-      {
-        "age": "15 to 18",
-        "variable": "2017_7",
-        "value": 9.743300999999999,
-        "year": "2017",
-        "label": "Other reasons",
-        "type": "reasons",
-        "reason_type": 0,
-        "order": 4,
-        "aux": 50
-      },
-      {
-        "age": "19 to 24",
-        "variable": "2017_7",
-        "value": 8.885488,
-        "year": "2017",
-        "label": "Other reasons",
-        "type": "reasons",
-        "reason_type": 0,
-        "order": 5,
-        "aux": 50
-      },
-      {
-        "age": "25 to 29",
-        "variable": "2017_7",
-        "value": 11.159961000000001,
-        "year": "2017",
-        "label": "Other reasons",
-        "type": "reasons",
-        "reason_type": 0,
-        "order": 6,
-        "aux": 50
-      },
-      {
-        "age": "30 to 39",
-        "variable": "2017_7",
-        "value": 11.699853,
-        "year": "2017",
-        "label": "Other reasons",
-        "type": "reasons",
-        "reason_type": 0,
-        "order": 7,
-        "aux": 50
-      },
-      {
-        "age": "40 to 49",
-        "variable": "2017_7",
-        "value": 10.289232,
-        "year": "2017",
-        "label": "Other reasons",
-        "type": "reasons",
-        "reason_type": 0,
-        "order": 8,
-        "aux": 50
-      },
-      {
-        "age": "50 to 59",
-        "variable": "2017_7",
-        "value": 10.619905000000001,
-        "year": "2017",
-        "label": "Other reasons",
-        "type": "reasons",
-        "reason_type": 0,
-        "order": 9,
-        "aux": 50
-      },
-      {
-        "age": "60 to 69",
-        "variable": "2017_7",
-        "value": 8.216455999999999,
-        "year": "2017",
-        "label": "Other reasons",
-        "type": "reasons",
-        "reason_type": 0,
-        "order": 10,
-        "aux": 50
-      },
-      {
-        "age": "70 or older",
-        "variable": "2017_7",
-        "value": 9.697201,
-        "year": "2017",
-        "label": "Other reasons",
         "type": "reasons",
         "reason_type": 0,
         "order": 11,
         "aux": 50
       }
     ],
-    "data-adc1695a4fd835a174c4af72724816ba": [
+    "data-05b31332e377ab0c10723a8445308b3a": [
       {
         "race": "White",
         "variable": "2010_no_access",
-        "value": 80.64154500000001,
+        "value": 80.64,
         "year": "2010",
         "label": "with access at home",
         "type": "access",
@@ -7280,7 +6593,7 @@
       {
         "race": "Black",
         "variable": "2010_no_access",
-        "value": 62.891871,
+        "value": 62.89,
         "year": "2010",
         "label": "with access at home",
         "type": "access",
@@ -7291,7 +6604,7 @@
       {
         "race": "Hispanic",
         "variable": "2010_no_access",
-        "value": 63.487807000000004,
+        "value": 63.49,
         "year": "2010",
         "label": "with access at home",
         "type": "access",
@@ -7302,7 +6615,7 @@
       {
         "race": "Asian",
         "variable": "2010_no_access",
-        "value": 87.038843,
+        "value": 87.04,
         "year": "2010",
         "label": "with access at home",
         "type": "access",
@@ -7313,7 +6626,7 @@
       {
         "race": "Pacific Islander",
         "variable": "2010_no_access",
-        "value": 70.26960700000001,
+        "value": 70.27,
         "year": "2010",
         "label": "with access at home",
         "type": "access",
@@ -7324,7 +6637,7 @@
       {
         "race": "AI/AN",
         "variable": "2010_no_access",
-        "value": 61.250278,
+        "value": 61.25,
         "year": "2010",
         "label": "with access at home",
         "type": "access",
@@ -7335,7 +6648,7 @@
       {
         "race": "White",
         "variable": "2015_no_access",
-        "value": 80.747093,
+        "value": 80.75,
         "year": "2015",
         "label": "with access at home",
         "type": "access",
@@ -7346,7 +6659,7 @@
       {
         "race": "Black",
         "variable": "2015_no_access",
-        "value": 67.407393,
+        "value": 67.41,
         "year": "2015",
         "label": "with access at home",
         "type": "access",
@@ -7357,7 +6670,7 @@
       {
         "race": "Hispanic",
         "variable": "2015_no_access",
-        "value": 70.128123,
+        "value": 70.13,
         "year": "2015",
         "label": "with access at home",
         "type": "access",
@@ -7368,7 +6681,7 @@
       {
         "race": "Asian",
         "variable": "2015_no_access",
-        "value": 84.249162,
+        "value": 84.25,
         "year": "2015",
         "label": "with access at home",
         "type": "access",
@@ -7379,7 +6692,7 @@
       {
         "race": "Pacific Islander",
         "variable": "2015_no_access",
-        "value": 76.419407,
+        "value": 76.42,
         "year": "2015",
         "label": "with access at home",
         "type": "access",
@@ -7390,7 +6703,7 @@
       {
         "race": "AI/AN",
         "variable": "2015_no_access",
-        "value": 67.935163,
+        "value": 67.94,
         "year": "2015",
         "label": "with access at home",
         "type": "access",
@@ -7401,7 +6714,7 @@
       {
         "race": "White",
         "variable": "2017_no_access",
-        "value": 83.507907,
+        "value": 83.51,
         "year": "2017",
         "label": "with access at home",
         "type": "access",
@@ -7412,7 +6725,7 @@
       {
         "race": "Black",
         "variable": "2017_no_access",
-        "value": 75.969285,
+        "value": 75.97,
         "year": "2017",
         "label": "with access at home",
         "type": "access",
@@ -7423,7 +6736,7 @@
       {
         "race": "Hispanic",
         "variable": "2017_no_access",
-        "value": 78.551143,
+        "value": 78.55,
         "year": "2017",
         "label": "with access at home",
         "type": "access",
@@ -7434,7 +6747,7 @@
       {
         "race": "Asian",
         "variable": "2017_no_access",
-        "value": 85.52819,
+        "value": 85.53,
         "year": "2017",
         "label": "with access at home",
         "type": "access",
@@ -7445,7 +6758,7 @@
       {
         "race": "Pacific Islander",
         "variable": "2017_no_access",
-        "value": 84.554913,
+        "value": 84.55,
         "year": "2017",
         "label": "with access at home",
         "type": "access",
@@ -7456,7 +6769,7 @@
       {
         "race": "AI/AN",
         "variable": "2017_no_access",
-        "value": 64.179687,
+        "value": 64.18,
         "year": "2017",
         "label": "with access at home",
         "type": "access",
@@ -7467,7 +6780,7 @@
       {
         "race": "White",
         "variable": "2010_1",
-        "value": 48.218758,
+        "value": 48.22,
         "year": "2010",
         "label": "Don’t need it (not interested)",
         "type": "reasons",
@@ -7478,7 +6791,7 @@
       {
         "race": "Black",
         "variable": "2010_1",
-        "value": 32.318015,
+        "value": 32.32,
         "year": "2010",
         "label": "Don’t need it (not interested)",
         "type": "reasons",
@@ -7489,7 +6802,7 @@
       {
         "race": "Hispanic",
         "variable": "2010_1",
-        "value": 28.776041999999997,
+        "value": 28.78,
         "year": "2010",
         "label": "Don’t need it (not interested)",
         "type": "reasons",
@@ -7500,7 +6813,7 @@
       {
         "race": "Asian",
         "variable": "2010_1",
-        "value": 41.576101,
+        "value": 41.58,
         "year": "2010",
         "label": "Don’t need it (not interested)",
         "type": "reasons",
@@ -7511,7 +6824,7 @@
       {
         "race": "Pacific Islander",
         "variable": "2010_1",
-        "value": 22.969788,
+        "value": 22.97,
         "year": "2010",
         "label": "Don’t need it (not interested)",
         "type": "reasons",
@@ -7522,7 +6835,7 @@
       {
         "race": "AI/AN",
         "variable": "2010_1",
-        "value": 33.998495,
+        "value": 34,
         "year": "2010",
         "label": "Don’t need it (not interested)",
         "type": "reasons",
@@ -7533,7 +6846,7 @@
       {
         "race": "White",
         "variable": "2010_2",
-        "value": 23.90962,
+        "value": 23.91,
         "year": "2010",
         "label": "Too expensive",
         "type": "reasons",
@@ -7544,7 +6857,7 @@
       {
         "race": "Black",
         "variable": "2010_2",
-        "value": 35.948643,
+        "value": 35.95,
         "year": "2010",
         "label": "Too expensive",
         "type": "reasons",
@@ -7555,7 +6868,7 @@
       {
         "race": "Hispanic",
         "variable": "2010_2",
-        "value": 40.806117,
+        "value": 40.81,
         "year": "2010",
         "label": "Too expensive",
         "type": "reasons",
@@ -7566,7 +6879,7 @@
       {
         "race": "Asian",
         "variable": "2010_2",
-        "value": 24.059882,
+        "value": 24.06,
         "year": "2010",
         "label": "Too expensive",
         "type": "reasons",
@@ -7577,7 +6890,7 @@
       {
         "race": "Pacific Islander",
         "variable": "2010_2",
-        "value": 44.933799,
+        "value": 44.93,
         "year": "2010",
         "label": "Too expensive",
         "type": "reasons",
@@ -7588,7 +6901,7 @@
       {
         "race": "AI/AN",
         "variable": "2010_2",
-        "value": 28.380412,
+        "value": 28.38,
         "year": "2010",
         "label": "Too expensive",
         "type": "reasons",
@@ -7599,7 +6912,7 @@
       {
         "race": "White",
         "variable": "2010_3",
-        "value": 5.154801,
+        "value": 5.15,
         "year": "2010",
         "label": "Can use it somewhere else",
         "type": "reasons",
@@ -7610,7 +6923,7 @@
       {
         "race": "Black",
         "variable": "2010_3",
-        "value": 6.131569,
+        "value": 6.13,
         "year": "2010",
         "label": "Can use it somewhere else",
         "type": "reasons",
@@ -7621,7 +6934,7 @@
       {
         "race": "Hispanic",
         "variable": "2010_3",
-        "value": 4.89799,
+        "value": 4.9,
         "year": "2010",
         "label": "Can use it somewhere else",
         "type": "reasons",
@@ -7632,7 +6945,7 @@
       {
         "race": "Asian",
         "variable": "2010_3",
-        "value": 5.88175,
+        "value": 5.88,
         "year": "2010",
         "label": "Can use it somewhere else",
         "type": "reasons",
@@ -7654,7 +6967,7 @@
       {
         "race": "AI/AN",
         "variable": "2010_3",
-        "value": 8.538988,
+        "value": 8.54,
         "year": "2010",
         "label": "Can use it somewhere else",
         "type": "reasons",
@@ -7665,7 +6978,7 @@
       {
         "race": "White",
         "variable": "2010_4",
-        "value": 1.511355,
+        "value": 1.51,
         "year": "2010",
         "label": "Not available in area",
         "type": "reasons",
@@ -7676,7 +6989,7 @@
       {
         "race": "Black",
         "variable": "2010_4",
-        "value": 0.634367,
+        "value": 0.63,
         "year": "2010",
         "label": "Not available in area",
         "type": "reasons",
@@ -7687,7 +7000,7 @@
       {
         "race": "Hispanic",
         "variable": "2010_4",
-        "value": 0.47597,
+        "value": 0.48,
         "year": "2010",
         "label": "Not available in area",
         "type": "reasons",
@@ -7720,7 +7033,7 @@
       {
         "race": "AI/AN",
         "variable": "2010_4",
-        "value": 3.483048,
+        "value": 3.48,
         "year": "2010",
         "label": "Not available in area",
         "type": "reasons",
@@ -7731,7 +7044,7 @@
       {
         "race": "White",
         "variable": "2010_5",
-        "value": 13.520110999999998,
+        "value": 13.52,
         "year": "2010",
         "label": "No computer or computer inadequate",
         "type": "reasons",
@@ -7742,7 +7055,7 @@
       {
         "race": "Black",
         "variable": "2010_5",
-        "value": 19.003918,
+        "value": 19,
         "year": "2010",
         "label": "No computer or computer inadequate",
         "type": "reasons",
@@ -7753,7 +7066,7 @@
       {
         "race": "Hispanic",
         "variable": "2010_5",
-        "value": 17.623645,
+        "value": 17.62,
         "year": "2010",
         "label": "No computer or computer inadequate",
         "type": "reasons",
@@ -7764,7 +7077,7 @@
       {
         "race": "Asian",
         "variable": "2010_5",
-        "value": 16.430941,
+        "value": 16.43,
         "year": "2010",
         "label": "No computer or computer inadequate",
         "type": "reasons",
@@ -7775,7 +7088,7 @@
       {
         "race": "Pacific Islander",
         "variable": "2010_5",
-        "value": 31.500228000000003,
+        "value": 31.5,
         "year": "2010",
         "label": "No computer or computer inadequate",
         "type": "reasons",
@@ -7786,7 +7099,7 @@
       {
         "race": "AI/AN",
         "variable": "2010_5",
-        "value": 21.956549,
+        "value": 21.96,
         "year": "2010",
         "label": "No computer or computer inadequate",
         "type": "reasons",
@@ -7796,74 +7109,8 @@
       },
       {
         "race": "White",
-        "variable": "2010_7",
-        "value": 7.685353999999999,
-        "year": "2010",
-        "label": "Other reasons",
-        "type": "reasons",
-        "reason_type": 0,
-        "order": 3,
-        "aux": 50
-      },
-      {
-        "race": "Black",
-        "variable": "2010_7",
-        "value": 5.963488,
-        "year": "2010",
-        "label": "Other reasons",
-        "type": "reasons",
-        "reason_type": 0,
-        "order": 5,
-        "aux": 50
-      },
-      {
-        "race": "Hispanic",
-        "variable": "2010_7",
-        "value": 7.420236,
-        "year": "2010",
-        "label": "Other reasons",
-        "type": "reasons",
-        "reason_type": 0,
-        "order": 4,
-        "aux": 50
-      },
-      {
-        "race": "Asian",
-        "variable": "2010_7",
-        "value": 11.848713,
-        "year": "2010",
-        "label": "Other reasons",
-        "type": "reasons",
-        "reason_type": 0,
-        "order": 1,
-        "aux": 50
-      },
-      {
-        "race": "Pacific Islander",
-        "variable": "2010_7",
-        "value": 0,
-        "year": "2010",
-        "label": "Other reasons",
-        "type": "reasons",
-        "reason_type": 0,
-        "order": 2,
-        "aux": 50
-      },
-      {
-        "race": "AI/AN",
-        "variable": "2010_7",
-        "value": 3.642507,
-        "year": "2010",
-        "label": "Other reasons",
-        "type": "reasons",
-        "reason_type": 0,
-        "order": 6,
-        "aux": 50
-      },
-      {
-        "race": "White",
         "variable": "2015_1",
-        "value": 57.321427,
+        "value": 57.32,
         "year": "2015",
         "label": "Don’t need it (not interested)",
         "type": "reasons",
@@ -7874,7 +7121,7 @@
       {
         "race": "Black",
         "variable": "2015_1",
-        "value": 44.846548999999996,
+        "value": 44.85,
         "year": "2015",
         "label": "Don’t need it (not interested)",
         "type": "reasons",
@@ -7885,7 +7132,7 @@
       {
         "race": "Hispanic",
         "variable": "2015_1",
-        "value": 43.678506,
+        "value": 43.68,
         "year": "2015",
         "label": "Don’t need it (not interested)",
         "type": "reasons",
@@ -7896,7 +7143,7 @@
       {
         "race": "Asian",
         "variable": "2015_1",
-        "value": 53.337555,
+        "value": 53.34,
         "year": "2015",
         "label": "Don’t need it (not interested)",
         "type": "reasons",
@@ -7907,7 +7154,7 @@
       {
         "race": "Pacific Islander",
         "variable": "2015_1",
-        "value": 35.716074,
+        "value": 35.72,
         "year": "2015",
         "label": "Don’t need it (not interested)",
         "type": "reasons",
@@ -7918,7 +7165,7 @@
       {
         "race": "AI/AN",
         "variable": "2015_1",
-        "value": 36.60866,
+        "value": 36.61,
         "year": "2015",
         "label": "Don’t need it (not interested)",
         "type": "reasons",
@@ -7929,7 +7176,7 @@
       {
         "race": "White",
         "variable": "2015_2",
-        "value": 19.50425,
+        "value": 19.5,
         "year": "2015",
         "label": "Too expensive",
         "type": "reasons",
@@ -7940,7 +7187,7 @@
       {
         "race": "Black",
         "variable": "2015_2",
-        "value": 34.758357000000004,
+        "value": 34.76,
         "year": "2015",
         "label": "Too expensive",
         "type": "reasons",
@@ -7951,7 +7198,7 @@
       {
         "race": "Hispanic",
         "variable": "2015_2",
-        "value": 37.10345,
+        "value": 37.1,
         "year": "2015",
         "label": "Too expensive",
         "type": "reasons",
@@ -7962,7 +7209,7 @@
       {
         "race": "Asian",
         "variable": "2015_2",
-        "value": 20.814939000000003,
+        "value": 20.81,
         "year": "2015",
         "label": "Too expensive",
         "type": "reasons",
@@ -7973,7 +7220,7 @@
       {
         "race": "Pacific Islander",
         "variable": "2015_2",
-        "value": 37.661587,
+        "value": 37.66,
         "year": "2015",
         "label": "Too expensive",
         "type": "reasons",
@@ -7984,7 +7231,7 @@
       {
         "race": "AI/AN",
         "variable": "2015_2",
-        "value": 37.131346,
+        "value": 37.13,
         "year": "2015",
         "label": "Too expensive",
         "type": "reasons",
@@ -7995,7 +7242,7 @@
       {
         "race": "White",
         "variable": "2015_3",
-        "value": 2.268918,
+        "value": 2.27,
         "year": "2015",
         "label": "Can use it somewhere else",
         "type": "reasons",
@@ -8006,7 +7253,7 @@
       {
         "race": "Black",
         "variable": "2015_3",
-        "value": 2.410895,
+        "value": 2.41,
         "year": "2015",
         "label": "Can use it somewhere else",
         "type": "reasons",
@@ -8017,7 +7264,7 @@
       {
         "race": "Hispanic",
         "variable": "2015_3",
-        "value": 1.6806240000000001,
+        "value": 1.68,
         "year": "2015",
         "label": "Can use it somewhere else",
         "type": "reasons",
@@ -8028,7 +7275,7 @@
       {
         "race": "Asian",
         "variable": "2015_3",
-        "value": 2.760554,
+        "value": 2.76,
         "year": "2015",
         "label": "Can use it somewhere else",
         "type": "reasons",
@@ -8050,7 +7297,7 @@
       {
         "race": "AI/AN",
         "variable": "2015_3",
-        "value": 6.056477,
+        "value": 6.06,
         "year": "2015",
         "label": "Can use it somewhere else",
         "type": "reasons",
@@ -8061,7 +7308,7 @@
       {
         "race": "White",
         "variable": "2015_4",
-        "value": 3.7288629999999996,
+        "value": 3.73,
         "year": "2015",
         "label": "Not available in area",
         "type": "reasons",
@@ -8072,7 +7319,7 @@
       {
         "race": "Black",
         "variable": "2015_4",
-        "value": 1.975193,
+        "value": 1.98,
         "year": "2015",
         "label": "Not available in area",
         "type": "reasons",
@@ -8083,7 +7330,7 @@
       {
         "race": "Hispanic",
         "variable": "2015_4",
-        "value": 1.97836,
+        "value": 1.98,
         "year": "2015",
         "label": "Not available in area",
         "type": "reasons",
@@ -8094,7 +7341,7 @@
       {
         "race": "Asian",
         "variable": "2015_4",
-        "value": 2.9785,
+        "value": 2.98,
         "year": "2015",
         "label": "Not available in area",
         "type": "reasons",
@@ -8116,7 +7363,7 @@
       {
         "race": "AI/AN",
         "variable": "2015_4",
-        "value": 6.7163770000000005,
+        "value": 6.72,
         "year": "2015",
         "label": "Not available in area",
         "type": "reasons",
@@ -8127,7 +7374,7 @@
       {
         "race": "White",
         "variable": "2015_5",
-        "value": 6.540765,
+        "value": 6.54,
         "year": "2015",
         "label": "No computer or computer inadequate",
         "type": "reasons",
@@ -8138,7 +7385,7 @@
       {
         "race": "Black",
         "variable": "2015_5",
-        "value": 8.746263,
+        "value": 8.75,
         "year": "2015",
         "label": "No computer or computer inadequate",
         "type": "reasons",
@@ -8149,7 +7396,7 @@
       {
         "race": "Hispanic",
         "variable": "2015_5",
-        "value": 8.91538,
+        "value": 8.92,
         "year": "2015",
         "label": "No computer or computer inadequate",
         "type": "reasons",
@@ -8160,7 +7407,7 @@
       {
         "race": "Asian",
         "variable": "2015_5",
-        "value": 8.512124,
+        "value": 8.51,
         "year": "2015",
         "label": "No computer or computer inadequate",
         "type": "reasons",
@@ -8171,7 +7418,7 @@
       {
         "race": "Pacific Islander",
         "variable": "2015_5",
-        "value": 11.393775,
+        "value": 11.39,
         "year": "2015",
         "label": "No computer or computer inadequate",
         "type": "reasons",
@@ -8182,7 +7429,7 @@
       {
         "race": "AI/AN",
         "variable": "2015_5",
-        "value": 6.805574000000001,
+        "value": 6.81,
         "year": "2015",
         "label": "No computer or computer inadequate",
         "type": "reasons",
@@ -8193,7 +7440,7 @@
       {
         "race": "White",
         "variable": "2015_6",
-        "value": 1.912393,
+        "value": 1.91,
         "year": "2015",
         "label": "Privacy or security concerns",
         "type": "reasons",
@@ -8204,7 +7451,7 @@
       {
         "race": "Black",
         "variable": "2015_6",
-        "value": 1.398583,
+        "value": 1.4,
         "year": "2015",
         "label": "Privacy or security concerns",
         "type": "reasons",
@@ -8215,7 +7462,7 @@
       {
         "race": "Hispanic",
         "variable": "2015_6",
-        "value": 0.406686,
+        "value": 0.41,
         "year": "2015",
         "label": "Privacy or security concerns",
         "type": "reasons",
@@ -8258,74 +7505,8 @@
       },
       {
         "race": "White",
-        "variable": "2015_7",
-        "value": 8.723383,
-        "year": "2015",
-        "label": "Other reasons",
-        "type": "reasons",
-        "reason_type": 0,
-        "order": 3,
-        "aux": 50
-      },
-      {
-        "race": "Black",
-        "variable": "2015_7",
-        "value": 5.864159,
-        "year": "2015",
-        "label": "Other reasons",
-        "type": "reasons",
-        "reason_type": 0,
-        "order": 5,
-        "aux": 50
-      },
-      {
-        "race": "Hispanic",
-        "variable": "2015_7",
-        "value": 6.236994,
-        "year": "2015",
-        "label": "Other reasons",
-        "type": "reasons",
-        "reason_type": 0,
-        "order": 4,
-        "aux": 50
-      },
-      {
-        "race": "Asian",
-        "variable": "2015_7",
-        "value": 10.975352,
-        "year": "2015",
-        "label": "Other reasons",
-        "type": "reasons",
-        "reason_type": 0,
-        "order": 1,
-        "aux": 50
-      },
-      {
-        "race": "Pacific Islander",
-        "variable": "2015_7",
-        "value": 0,
-        "year": "2015",
-        "label": "Other reasons",
-        "type": "reasons",
-        "reason_type": 0,
-        "order": 2,
-        "aux": 50
-      },
-      {
-        "race": "AI/AN",
-        "variable": "2015_7",
-        "value": 5.57592,
-        "year": "2015",
-        "label": "Other reasons",
-        "type": "reasons",
-        "reason_type": 0,
-        "order": 6,
-        "aux": 50
-      },
-      {
-        "race": "White",
         "variable": "2017_1",
-        "value": 58.278647,
+        "value": 58.28,
         "year": "2017",
         "label": "Don’t need it (not interested)",
         "type": "reasons",
@@ -8336,7 +7517,7 @@
       {
         "race": "Black",
         "variable": "2017_1",
-        "value": 50.18953,
+        "value": 50.19,
         "year": "2017",
         "label": "Don’t need it (not interested)",
         "type": "reasons",
@@ -8347,7 +7528,7 @@
       {
         "race": "Hispanic",
         "variable": "2017_1",
-        "value": 51.88023,
+        "value": 51.88,
         "year": "2017",
         "label": "Don’t need it (not interested)",
         "type": "reasons",
@@ -8358,7 +7539,7 @@
       {
         "race": "Asian",
         "variable": "2017_1",
-        "value": 50.424733,
+        "value": 50.42,
         "year": "2017",
         "label": "Don’t need it (not interested)",
         "type": "reasons",
@@ -8369,7 +7550,7 @@
       {
         "race": "Pacific Islander",
         "variable": "2017_1",
-        "value": 45.125169,
+        "value": 45.13,
         "year": "2017",
         "label": "Don’t need it (not interested)",
         "type": "reasons",
@@ -8380,7 +7561,7 @@
       {
         "race": "AI/AN",
         "variable": "2017_1",
-        "value": 41.794949,
+        "value": 41.79,
         "year": "2017",
         "label": "Don’t need it (not interested)",
         "type": "reasons",
@@ -8391,7 +7572,7 @@
       {
         "race": "White",
         "variable": "2017_2",
-        "value": 18.250264,
+        "value": 18.25,
         "year": "2017",
         "label": "Too expensive",
         "type": "reasons",
@@ -8402,7 +7583,7 @@
       {
         "race": "Black",
         "variable": "2017_2",
-        "value": 28.910971999999997,
+        "value": 28.91,
         "year": "2017",
         "label": "Too expensive",
         "type": "reasons",
@@ -8413,7 +7594,7 @@
       {
         "race": "Hispanic",
         "variable": "2017_2",
-        "value": 34.106801000000004,
+        "value": 34.11,
         "year": "2017",
         "label": "Too expensive",
         "type": "reasons",
@@ -8424,7 +7605,7 @@
       {
         "race": "Asian",
         "variable": "2017_2",
-        "value": 24.814744,
+        "value": 24.81,
         "year": "2017",
         "label": "Too expensive",
         "type": "reasons",
@@ -8435,7 +7616,7 @@
       {
         "race": "Pacific Islander",
         "variable": "2017_2",
-        "value": 36.079974,
+        "value": 36.08,
         "year": "2017",
         "label": "Too expensive",
         "type": "reasons",
@@ -8446,7 +7627,7 @@
       {
         "race": "AI/AN",
         "variable": "2017_2",
-        "value": 24.588994,
+        "value": 24.59,
         "year": "2017",
         "label": "Too expensive",
         "type": "reasons",
@@ -8457,7 +7638,7 @@
       {
         "race": "White",
         "variable": "2017_3",
-        "value": 2.632431,
+        "value": 2.63,
         "year": "2017",
         "label": "Can use it somewhere else",
         "type": "reasons",
@@ -8468,7 +7649,7 @@
       {
         "race": "Black",
         "variable": "2017_3",
-        "value": 3.471312,
+        "value": 3.47,
         "year": "2017",
         "label": "Can use it somewhere else",
         "type": "reasons",
@@ -8479,7 +7660,7 @@
       {
         "race": "Hispanic",
         "variable": "2017_3",
-        "value": 1.299228,
+        "value": 1.3,
         "year": "2017",
         "label": "Can use it somewhere else",
         "type": "reasons",
@@ -8512,7 +7693,7 @@
       {
         "race": "AI/AN",
         "variable": "2017_3",
-        "value": 2.898181,
+        "value": 2.9,
         "year": "2017",
         "label": "Can use it somewhere else",
         "type": "reasons",
@@ -8523,7 +7704,7 @@
       {
         "race": "White",
         "variable": "2017_4",
-        "value": 3.1174619999999997,
+        "value": 3.12,
         "year": "2017",
         "label": "Not available in area",
         "type": "reasons",
@@ -8534,7 +7715,7 @@
       {
         "race": "Black",
         "variable": "2017_4",
-        "value": 3.032531,
+        "value": 3.03,
         "year": "2017",
         "label": "Not available in area",
         "type": "reasons",
@@ -8545,7 +7726,7 @@
       {
         "race": "Hispanic",
         "variable": "2017_4",
-        "value": 0.975765,
+        "value": 0.98,
         "year": "2017",
         "label": "Not available in area",
         "type": "reasons",
@@ -8556,7 +7737,7 @@
       {
         "race": "Asian",
         "variable": "2017_4",
-        "value": 0.813703,
+        "value": 0.81,
         "year": "2017",
         "label": "Not available in area",
         "type": "reasons",
@@ -8578,7 +7759,7 @@
       {
         "race": "AI/AN",
         "variable": "2017_4",
-        "value": 18.356419,
+        "value": 18.36,
         "year": "2017",
         "label": "Not available in area",
         "type": "reasons",
@@ -8589,7 +7770,7 @@
       {
         "race": "White",
         "variable": "2017_5",
-        "value": 4.681239,
+        "value": 4.68,
         "year": "2017",
         "label": "No computer or computer inadequate",
         "type": "reasons",
@@ -8600,7 +7781,7 @@
       {
         "race": "Black",
         "variable": "2017_5",
-        "value": 3.8347309999999997,
+        "value": 3.83,
         "year": "2017",
         "label": "No computer or computer inadequate",
         "type": "reasons",
@@ -8611,7 +7792,7 @@
       {
         "race": "Hispanic",
         "variable": "2017_5",
-        "value": 3.607192,
+        "value": 3.61,
         "year": "2017",
         "label": "No computer or computer inadequate",
         "type": "reasons",
@@ -8622,7 +7803,7 @@
       {
         "race": "Asian",
         "variable": "2017_5",
-        "value": 5.718093,
+        "value": 5.72,
         "year": "2017",
         "label": "No computer or computer inadequate",
         "type": "reasons",
@@ -8655,7 +7836,7 @@
       {
         "race": "White",
         "variable": "2017_6",
-        "value": 2.145689,
+        "value": 2.15,
         "year": "2017",
         "label": "Privacy or security concerns",
         "type": "reasons",
@@ -8666,7 +7847,7 @@
       {
         "race": "Black",
         "variable": "2017_6",
-        "value": 0.527947,
+        "value": 0.53,
         "year": "2017",
         "label": "Privacy or security concerns",
         "type": "reasons",
@@ -8677,7 +7858,7 @@
       {
         "race": "Hispanic",
         "variable": "2017_6",
-        "value": 1.394558,
+        "value": 1.39,
         "year": "2017",
         "label": "Privacy or security concerns",
         "type": "reasons",
@@ -8688,7 +7869,7 @@
       {
         "race": "Asian",
         "variable": "2017_6",
-        "value": 2.2177029999999998,
+        "value": 2.22,
         "year": "2017",
         "label": "Privacy or security concerns",
         "type": "reasons",
@@ -8713,72 +7894,6 @@
         "value": 0,
         "year": "2017",
         "label": "Privacy or security concerns",
-        "type": "reasons",
-        "reason_type": 0,
-        "order": 6,
-        "aux": 50
-      },
-      {
-        "race": "White",
-        "variable": "2017_7",
-        "value": 10.894267,
-        "year": "2017",
-        "label": "Other reasons",
-        "type": "reasons",
-        "reason_type": 0,
-        "order": 3,
-        "aux": 50
-      },
-      {
-        "race": "Black",
-        "variable": "2017_7",
-        "value": 10.032976,
-        "year": "2017",
-        "label": "Other reasons",
-        "type": "reasons",
-        "reason_type": 0,
-        "order": 5,
-        "aux": 50
-      },
-      {
-        "race": "Hispanic",
-        "variable": "2017_7",
-        "value": 6.736225,
-        "year": "2017",
-        "label": "Other reasons",
-        "type": "reasons",
-        "reason_type": 0,
-        "order": 4,
-        "aux": 50
-      },
-      {
-        "race": "Asian",
-        "variable": "2017_7",
-        "value": 14.071025,
-        "year": "2017",
-        "label": "Other reasons",
-        "type": "reasons",
-        "reason_type": 0,
-        "order": 1,
-        "aux": 50
-      },
-      {
-        "race": "Pacific Islander",
-        "variable": "2017_7",
-        "value": 0,
-        "year": "2017",
-        "label": "Other reasons",
-        "type": "reasons",
-        "reason_type": 0,
-        "order": 2,
-        "aux": 50
-      },
-      {
-        "race": "AI/AN",
-        "variable": "2017_7",
-        "value": 9.621757,
-        "year": "2017",
-        "label": "Other reasons",
         "type": "reasons",
         "reason_type": 0,
         "order": 6,
