@@ -79,7 +79,7 @@
                   ],
                   "clear": "click"
                 },
-                "selector041": {
+                "selector012": {
                   "type": "interval",
                   "bind": "scales",
                   "encodings": [
@@ -195,7 +195,7 @@
               },
               "title": {
                 "text": [
-                  "% reasons for not going online at home",
+                  "% people w/ Internet at home and gaps",
                   "income groups"
                 ]
               },
@@ -275,7 +275,7 @@
               },
               "title": {
                 "text": [
-                  "% reasons for not going online at home",
+                  "% people w/ Internet at home and gaps",
                   "income groups"
                 ]
               },
@@ -420,7 +420,7 @@
                   ],
                   "clear": "click"
                 },
-                "selector042": {
+                "selector006": {
                   "type": "interval",
                   "bind": "scales",
                   "encodings": [
@@ -724,7 +724,7 @@
                   ],
                   "clear": "click"
                 },
-                "selector043": {
+                "selector007": {
                   "type": "interval",
                   "bind": "scales",
                   "encodings": [
@@ -1087,8 +1087,8 @@
               },
               "title": {
                 "text": [
-                  "structural reasons",
-                  ""
+                  "                                        % reasons for not going online at home",
+                  "structural reasons"
                 ]
               },
               "transform": [
@@ -1610,8 +1610,8 @@
               },
               "title": {
                 "text": [
-                  "subjective reasons",
-                  ""
+                  "",
+                  "subjective reasons"
                 ]
               },
               "transform": [
